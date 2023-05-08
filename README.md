@@ -5,8 +5,14 @@
 Before you begin, ensure you have met the following requirements:
 
 - [Git](https://git-scm.com/downloads "Download Git")
-
-- [Node.js 18](https://nodejs.org/en) The `.nvmrc` file contains the required Node.js version.
+- [Node.js 18](https://nodejs.org/en "Download Node.js") The `.nvmrc` file contains the required Node.js version.
+- [VSCode](https://code.visualstudio.com/ "Download VSCode") Recommended code editor with the following extensions:
+  - DavidAnson.vscode-markdownlint
+  - EditorConfig.EditorConfig
+  - esbenp.prettier-vscode
+  - formulahendry.auto-rename-tag
+  - SimonSiefke.svg-preview
+  - svelte.svelte-vscode
 
 ## Installing
 

@@ -3,9 +3,6 @@
   "editor.formatOnSave": true,
   "editor.rulers": [140],
   "editor.wordWrapColumn": 140,
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -21,12 +18,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "files.associations": {
-    "**/roles/**/*.yml": "ansible",
-    "**/tasks/**/*.yml": "ansible",
     "*.svelte": "html"
   },
   "files.insertFinalNewline": true,
@@ -35,6 +27,5 @@
   "markdownlint.config": {
     "MD024": false
   },
-  "redhat.telemetry.enabled": false,
   "svelte.enable-ts-plugin": true
 }
