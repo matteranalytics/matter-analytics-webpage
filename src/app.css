@@ -596,6 +596,7 @@ main {
   background: var(--bg-gradient-onyx);
   border-radius: 14px;
   box-shadow: var(--shadow-1);
+  filter: grayscale(1);
 }
 
 .testimonials-item-title {
@@ -713,6 +714,7 @@ main {
   border-radius: 14px;
   margin-bottom: 15px;
   box-shadow: var(--shadow-2);
+  filter: grayscale(1);
 }
 
 .modal-img-wrapper > img {
