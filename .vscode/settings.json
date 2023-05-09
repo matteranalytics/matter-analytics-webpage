@@ -19,7 +19,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.associations": {
-    "*.svelte": "html"
+    "*.svelte": "html",
+    "*.svg": "html"
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
