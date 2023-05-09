@@ -8,7 +8,12 @@
         <h2 class="h2 article-title">{project.title}</h2>
     </header>
 
-    <p class="project-category">{project.category}</p>
+    <div class="project-meta">
+        <p class="project-category">{project.category}</p>
+        <span class="dot" />
+        <p class="project-client">{project.client}</p>
+    </div>
+
     <p class="project-text">{project.short}</p>
 
     <figure class="project-img">

@@ -119,6 +119,7 @@ export type Project = {
     slug: string;
     title: string;
     category: string;
+    client: string;
     img: Image;
     short: string;
     long: string[];

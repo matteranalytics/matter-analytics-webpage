@@ -235,6 +235,7 @@ export const pages = {
                 slug: "finance",
                 title: "Finance",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-1.jpg", alt: "finance" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [
@@ -247,6 +248,7 @@ export const pages = {
                 slug: "orizon",
                 title: "Orizon",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-2.png", alt: "orizon" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [
@@ -258,6 +260,7 @@ export const pages = {
                 slug: "fundo",
                 title: "Fundo",
                 category: "Web design",
+                client: "Acme Comp",
                 img: { src: "/images/project-3.jpg", alt: "fundo" },
                 short: "",
                 long: [],
@@ -266,6 +269,7 @@ export const pages = {
                 slug: "brawlhalla",
                 title: "Brawlhalla",
                 category: "Applications",
+                client: "Acme Comp",
                 img: { src: "/images/project-4.png", alt: "brawlhalla" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [
@@ -277,6 +281,7 @@ export const pages = {
                 slug: "dsm",
                 title: "DSM.",
                 category: "Web design",
+                client: "Acme Comp",
                 img: { src: "/images/project-5.png", alt: "dsm" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [
@@ -288,6 +293,7 @@ export const pages = {
                 slug: "metaspark",
                 title: "MetaSpark",
                 category: "Web design",
+                client: "Acme Comp",
                 img: { src: "/images/project-6.png", alt: "metaspark" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [
@@ -299,6 +305,7 @@ export const pages = {
                 slug: "summary",
                 title: "Summary",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-7.png", alt: "summary" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [
@@ -310,6 +317,7 @@ export const pages = {
                 slug: "task-manager",
                 title: "Task Manager",
                 category: "Applications",
+                client: "Acme Comp",
                 img: { src: "/images/project-8.jpg", alt: "task manager" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [
@@ -321,6 +329,7 @@ export const pages = {
                 slug: "arrival",
                 title: "Arrival",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-9.png", alt: "arrival" },
                 short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
                 long: [

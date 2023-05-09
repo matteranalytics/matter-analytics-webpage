@@ -58,7 +58,9 @@
                         </figure>
 
                         <h3 class="project-title">{project.title}</h3>
-                        <p class="project-category">{project.category}</p>
+                        <div class="project-meta">
+                            <p class="project-category">{project.category}</p>
+                        </div>
                     </a>
                 </li>
             {/each}
