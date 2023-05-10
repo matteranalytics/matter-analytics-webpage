@@ -8,7 +8,7 @@
     import Navbar from "$lib/Navbar.svelte";
 
     export let data;
-    const { sidebar, localeDateString, pages } = data;
+    const { sidebar, pages } = data;
     const routes = Object.values(pages).map(({ route }) => route);
 </script>
 
@@ -18,7 +18,7 @@
 </svelte:head>
 
 <main>
-    <Sidebar {sidebar} {localeDateString} />
+    <Sidebar {sidebar} />
 
     <div class="main-content">
         <Navbar {routes} />

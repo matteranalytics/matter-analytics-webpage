@@ -5,9 +5,6 @@
     /** @type { import("../custom/vcard.d").Sidebar } */
     export let sidebar;
 
-    /** @type { import("../custom/vcard.d").LocaleDateString } */
-    export let localeDateString;
-
     const accordionMachine = fsm("off", {
         off: { toggle: "on" },
         on: { toggle: "off" },
@@ -46,10 +43,6 @@
 
                         {#if contact.hasOwnProperty("link") && contact.link}
                             <a href={contact.link} class="contact-link">{contact.text}</a>
-                        {:else if contact.hasOwnProperty("date") && contact.date}
-                            <time datetime={contact.date}>
-                                {new Date(contact.date ?? "").toLocaleDateString(localeDateString.locales, localeDateString.options)}
-                            </time>
                         {:else if contact.hasOwnProperty("address") && contact.address}
                             <address>{contact.address}</address>
                         {/if}

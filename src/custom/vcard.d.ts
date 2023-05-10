@@ -24,7 +24,6 @@ export type ContactItem = {
     icon: IconifyIcon;
     link?: string;
     text?: string;
-    date?: string;
     address?: string;
 };
 

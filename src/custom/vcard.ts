@@ -41,11 +41,6 @@ export const sidebar = {
             text: "+1 (213) 352-2795",
         },
         {
-            title: "Birthday",
-            icon: Icons.calendar,
-            date: "1982-06-23",
-        },
-        {
             title: "Location",
             icon: Icons.location,
             address: "Sacramento, California, USA",
