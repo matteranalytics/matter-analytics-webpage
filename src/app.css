@@ -31,6 +31,7 @@
    */
 
   /* font-size */
+  --fs-0: 28px;
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -1388,6 +1389,7 @@ textarea.form-input::-webkit-resizer {
      * typography
      */
 
+    --fs-0: 36px;
     --fs-1: 32px;
     --fs-2: 24px;
     --fs-3: 26px;

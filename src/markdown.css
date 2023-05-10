@@ -1,3 +1,4 @@
+.project-markdown h1,
 .project-markdown h2,
 .project-markdown h3,
 .project-markdown h4,
@@ -5,6 +6,10 @@
   color: var(--white-2);
   text-transform: capitalize;
   margin: 40px 0 20px 0;
+}
+
+.project-markdown h1 {
+  font-size: var(--fs-0);
 }
 
 .project-markdown h2 {

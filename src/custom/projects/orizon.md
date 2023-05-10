@@ -7,6 +7,8 @@ The second image retains its original size on larger screens and responsively sh
 
 ## Heading
 
+# h1 Heading
+
 ## h2 Heading
 
 ### h3 Heading
