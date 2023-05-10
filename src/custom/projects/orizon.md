@@ -184,7 +184,7 @@ This is an experimental customization, where the rendering is based on the follo
 
 ```md
       |
----   |
+---   | ---
 image | text
 ```
 
