@@ -24,6 +24,12 @@
   font-weight: var(--fw-500);
 }
 
+.project-markdown hr {
+  height: 1px;
+  background-color: var(--jet);
+  border: none;
+}
+
 .project-markdown a {
   color: var(--text-solid-brand-1);
   display: inline-block;
