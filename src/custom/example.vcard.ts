@@ -16,7 +16,7 @@ export const localeDateString = {
  * @param { import("./vcard.d.ts").Sidebar } sidebar
  */
 export const sidebar = {
-    name: "Richard hanrick",
+    name: "Richard Hanrick",
     title: "Web developer",
     info_more_btn: {
         text: "Show Contacts",
@@ -24,7 +24,7 @@ export const sidebar = {
     },
     img: {
         src: "/images/my-avatar.png",
-        alt: "Richard hanrick",
+        alt: "Richard Hanrick",
     },
 
     contacts: [
@@ -235,98 +235,64 @@ export const pages = {
                 slug: "finance",
                 title: "Finance",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-1.jpg", alt: "finance" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus.",
-                    "Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
             {
                 slug: "orizon",
                 title: "Orizon",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-2.png", alt: "orizon" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus. Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
             {
                 slug: "fundo",
                 title: "Fundo",
                 category: "Web design",
+                client: "Acme Comp",
                 img: { src: "/images/project-3.jpg", alt: "fundo" },
-                short: "",
-                long: [],
             },
             {
                 slug: "brawlhalla",
                 title: "Brawlhalla",
                 category: "Applications",
+                client: "Acme Comp",
                 img: { src: "/images/project-4.png", alt: "brawlhalla" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus. Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
             {
                 slug: "dsm",
                 title: "DSM.",
                 category: "Web design",
+                client: "Acme Comp",
                 img: { src: "/images/project-5.png", alt: "dsm" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus. Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
             {
                 slug: "metaspark",
                 title: "MetaSpark",
                 category: "Web design",
+                client: "Acme Comp",
                 img: { src: "/images/project-6.png", alt: "metaspark" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus. Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
             {
                 slug: "summary",
                 title: "Summary",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-7.png", alt: "summary" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus. Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
             {
                 slug: "task-manager",
                 title: "Task Manager",
                 category: "Applications",
+                client: "Acme Comp",
                 img: { src: "/images/project-8.jpg", alt: "task manager" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus. Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
             {
                 slug: "arrival",
                 title: "Arrival",
                 category: "Web development",
+                client: "Acme Comp",
                 img: { src: "/images/project-9.png", alt: "arrival" },
-                short: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et.",
-                long: [
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo aliquam ante, non gravida nunc elementum et. Nam pulvinar commodo velit at molestie. Vestibulum mattis, nulla eu tempor congue, ligula orci ultrices metus, semper finibus libero erat quis ipsum. Fusce sem metus, vulputate ac libero non, vestibulum auctor sem. Morbi gravida leo eu tempus interdum. Duis feugiat sem luctus nisl interdum, sit amet posuere lorem aliquet. Sed ligula libero, dapibus a auctor ut, tristique a ligula.",
-                    "Ut vitae libero ex. Fusce non leo quam. Vivamus ac odio ex. Morbi urna metus, interdum non dolor eu, efficitur eleifend magna. Donec elementum finibus felis at molestie. Donec sit amet enim vel ipsum vestibulum faucibus. Aenean eros dui, faucibus id massa eu, faucibus scelerisque sem.",
-                ],
             },
         ],
     },

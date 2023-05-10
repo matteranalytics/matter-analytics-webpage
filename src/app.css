@@ -101,8 +101,7 @@ img,
 svg,
 a,
 button,
-time,
-span {
+time {
   display: block;
 }
 
@@ -581,6 +580,7 @@ main {
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+  cursor: pointer;
 }
 
 .testimonials-item {
@@ -760,6 +760,7 @@ main {
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px;
+  cursor: pointer;
 }
 
 .clients-item {
@@ -1099,7 +1100,7 @@ main {
 }
 
 .project .project-img {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .project-text {

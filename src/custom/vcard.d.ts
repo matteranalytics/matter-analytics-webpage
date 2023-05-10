@@ -121,8 +121,6 @@ export type Project = {
     category: string;
     client: string;
     img: Image;
-    short: string;
-    long: string[];
 };
 
 export type Projects = Project[];

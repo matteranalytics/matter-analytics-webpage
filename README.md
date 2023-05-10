@@ -26,7 +26,7 @@ npm install
 
 Upon executing this step, a `node_modules` folder is generated within your project's root directory, housing all installed packages and their dependencies. Node.js subsequently locates and loads these packages as needed by your application.
 
-In case of installation issues or dependency reinstallation, simply delete the `node_modules` folder and reinstall the desired dependencies.
+In case of installation issues or dependency reinstallation, simply delete the `node_modules` folder and install the dependencies again.
 
 ## Developing
 
@@ -104,7 +104,7 @@ Three key areas for customization include:
     }
     ```
 
-5. Uninstall the previous font source:
+5. Uninstall the previous font family:
 
     ```bash
     npm uninstall @fontsource/inter
@@ -112,7 +112,7 @@ Three key areas for customization include:
 
     Once again, you will see the changes reflected in the `package.json` file.
 
-6. Finally restart the development server to view the updated font family on your website.
+6. Finally restart the development server to view the updated font on your website.
 
 ### Icons
 

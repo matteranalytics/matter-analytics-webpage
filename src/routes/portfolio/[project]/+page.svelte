@@ -1,6 +1,6 @@
 <script>
     export let data;
-    const { project } = data;
+    const { project, ProjectMarkdown } = data;
 </script>
 
 <article class="project">
@@ -14,15 +14,13 @@
         <p class="project-client">{project.client}</p>
     </div>
 
-    <p class="project-text">{project.short}</p>
+    {#if !ProjectMarkdown}
+        <figure class="project-img">
+            <img src={project.img.src} alt={project.img.alt} loading="lazy" />
+        </figure>
+    {/if}
 
-    <figure class="project-img">
-        <img src={project.img.src} alt={project.img.alt} loading="lazy" />
-    </figure>
-
-    <section class="project-text">
-        {#each project.long as paragraph}
-            <p>{paragraph}</p>
-        {/each}
+    <section class="project-markdown">
+        <svelte:component this={ProjectMarkdown} />
     </section>
 </article>
