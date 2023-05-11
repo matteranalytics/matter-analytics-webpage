@@ -48,9 +48,11 @@ export const sidebar = {
     ],
 
     socials: [
+        { link: "https://facebook.com", icon: Icons.facebook },
+        { link: "https://twitter.com/", icon: Icons.twitter },
+        { link: "https://instagram.com/", icon: Icons.instagram },
         { link: "https://github.com/", icon: Icons.github },
-        { link: "https://mastodon.social/explore", icon: Icons.mastodon },
-        { link: "https://www.youtube.com/", icon: Icons.youtube },
+        { link: "https://linkedin.com/", icon: Icons.linkedin },
     ],
 };
 
@@ -62,9 +64,12 @@ export const pages = {
         route: { id: "/", nav: "About" },
 
         seo: {
+            // Keep it very short
             title: "Richard Hanrick · Portfolio",
+            // Max. 155 characters
             description:
-                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.", // max. 155 characters
+                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
+            // The more unique they are, the better.
             keywords: "freelancer, data science, analytics",
         },
 
@@ -172,7 +177,7 @@ export const pages = {
         seo: {
             title: "Richard Hanrick · Resume",
             description:
-                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.", // max. 155 characters
+                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
             keywords: "freelancer, data science, analytics",
         },
 
@@ -237,7 +242,7 @@ export const pages = {
         seo: {
             title: "Richard Hanrick · Portfolio",
             description:
-                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.", // max. 155 characters
+                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
             keywords: "freelancer, data science, analytics",
         },
 

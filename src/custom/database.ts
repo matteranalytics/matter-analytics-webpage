@@ -48,9 +48,11 @@ export const sidebar = {
     ],
 
     socials: [
+        { link: "https://facebook.com", icon: Icons.facebook },
+        { link: "https://twitter.com/", icon: Icons.twitter },
+        { link: "https://instagram.com/", icon: Icons.instagram },
         { link: "https://github.com/", icon: Icons.github },
-        { link: "https://mastodon.social/explore", icon: Icons.mastodon },
-        { link: "https://www.youtube.com/", icon: Icons.youtube },
+        { link: "https://linkedin.com/", icon: Icons.linkedin },
     ],
 };
 
