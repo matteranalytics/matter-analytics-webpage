@@ -1,7 +1,7 @@
 <script>
     import { page } from "$app/stores";
 
-    /** @type { import("../custom/vcard.d").Route[] } */
+    /** @type { import("../custom/database.d").Route[] } */
     export let routes;
 </script>
 

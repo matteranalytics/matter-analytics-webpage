@@ -8,7 +8,7 @@
     import Icon from "@iconify/svelte";
     import closeIcon from "@iconify-icons/ion/close-outline.js";
 
-    /** @type { import("../custom/vcard.d").Testimonial } */
+    /** @type { import("../custom/database.d").Testimonial } */
     export let item;
 </script>
 

@@ -2,10 +2,14 @@
     import Icon from "@iconify/svelte";
     import bookIcon from "@iconify-icons/ion/book-outline.js";
 
+    import Head from "$lib/Head.svelte";
+
     export let data;
     const { resume } = data.pages;
-    const { education, experience, skills } = resume;
+    const { education, experience, skills, seo } = resume;
 </script>
+
+<Head {...seo} />
 
 <article class="resume">
     <header>

@@ -2,21 +2,22 @@
     import Icon from "@iconify/svelte";
     import eyeIcon from "@iconify-icons/ion/eye-outline.js";
 
+    import Head from "$lib/Head.svelte";
     import Filter from "$lib/Filter.svelte";
 
     export let data;
     const { portfolio } = data.pages;
-    const { allCategory, projects, select_category_option } = portfolio;
+    const { allCategory, projects, select_category_option, seo } = portfolio;
 
     /**
-     * @param { import("../../custom/vcard.d").Project[] } projects
+     * @param { import("../../custom/database.d").Project[] } projects
      * @return { string[] }
      */
     const extractCategories = (projects) => {
         return projects.reduce(
             /**
              * @param { string[] } acc
-             * @param { import("../../custom/vcard.d").Project } project
+             * @param { import("../../custom/database.d").Project } project
              */
             (acc, project) => {
                 acc.includes(project.category) ? acc : acc.push(project.category);
@@ -31,6 +32,8 @@
     let selectedCategory = allCategory;
     $: filteredProjects = selectedCategory === allCategory ? projects : projects.filter((project) => project.category === selectedCategory);
 </script>
+
+<Head {...seo} />
 
 <article class="portfolio active">
     <header>

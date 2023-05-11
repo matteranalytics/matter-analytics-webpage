@@ -1,7 +1,7 @@
 import Icons from "./icons";
 
 /**
- * @param { import("./vcard.d.ts").LocaleDateString } localeDateString
+ * @param { import("./database.d.ts").LocaleDateString } localeDateString
  */
 export const localeDateString = {
     locales: "en-US",
@@ -13,11 +13,11 @@ export const localeDateString = {
 };
 
 /**
- * @param { import("./vcard.d.ts").Sidebar } sidebar
+ * @param { import("./database.d.ts").Sidebar } sidebar
  */
 export const sidebar = {
     name: "Richard Hanrick",
-    title: "Web developer",
+    profession: "Data Scientist",
     info_more_btn: {
         text: "Show Contacts",
         icon: Icons.chevronDown,
@@ -55,11 +55,18 @@ export const sidebar = {
 };
 
 /**
- * @param { import("./vcard.d.ts").Pages } pages
+ * @param { import("./database.d.ts").Pages } pages
  */
 export const pages = {
     about: {
         route: { id: "/", nav: "About" },
+
+        seo: {
+            title: "Richard Hanrick · Portfolio",
+            description:
+                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.", // max. 155 characters
+            keywords: "freelancer, data science, analytics",
+        },
 
         title: "About me",
 
@@ -73,18 +80,18 @@ export const pages = {
             items: [
                 {
                     img: { src: "/images/branding-design.svg", alt: "design icon" },
-                    title: "Web design",
-                    text: "The most modern and high-quality design made at a professional level.",
+                    title: "Machine Learning",
+                    text: "I create top-notch ML models to tackle various challenges",
                 },
                 {
                     img: { src: "/images/branding-dev.svg", alt: "Web development icon" },
-                    title: "Web development",
-                    text: "High-quality development of sites at the professional level.",
+                    title: "Statistics",
+                    text: "Analyzing and interpreting data using essential statistical concepts.",
                 },
                 {
                     img: { src: "/images/branding-app.svg", alt: "mobile app icon" },
-                    title: "Mobile apps",
-                    text: "Professional development of applications for iOS and Android.",
+                    title: "Prompt Engineering",
+                    text: "Creating quality prompts for improved AI language model performance.",
                 },
                 {
                     img: { src: "/images/branding-photo.svg", alt: "camera icon" },
@@ -162,24 +169,31 @@ export const pages = {
     resume: {
         route: { id: "/resume", nav: "Resume" },
 
+        seo: {
+            title: "Richard Hanrick · Resume",
+            description:
+                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.", // max. 155 characters
+            keywords: "freelancer, data science, analytics",
+        },
+
         title: "Resume",
 
         education: {
             title: "Education",
             items: [
                 {
-                    title: "University school of the arts",
-                    year: "2007 — 2008",
+                    title: "Microsoft Certified Solutions Expert",
+                    year: "2021",
                     text: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
                 },
                 {
-                    title: "New york academy of art",
-                    year: "2006 — 2007",
+                    title: "MSc in Data Science, UCLA",
+                    year: "2015 — 2018",
                     text: "Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis.",
                 },
                 {
-                    title: "High school of art and design",
-                    year: "2002 — 2004",
+                    title: "BSc in Statistics, UCLA",
+                    year: "2012 — 2015",
                     text: "Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.",
                 },
             ],
@@ -189,18 +203,18 @@ export const pages = {
             title: "Experience",
             items: [
                 {
-                    title: "Creative director",
-                    year: "2015 — Present",
+                    title: "Data Scientist",
+                    year: "2020 — Present",
                     text: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur.",
                 },
                 {
-                    title: "Art director",
-                    year: "2013 — 2015",
+                    title: "Machine Learning Specialist",
+                    year: "2018 — 2020",
                     text: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
                 },
                 {
-                    title: "Web designer",
-                    year: "2010 — 2013",
+                    title: "Statistical Programmer",
+                    year: "2016 — 2018",
                     text: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
                 },
             ],
@@ -209,16 +223,23 @@ export const pages = {
         skills: {
             title: "My skills",
             items: [
-                { name: "Web design", percentage: 80 },
-                { name: "Graphic design", percentage: 70 },
-                { name: "Branding", percentage: 90 },
-                { name: "WordPress", percentage: 50 },
+                { name: "Machine Learning", percentage: 80 },
+                { name: "Statistical analysis", percentage: 70 },
+                { name: "Data Wrangling", percentage: 90 },
+                { name: "Cloud Computing", percentage: 50 },
             ],
         },
     },
 
     portfolio: {
         route: { id: "/portfolio", nav: "Portfolio" },
+
+        seo: {
+            title: "Richard Hanrick · Portfolio",
+            description:
+                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.", // max. 155 characters
+            keywords: "freelancer, data science, analytics",
+        },
 
         title: "Portfolio",
 
@@ -229,65 +250,74 @@ export const pages = {
             {
                 slug: "finance",
                 title: "Finance",
-                category: "Web development",
+                category: "Statistics",
                 client: "Acme Comp",
                 img: { src: "/images/project-1.jpg", alt: "finance" },
+                description: "A short (max. 155 charaters) description which can be nicely appear in SEO",
             },
             {
                 slug: "orizon",
                 title: "Orizon",
-                category: "Web development",
+                category: "Statistics",
                 client: "Acme Comp",
                 img: { src: "/images/project-2.png", alt: "orizon" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
             {
                 slug: "fundo",
                 title: "Fundo",
-                category: "Web design",
+                category: "Machine Learning",
                 client: "Acme Comp",
                 img: { src: "/images/project-3.jpg", alt: "fundo" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
             {
                 slug: "brawlhalla",
                 title: "Brawlhalla",
-                category: "Applications",
+                category: "Big Data",
                 client: "Acme Comp",
                 img: { src: "/images/project-4.png", alt: "brawlhalla" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
             {
                 slug: "dsm",
                 title: "DSM.",
-                category: "Web design",
+                category: "Machine Learning",
                 client: "Acme Comp",
                 img: { src: "/images/project-5.png", alt: "dsm" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
             {
                 slug: "metaspark",
                 title: "MetaSpark",
-                category: "Web design",
+                category: "Machine Learning",
                 client: "Acme Comp",
                 img: { src: "/images/project-6.png", alt: "metaspark" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
             {
                 slug: "summary",
                 title: "Summary",
-                category: "Web development",
+                category: "Statistics",
                 client: "Acme Comp",
                 img: { src: "/images/project-7.png", alt: "summary" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
             {
                 slug: "task-manager",
                 title: "Task Manager",
-                category: "Applications",
+                category: "Big Data",
                 client: "Acme Comp",
                 img: { src: "/images/project-8.jpg", alt: "task manager" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
             {
                 slug: "arrival",
                 title: "Arrival",
-                category: "Web development",
+                category: "Statistics",
                 client: "Acme Comp",
                 img: { src: "/images/project-9.png", alt: "arrival" },
+                description: "A short (max. 155 charaters) description for SEO",
             },
         ],
     },

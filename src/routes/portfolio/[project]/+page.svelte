@@ -1,7 +1,12 @@
 <script>
+    import Head from "$lib/Head.svelte";
+
     export let data;
-    const { project, ProjectMarkdown } = data;
+    const { pages, project, ProjectMarkdown, sidebar } = data;
+    const { portfolio } = pages;
 </script>
+
+<Head title="{sidebar.name} · {project.title}" description={project.description} keywords="{portfolio.seo.keywords}, {project.category}" />
 
 <article class="project">
     <header>

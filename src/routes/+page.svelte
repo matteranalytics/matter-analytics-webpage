@@ -1,10 +1,13 @@
 <script>
+    import Head from "$lib/Head.svelte";
     import Testimonial from "$lib/Testimonial.svelte";
 
     export let data;
     const { about } = data.pages;
-    const { clients, services, testimonials } = about;
+    const { clients, services, testimonials, seo } = about;
 </script>
+
+<Head {...seo} />
 
 <article class="about">
     <header>

@@ -1,6 +1,8 @@
+export const prerender = true;
+
 import { redirect } from "@sveltejs/kit";
 
-import { pages } from "../../../custom/vcard";
+import { pages } from "../../../custom/database";
 
 const { projects } = pages.portfolio;
 

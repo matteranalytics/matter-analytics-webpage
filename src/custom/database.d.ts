@@ -34,7 +34,7 @@ export type Social = {
 
 export type Sidebar = {
     name: string;
-    title: string;
+    profession: string;
     info_more_btn: InfoMoreButton;
     img: Image;
     contacts: ContactItem[];
@@ -114,18 +114,26 @@ export type Skills = {
     items: Skill[];
 };
 
+export type SEO = {
+    title: string;
+    description: string;
+    keywords: string;
+};
+
 export type Project = {
     slug: string;
     title: string;
     category: string;
     client: string;
     img: Image;
+    description: string;
 };
 
 export type Projects = Project[];
 
 export type About = {
     route: Route;
+    seo: SEO;
     title: string;
     paragraphs: Paragraphs;
     services: Services;
@@ -135,6 +143,7 @@ export type About = {
 
 export type Resume = {
     route: Route;
+    seo: SEO;
     title: string;
     education: Education;
     experience: Experience;
@@ -143,6 +152,7 @@ export type Resume = {
 
 export type Portfolio = {
     route: Route;
+    seo: SEO;
     title: string;
     select_category_option: string;
     allCategory: string;

@@ -8,21 +8,15 @@
     import Navbar from "$lib/Navbar.svelte";
 
     export let data;
-    const { sidebar, pages } = data;
+    const { pages, sidebar } = data;
     const routes = Object.values(pages).map(({ route }) => route);
 </script>
-
-<svelte:head>
-    <title>vCard · Personal Portfolio</title>
-    <meta property="og:title" content="vCard · Personal Portfolio" />
-</svelte:head>
 
 <main>
     <Sidebar {sidebar} />
 
     <div class="main-content">
         <Navbar {routes} />
-
         <slot />
     </div>
 </main>

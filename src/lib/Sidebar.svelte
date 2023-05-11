@@ -2,7 +2,7 @@
     import Icon from "@iconify/svelte";
     import fsm from "svelte-fsm";
 
-    /** @type { import("../custom/vcard.d").Sidebar } */
+    /** @type { import("../custom/database.d").Sidebar } */
     export let sidebar;
 
     const accordionMachine = fsm("off", {
@@ -19,7 +19,7 @@
 
         <div class="info-content">
             <h1 class="name" title={sidebar.name}>{sidebar.name}</h1>
-            <p class="title">{sidebar.title}</p>
+            <p class="profession">{sidebar.profession}</p>
         </div>
 
         <button class="info_more-btn" on:click={accordionMachine.toggle}>

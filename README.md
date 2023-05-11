@@ -45,7 +45,20 @@ When you run `npm run dev` for the first time, it creates the `.svelte-kit` fold
 
 If unexpected issues arise during development, you can delete the `.svelte-kit` folder to remove the existing cache and build artifacts. Once deleted, restart the development server, which will generate a new `.svelte-kit` folder with a fresh cache, potentially resolving any problems you encountered.
 
+## Type-checking
+
+Run this command before deploying your project, and fix any errors that arise.
+The unmodified `src/custom/template.database.ts` comes handy when comparing with the updated `src/custom/database.ts`.
+
+Perform type checking to ensure that `src/custom/database.ts` aligns with `src/custom/database.d.ts`:
+
+```bash
+npm run check
+```
+
 ## Building
+
+Run this command before deploying your project, and fix any errors that arise.
 
 To create a production version of your app:
 
@@ -67,17 +80,34 @@ npm run preview
 
 The site is accessible at [dalum.vercel.app](https://dalum.vercel.app/)
 
+### Importing a Git repo from GitHub
+
+1. Sign in to [vercel.com](https://vercel.com/)  with your GitHub account.
+2. Go to the [vercel.com/dashboard](https://vercel.com/dashboard)
+3. Click `Add New` and choose `Project`
+4. In the `Import Git repository` section, you'll see your imported Git repositories. To import a new one, click `Adjust GitHub App Permissions →` next to `Missing Git repository?` question.
+5. In the popup, click `Configure` next to your GitHub username
+6. _Optional_ If you enabled 2FA on GitHub, you'll need to confirm it for the Vercel GitHub Apps
+7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select your portfolio source code repository, and click `Save`. This allows Vercel to access your repository and create a static site from it.
+8. The popup will be closed automatically, and you'll see the authorized repository in the Vercel Dashboard. Click `Import` next to it.
+9. Leave the settings as they are and click the wide `Deploy` button.
+10. If you see "Congratulations," your site is live!
+11. Click `Continue with Dashboard` to set the domain for the site.
+12. Click `Settings` at the top, then `Domains` on the left panel.
+13. Add your domain name if you have one, or edit the name provided by Vercel.
+14. Visit your site on the domain 🎉
+
 ## Customization
 
 Three key areas for customization include:
 
 - `package.json` The core of every Node.js application.
 - `static/` A directory containing static assets, such as images and `favicon.ico`.
-- `src/custom` A directory for content and style customizations, including:
+- `src/custom/` A directory for content and style customizations, including:
   - colors
   - fonts
   - icons
-  - personal structured content
+  - database (well,... :smiley:)
 
 ### Colors
 
@@ -116,4 +146,41 @@ Three key areas for customization include:
 
 ### Icons
 
-### Personal content
+### Database
+
+There are three files related to the well-structured content of your site:
+
+- `src/custom/template.database.ts`: This file is a guide for showing data on your website. Don't delete or change it. Keep it for future reference.
+- `src/custom/database.ts`: Initially, this file is a copy of the template. You can change this file with your own information, and it will show on your website.
+- `src/custom/database.d.ts`: This file explains the structure and types of data used in your `database.ts` ( and `template.database.ts`) file. It makes sure the data in `database.ts` is correct and adheres to the expected format, which helps prevent errors.
+
+#### Search Engine Optimization
+
+Each page (`page.about`, `page.resume`, `page.portfolio`) has an `seo` section that will be rendered in the `<head>` of your site.
+Each project (`page.portfolio.projects[]`) has a dynamically generated piece of SEO related `<head>` based on the following rules:
+
+| Meta              | Content                                                            |
+| ----------------- | ------------------------------------------------------------------ |
+| `seo.title`       | `sidebar.name · page.portfolio.projects[].title`                   |
+| `seo.description` | `page.portfolio.projects[].description`                            |
+| `seo.keywords`    | `page.portfolio.seo.keywords, page.portfolio.projects[].category}` |
+
+Example `<head>` for the Resume page:
+
+```html
+<head>
+  <title>Richard Hanrick · Resume</title>
+  <meta name="description" content="Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.">
+  <meta name="keywords" content="freelancer, data science, analytics">
+</head>
+```
+
+Example `<head>` for a Project page:
+
+```html
+<head>
+  <title>Richard Hanrick · Finance</title>
+  <meta name="description" content="A short (max. 155 charaters) description which can be nicely appear in SEO">
+  <meta name="keywords" content="freelancer, data science, analytics, Statistics">
+</head>
+```
