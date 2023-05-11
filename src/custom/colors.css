@@ -5,9 +5,9 @@
   --text-solid-brand-2: #316dca;
 
   /* Background colors */
-  --bg-brand-1: #2e70ee20; /* Show Contacts button visible on narrow screens */
-  --bg-brand-2: #2b2b2cbf;
-  --bg-jet: #2d2d2e40;
-  --eerie-black-2: #1e1e1f;
+  --bg-brand-1: hsla(219, 85%, 56%, 0.125); /* Show Contacts button visible on narrow screens */
+  --bg-brand-2: hsla(240, 1%, 17%, 0.749);
+  --bg-jet: hsla(240, 1%, 20%, 0.251);
+  --eerie-black-1: #1e1e1f;
   --smoky-black: #121212;
 }

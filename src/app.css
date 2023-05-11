@@ -20,7 +20,7 @@
   /* solid */
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
+  --eerie-black-2: hsl(240, 2%, 15%);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --light-gray: hsl(0, 0%, 84%);
@@ -145,7 +145,7 @@ body {
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
+  background: var(--eerie-black-1);
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
@@ -179,7 +179,7 @@ article {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--eerie-black-1);
+  background: var(--eerie-black-2);
   border-radius: inherit;
   z-index: -1;
 }
@@ -664,7 +664,7 @@ main {
 }
 
 .testimonials-modal {
-  background: var(--eerie-black-2);
+  background: var(--eerie-black-1);
   position: relative;
   padding: 15px;
   margin: 15px 12px;
@@ -909,7 +909,7 @@ main {
 }
 
 .filter-select {
-  background: var(--eerie-black-2);
+  background: var(--eerie-black-1);
   color: var(--light-gray);
   display: flex;
   justify-content: space-between;
@@ -927,7 +927,7 @@ main {
 }
 
 .select-list {
-  background: var(--eerie-black-2);
+  background: var(--eerie-black-1);
   position: absolute;
   top: calc(100% + 6px);
   width: 100%;
@@ -948,7 +948,7 @@ main {
 }
 
 .select-item button {
-  background: var(--eerie-black-2);
+  background: var(--eerie-black-1);
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -959,7 +959,7 @@ main {
 }
 
 .select-item button:hover {
-  --eerie-black-2: hsl(240, 2%, 20%);
+  --eerie-black-1: hsl(240, 2%, 20%);
 }
 
 .project-list {
