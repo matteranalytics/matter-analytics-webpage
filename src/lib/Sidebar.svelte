@@ -41,9 +41,9 @@
                     <div class="contact-info">
                         <p class="contact-title">{contact.title}</p>
 
-                        {#if contact.hasOwnProperty("link") && contact.link}
+                        {#if Object.prototype.hasOwnProperty.call(contact, "link") && contact.link}
                             <a href={contact.link} class="contact-link">{contact.text}</a>
-                        {:else if contact.hasOwnProperty("address") && contact.address}
+                        {:else if Object.prototype.hasOwnProperty.call(contact, "address") && contact.address}
                             <address>{contact.address}</address>
                         {/if}
                     </div>

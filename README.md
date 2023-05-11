@@ -14,6 +14,10 @@ Before you begin, ensure you have met the following requirements:
   - SimonSiefke.svg-preview
   - svelte.svelte-vscode
 
+## Cloning
+
+Clone this repository.
+
 ## Installing
 
 This project uses Node.js's built-in package manager [npm](https://www.npmjs.com/). There are other package managers, we will warn you when you may encounter one of them.
@@ -45,11 +49,7 @@ When you run `npm run dev` for the first time, it creates the `.svelte-kit` fold
 
 If unexpected issues arise during development, you can delete the `.svelte-kit` folder to remove the existing cache and build artifacts. Once deleted, restart the development server, which will generate a new `.svelte-kit` folder with a fresh cache, potentially resolving any problems you encountered.
 
-## Type-checking
-
-⚠️ Run this command before every deploy, and fix any errors that arise.
-
-The unmodified `src/custom/template.database.ts` comes handy when comparing with the updated `src/custom/database.ts`.
+## Type-checking, linting
 
 Perform type checking to ensure that `src/custom/database.ts` aligns with `src/custom/database.d.ts`:
 
@@ -57,9 +57,15 @@ Perform type checking to ensure that `src/custom/database.ts` aligns with `src/c
 npm run check
 ```
 
-## Building
+Check the code for syntax and style issues:
 
-⚠️ Run this command before every deploy, and fix any errors that arise.
+```bash
+npm run lint
+```
+
+The original `src/custom/template.database.ts` is useful for comparing with the modified `src/custom/database.ts` to resolve errors.
+
+## Building
 
 To create a production version of your app:
 
@@ -78,9 +84,27 @@ npm run preview
 
 ## Deploying
 
-The site is accessible at [dalum.vercel.app](https://dalum.vercel.app/)
+If you accidentally push a commit with an error, don't worry. As long as there is a previous successful:heavy_check_mark: deployment on Vercel, it will be retained, and your site will remain unchanged. You will have time to fix the issues.
+
+### Local Validation
+
+Validate your changes with these three scripts locally:
+
+```bash
+npm run check
+npm run lint
+npm run build
+```
+
+Only `build` may have one known warning; otherwise, strive for error-free outcomes.
+
+### Continuous Integration (CI)
+
+This repository includes a GitHub Workflow in `.github/workflows/ci.yml`, which runs the same three validations on GitHub. You can view the results in the `Actions` tab of the repository.
 
 ### Importing a Git repo from GitHub
+
+Complete this one-time task after a successful:heavy_check_mark: deployment:
 
 1. Sign in to [vercel.com](https://vercel.com/)  with your GitHub account.
 2. Go to the [vercel.com/dashboard](https://vercel.com/dashboard)
@@ -96,6 +120,8 @@ The site is accessible at [dalum.vercel.app](https://dalum.vercel.app/)
 12. Click `Settings` at the top, then `Domains` on the left panel.
 13. Add your domain name if you have one, or edit the name provided by Vercel.
 14. Visit your site on the domain 🎉
+
+The deployed site from this repository can be viewed at [dalum.vercel.app](https://dalum.vercel.app/).
 
 ## Customization
 
@@ -159,7 +185,7 @@ There are three files related to the well-structured content of your site:
 - `src/custom/database.ts`: Initially, this file is a copy of the template. You can change this file with your own information, and it will show on your website.
 - `src/custom/database.d.ts`: This file explains the structure and types of data used in your `database.ts` ( and `template.database.ts`) file. It makes sure the data in `database.ts` is correct and adheres to the expected format, which helps prevent errors.
 
-#### Search Engine Optimization
+#### Search Engine Optimization (SEO)
 
 ##### For Pages
 
