@@ -156,14 +156,9 @@ There are three files related to the well-structured content of your site:
 
 #### Search Engine Optimization
 
-Each page (`page.about`, `page.resume`, `page.portfolio`) has an `seo` section that will be rendered in the `<head>` of your site.
-Each project (`page.portfolio.projects[]`) has a dynamically generated piece of SEO related `<head>` based on the following rules:
+##### For Pages
 
-| Meta              | Content                                                            |
-| ----------------- | ------------------------------------------------------------------ |
-| `seo.title`       | `sidebar.name · page.portfolio.projects[].title`                   |
-| `seo.description` | `page.portfolio.projects[].description`                            |
-| `seo.keywords`    | `page.portfolio.seo.keywords, page.portfolio.projects[].category}` |
+Each page (`page.about`, `page.resume`, `page.portfolio`) has an `seo` section that will be rendered in the `<head>` of your site
 
 Example `<head>` for the Resume page:
 
@@ -174,6 +169,16 @@ Example `<head>` for the Resume page:
   <meta name="keywords" content="freelancer, data science, analytics">
 </head>
 ```
+
+##### For Projects
+
+Each project (`page.portfolio.projects[]`) has a dynamically generated piece of SEO related `<head>` based on the following rules
+
+| Meta              | Content                                                            |
+| ----------------- | ------------------------------------------------------------------ |
+| `seo.title`       | `sidebar.name · page.portfolio.projects[].title`                   |
+| `seo.description` | `page.portfolio.projects[].description`                            |
+| `seo.keywords`    | `page.portfolio.seo.keywords, page.portfolio.projects[].category}` |
 
 Example `<head>` for a Project page:
 
