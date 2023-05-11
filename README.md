@@ -47,7 +47,8 @@ If unexpected issues arise during development, you can delete the `.svelte-kit` 
 
 ## Type-checking
 
-Run this command before deploying your project, and fix any errors that arise.
+⚠️ Run this command before every deploy, and fix any errors that arise.
+
 The unmodified `src/custom/template.database.ts` comes handy when comparing with the updated `src/custom/database.ts`.
 
 Perform type checking to ensure that `src/custom/database.ts` aligns with `src/custom/database.d.ts`:
@@ -58,7 +59,7 @@ npm run check
 
 ## Building
 
-Run this command before deploying your project, and fix any errors that arise.
+⚠️ Run this command before every deploy, and fix any errors that arise.
 
 To create a production version of your app:
 
@@ -66,11 +67,10 @@ To create a production version of your app:
 npm run build
 ```
 
-A known warning related to older SvelteKit versions concerns the [adapter-auto package](https://vercel.com/docs/beginner-sveltekit/adapters#adapter-types). The warning reads: "Unable to detect a supported production environment. Visit <https://kit.svelte.dev/docs/adapters> to learn how to configure your app for your chosen platform."
+A known warning can be left unresolved before deployment. It is linked to older SvelteKit versions and involves the [adapter-auto package](https://vercel.com/docs/beginner-sveltekit/adapters#adapter-types):
+> Unable to detect a supported production environment. Visit <https://kit.svelte.dev/docs/adapters> to learn how to configure your app for your chosen platform.
 
-⚠️ Any other warning or error need to be addressed first before deploying.
-
-To preview the production build:
+To preview the production build in the browser:
 
 ```bash
 npm run preview
@@ -111,11 +111,16 @@ Three key areas for customization include:
 
 ### Colors
 
+The customizable colors can be found in `src/custom/colors.css`.
+
+Start the development server, and modify the colors in VSCode. You will see the changes right away in the browser.
+
 ### Fonts
 
 1. Terminate the development server if it is running.
 
 2. Choose a font family from [fontsource](https://fontsource.org/), such as [Open Sans](https://fontsource.org/fonts/open-sans).
+
 3. Execute the installation script at the root of the repository (note that the official instructions use the `yarn` package manager, which is not advised here):
 
     ```bash

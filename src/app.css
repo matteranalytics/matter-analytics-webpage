@@ -263,7 +263,7 @@ article.active {
 
 .content-card {
   position: relative;
-  background: var(--border-gradient-onyx);
+  background: var(--bg-jet);
   padding: 15px;
   padding-top: 45px;
   border-radius: 14px;
@@ -276,7 +276,6 @@ article.active {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
 }
@@ -344,7 +343,7 @@ main {
   border-radius: 0 15px;
   font-size: 13px;
   color: var(--text-solid-brand-1);
-  background: var(--border-gradient-onyx);
+  background: var(--bg-brand-1);
   padding: 10px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
@@ -356,19 +355,19 @@ main {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  background: var(--bg-gradient-jet);
+  background: var(--bg-jet);
   transition: var(--transition-1);
   z-index: -1;
 }
 
 .info_more-btn:hover,
 .info_more-btn:focus {
-  background: var(--bg-gradient-brand-1);
+  background: var(--bg-brand-1);
 }
 
 .info_more-btn:hover::before,
 .info_more-btn:focus::before {
-  background: var(--bg-gradient-brand-2);
+  background: var(--bg-brand-1);
 }
 
 .info_more-btn span {
@@ -447,7 +446,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: var(--bg-brand-2);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -518,7 +517,7 @@ main {
 
 .service-item {
   position: relative;
-  background: var(--border-gradient-onyx);
+  background: var(--bg-jet);
   padding: 20px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
@@ -529,7 +528,6 @@ main {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
 }
