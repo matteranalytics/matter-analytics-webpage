@@ -33,7 +33,7 @@
     />
 
     <section class="testimonials-modal">
-        <button class="modal-close-btn" on:click={() => activeTestimonial.set("")}>
+        <button class="modal-close-btn" on:click={() => activeTestimonial.set("")} aria-label="Close">
             <Icon icon={closeIcon} />
         </button>
 

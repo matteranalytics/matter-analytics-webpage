@@ -22,7 +22,7 @@
             <p class="profession">{sidebar.profession}</p>
         </div>
 
-        <button class="info_more-btn" on:click={accordionMachine.toggle}>
+        <button class="info_more-btn" on:click={accordionMachine.toggle} aria-label={sidebar.info_more_btn.text}>
             <span>{sidebar.info_more_btn.text}</span>
             <Icon icon={sidebar.info_more_btn.icon} />
         </button>

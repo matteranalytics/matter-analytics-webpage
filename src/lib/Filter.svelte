@@ -36,14 +36,14 @@
 
 <ul class="filter-list">
     <li class="filter-item">
-        <button class:active={selectedCategory === all} on:click={() => selectCategory(all)}>
+        <button class:active={selectedCategory === all} on:click={() => selectCategory(all)} aria-label={all}>
             {all}
         </button>
     </li>
 
     {#each categories as category}
         <li class="filter-item">
-            <button class:active={selectedCategory === category} on:click={() => selectCategory(category)}>
+            <button class:active={selectedCategory === category} on:click={() => selectCategory(category)} aria-label={category}>
                 {category}
             </button>
         </li>
@@ -51,7 +51,12 @@
 </ul>
 
 <div class="filter-select-box">
-    <button class="filter-select" class:active={$accordionMachine === "on"} on:click={accordionMachine.toggle}>
+    <button
+        class="filter-select"
+        class:active={$accordionMachine === "on"}
+        on:click={accordionMachine.toggle}
+        aria-label={categories.includes(selectedCategory) ? selectedCategory : instruction}
+    >
         <div class="select-value">{categories.includes(selectedCategory) ? selectedCategory : instruction}</div>
         <div class="select-icon">
             <Icon icon={chevronDownIcon} />
@@ -60,7 +65,12 @@
 
     <ul class="select-list">
         <li class="select-item">
-            <button class:active={selectedCategory === all} on:click={() => selectCategory(all)} on:click={accordionMachine.toggle}>
+            <button
+                class:active={selectedCategory === all}
+                on:click={() => selectCategory(all)}
+                on:click={accordionMachine.toggle}
+                aria-label={all}
+            >
                 {all}
             </button>
         </li>
@@ -71,6 +81,7 @@
                     class:active={selectedCategory === category}
                     on:click={() => selectCategory(category)}
                     on:click={accordionMachine.toggle}
+                    aria-label={category}
                 >
                     {category}
                 </button>
