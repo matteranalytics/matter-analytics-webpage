@@ -2,22 +2,23 @@
 
 ## Table of Contents
 
-- Prerequisites
-- Setup
-- Installation
-- Development
-- Type-checking and Linting
-- Building
-- Pushing Changes
-- Automation
-  - CI
-  - CD
-- Customization
-  - Colors
-  - Fonts
-  - Icons
-  - Database
-  - Projects (Markdown)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [Workflow](#workflow)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Type-checking and Linting](#type-checking-and-linting)
+  - [Building](#building)
+  - [Pushing Changes](#pushing-changes)
+- [Automation](#automation)
+  - [Continuous Integration](#continuous-integration)
+  - [Continuous Delivery](#continuous-delivery)
+- [Customization](#customization)
+  - [Colors](#colors)
+  - [Fonts](#fonts)
+  - [Icons](#icons)
+  - [Database](#database)
+  - [Projects](#projects)
 
 ## Prerequisites
 
@@ -37,9 +38,11 @@ Before you begin, ensure you have met the following requirements:
 
 Clone this repository.
 
-## Installation
+## Workflow
 
-This project uses Node.js's built-in package manager [npm](https://www.npmjs.com/). There are other package managers, we will warn you when you may encounter one of them.
+### Installation
+
+This repo uses Node.js's built-in package manager [npm](https://www.npmjs.com/). There are other package managers, we will warn you when you may encounter one of them.
 
 The `package.json` contains the required JavaScript packages which are hosted at [npm](https://www.npmjs.com/). To install these dependencies run the following script at the root of this repository:
 
@@ -47,11 +50,11 @@ The `package.json` contains the required JavaScript packages which are hosted at
 npm install
 ```
 
-Upon executing this step, a `node_modules` folder is generated within your project's root directory, housing all installed packages and their dependencies. Node.js subsequently locates and loads these packages as needed by your application.
+Upon executing this step, a `node_modules` folder is generated within your repo's root directory, housing all installed packages and their dependencies. Node.js subsequently locates and loads these packages as needed by your application.
 
 In case of installation issues or dependency reinstallation, simply delete the `node_modules` folder and install the dependencies again.
 
-## Development
+### Development
 
 Once you've installed the dependencies, start a development server:
 
@@ -64,11 +67,13 @@ npm run dev -- --open
 
 Press `Ctrl + D` to terminate the development server.
 
-When you run `npm run dev` for the first time, it creates the `.svelte-kit` folder, which the development server uses for storing build artifacts and cache. As you continue working on your project, the development server relies on this folder for a faster development experience.
+When you run `npm run dev` for the first time, it creates the `.svelte-kit` folder, which the development server uses for storing build artifacts and cache. As you continue working on this repo, the development server relies on this folder for a faster development experience.
 
 If unexpected issues arise during development, you can delete the `.svelte-kit` folder to remove the existing cache and build artifacts. Once deleted, restart the development server, which will generate a new `.svelte-kit` folder with a fresh cache, potentially resolving any problems you encountered.
 
-## Type-checking and Linting
+You might be wondering what we mean by _Development_ in the context of this repo. We'll cover the [Customization](#customization) options in more detail later in this document.
+
+### Type-checking and Linting
 
 Perform type checking to ensure that `src/custom/database.ts` aligns with `src/custom/database.d.ts`:
 
@@ -85,7 +90,7 @@ npm run lint
 The original `src/custom/template.database.ts` file can be helpful for comparing it with the modified `src/custom/database.ts` file to troubleshoot and resolve any errors.
 However, it might not render correctly anymore if you have removed the default images from the `static/images` folder.
 
-## Building
+### Building
 
 To create a production version of your app:
 
@@ -102,7 +107,7 @@ To preview the production build in the browser:
 npm run preview
 ```
 
-## Pushing Changes
+### Pushing Changes
 
 You can now use Git commands to push your changes to GitHub.
 
@@ -112,13 +117,13 @@ If you accidentally push a commit with an error, don't worry. As long as there i
 
 Automation significantly improves software development by providing consistent validation through Continuous Integration (CI) and facilitating automated deployment via Continuous Delivery (CD).
 
-### CI
+### Continuous Integration
 
-This repository contains a GitHub Workflow located at `.github/workflows/ci.yml`, which executes installation, validation, and build processes on GitHub. The workflow runs can be viewed under the `Actions` tab of the repository on GitHub.
+This repository contains a GitHub Workflow located at `.github/workflows/ci.yml`, which executes installation, validation, and build processes on GitHub. The workflow runs can be viewed under the `Actions` tab.
 
-### CD
+### Continuous Delivery
 
-In this example, we utilize [Vercel](https://vercel.com/) as the hosting platform for our static website, enabling an automated and seamless delivery process into production. The deployments can be viewed under the `Deployments` tab of the project on Vercel.
+In this example, we utilize [Vercel](https://vercel.com/) as the hosting platform for our static website, enabling an automated and seamless delivery process into production. The deployments can be viewed under the `Deployments` tab.
 
 But first, we need to set up CD by importing our Git repo from GitHub to Vercel. Complete this one-time task once you have a successfully:heavy_check_mark: processed GitHub repository:
 
@@ -277,10 +282,12 @@ Example `<head>` for a Project page:
 In this setup, the content of the individual Project pages on your site comes from two sources:
 
 1. The `pages.portfolio.projects[]` array in the `src/custom/database.ts` file, and
-2. The Markdown files within the `src/custom/projects` folder.
+2. The Markdown files located in the `src/custom/projects` folder.
 
 For simplicity, we will refer to the array as the `projects[]` array and the folder as the `projects` folder.
 
 To establish a connection between the two, the `slug` field of each project within the `projects[]` array and the filename of each Markdown file are used. In this way, the value of `projects[n].slug` corresponds to `projects/{slug}.md`, and the content will be rendered on the page at the URL <http://mysite.com/portfolio/{slug}>.
 
-You may notice that there are only three items in the `projects` folder, while there are more items in the `projects[]` array. When rendering a Project page, the site uses the data found in the `projects[]` array. If there is an associated Markdown file, the content from that file will also be rendered on the page.
+You may notice that there are only two items in the `projects` folder, while there are more items in the `projects[]` array. When rendering a Project page, the site utilizes the data found in the `projects[]` array. If there is an associated Markdown file, the content from that file will also be rendered on the page.
+
+On the contrary, if a Markdown file exists in the `projects` folder but there is no item in the `projects[]` array with a `slug` field that matches the Markdown file's name, nothing will be rendered, and the Project will not be accessible to visitors.

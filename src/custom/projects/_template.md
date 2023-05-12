@@ -1,5 +1,5 @@
-![Main project dashboard |full](/images/_template.png)
-![Main project dashboard](/images/_template.png)
+![Appealing Markdown logo |full](/images/_template.png)
+![Appealing Markdown logo](/images/_template.png)
 
 The first image occupies the container's full width, responsively adjusting its size.
 

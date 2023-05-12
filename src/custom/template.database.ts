@@ -259,9 +259,9 @@ export const pages = {
             {
                 slug: "_template",
                 title: "Template Markdown",
-                category: "_Template",
+                category: "Template",
                 client: "Acme Comp",
-                img: { src: "/images/_template.png", alt: "_template" },
+                img: { src: "/images/_template.png", alt: "template" },
                 description: "Supported Markdown syntax showcase",
             },
 
