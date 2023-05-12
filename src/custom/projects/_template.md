@@ -1,5 +1,5 @@
-![Main project dashboard |full](/images/project-2.png)
-![Main project dashboard](/images/project-2.png)
+![Main project dashboard |full](/images/_template.png)
+![Main project dashboard](/images/_template.png)
 
 The first image occupies the container's full width, responsively adjusting its size.
 
@@ -21,11 +21,11 @@ The second image retains its original size on larger screens and responsively sh
 
 ## Emphasis
 
-Emphasis, aka italics, with *asterisks* or *underscores*.
+Emphasis, aka italics, with *one asterisk*.
 
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
+Strong emphasis, aka bold, with **two asterisks**.
 
-Combined emphasis with **asterisks and *underscores***.
+Combined emphasis with ***three asterisks***.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
@@ -35,24 +35,22 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 2. Another item
     - Unordered sub-list indented with 4 spaces
     - Unordered sub-list indented with 4 spaces
-3. Actual numbers don't matter, just that it's a number
+3. Actual numbers don't matter, just that it's a number, but the Markdwon Linter will warn you
     1. Ordered sub-list indented with 4 spaces
     2. Ordered sub-list indented with 4 spaces
 4. And another item.
 
   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use two here to also align the raw Markdown).
 
-  To have a line break without a paragraph, you will need to use two trailing spaces.
-  Note that this line is separate, but within the same paragraph. ❗Unfortunately this DOES NOT RENDERED PROPERLY!
-  (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+  To have a line break just use an empty line, and indent the new paragraph with two spaces.
 5. And another item.
 
-- Unordered list can use asterisks *
-  - Or minuses -
-  - Or pluses +
-- Unordered list can use asterisks *
-  - Or minuses -
-  - Or pluses +
+- Unordered list
+  - Item
+  - Item
+- And another one right after the previous one
+  - Item
+  - Item
 
 ## Links
 
@@ -62,15 +60,12 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
-I'm a relative reference to a repository file ❗ No, in our case it will be an error during build.
-
 [You can use numbers for reference-style link definitions][1]
 
 Or leave it empty and use the [link text itself].
 
-URLs and URLs in angle brackets will automatically get turned into links.
-<http://www.example.com> or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
+URLs in angle brackets will automatically get turned into links.
+<http://www.example.com>
 
 Some text to show that the reference links can follow later.
 
@@ -80,19 +75,24 @@ Some text to show that the reference links can follow later.
 
 ## Images
 
-Here's our logo (hover to see the title text):
+Here's the Markdown logo (hover to see the title text):
 
 Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/80px-Markdown-mark.svg.png "Logo Title Text 1")
 
 Reference-style:
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+Relative reference to the `static/` folder (without using the `static` prefix to safe space if you have a nested folder structure):
+![Template Project](/images/_template.png)
+
+[logo]: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/80px-Markdown-mark.svg.png "Logo Title Text 2"
 
 ## Codeblocks
 
 Inline `code` has `back-ticks around` it.
+
+Fenced codeblocks:
 
 ```sql
 --
@@ -131,10 +131,6 @@ No language indicated, so no syntax highlighting.
 But we want to create a codeblock, just for fun.
 ```
 
-## Footnotes
-
-Not supported.
-
 ## Tables
 
 Colons can be used to align columns.
@@ -163,10 +159,6 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
-## Inline HTML
-
-Not supported.
-
 ## Horizontal Rule
 
 ---
@@ -176,6 +168,3 @@ Not supported.
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*. ❗Again, not rendered properly.

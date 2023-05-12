@@ -82,7 +82,8 @@ Check the code for syntax and style issues:
 npm run lint
 ```
 
-The original `src/custom/template.database.ts` is useful for comparing with the modified `src/custom/database.ts` to resolve errors.
+The original `src/custom/template.database.ts` file can be helpful for comparing it with the modified `src/custom/database.ts` file to troubleshoot and resolve any errors.
+However, it might not render correctly anymore if you have removed the default images from the `static/images` folder.
 
 ## Building
 
@@ -138,7 +139,7 @@ But first, we need to set up CD by importing our Git repo from GitHub to Vercel.
 
 The deployed site from this repository can be viewed at [dalum.vercel.app](https://dalum.vercel.app/).
 
-From this point forward, every time you create a pull request (PR) or push to the `main` branch, GitHub CI processes will automatically build, test, and validate your code changes to ensure seamless integration with the existing codebase. Subsequently, Vercel CD processes will deploy the updated code automatically from the `main` branch. If the checks pass :heavy_check_mark:, your live site will be updated smoothly. However, if the checks fail :x:, the deployment will not proceed, and your live site will remain unchanged, preserving the last successful deployment.
+From this point forward, every time you create a pull request (PR) or push to the `main` branch, GitHub CI processes will automatically test, validate, and build your code changes to ensure seamless integration with the existing codebase. Subsequently, Vercel CD processes will deploy the updated code automatically from the `main` branch. If the checks pass :heavy_check_mark:, your live site will be updated smoothly. However, if the checks fail :x:, the deployment will not proceed, and your live site will remain unchanged, preserving the last successful deployment.
 
 ## Customization
 
@@ -195,6 +196,38 @@ Start the development server, and modify the colors in VSCode. You will see the 
 
 ### Icons
 
+1. Terminate the development server if it is running.
+
+2. Choose an icon set from [fontsource](https://fontsource.org/), such as [Open Sans](https://fontsource.org/fonts/open-sans).
+
+3. Execute the installation script at the root of the repository (note that the official instructions use the `yarn` package manager, which is not advised here):
+
+    ```bash
+    npm install @fontsource/open-sans
+    ```
+
+    After running this script, you will see the changes in the `package.json` file.
+
+4. Modify `src/custom/fonts.css` in two locations to resemble the following code:
+
+    ```css
+    import "@fontsource/open-sans";
+
+    :root {
+      --ff-custom: "Open Sans";
+    }
+    ```
+
+5. Uninstall the previous font family:
+
+    ```bash
+    npm uninstall @fontsource/inter
+    ```
+
+    Once again, you will see the changes reflected in the `package.json` file.
+
+6. Finally restart the development server to view the updated font on your website.
+
 ### Database
 
 There are three files related to the well-structured content of your site:
@@ -240,3 +273,14 @@ Example `<head>` for a Project page:
 ```
 
 ### Projects
+
+In this setup, the content of the individual Project pages on your site comes from two sources:
+
+1. The `pages.portfolio.projects[]` array in the `src/custom/database.ts` file, and
+2. The Markdown files within the `src/custom/projects` folder.
+
+For simplicity, we will refer to the array as the `projects[]` array and the folder as the `projects` folder.
+
+To establish a connection between the two, the `slug` field of each project within the `projects[]` array and the filename of each Markdown file are used. In this way, the value of `projects[n].slug` corresponds to `projects/{slug}.md`, and the content will be rendered on the page at the URL <http://mysite.com/portfolio/{slug}>.
+
+You may notice that there are only three items in the `projects` folder, while there are more items in the `projects[]` array. When rendering a Project page, the site uses the data found in the `projects[]` array. If there is an associated Markdown file, the content from that file will also be rendered on the page.

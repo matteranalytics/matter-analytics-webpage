@@ -252,6 +252,19 @@ export const pages = {
         allCategory: "All",
 
         projects: [
+            /** The `_template` Project page serves as a showcase for the supported Markdown syntax,
+             * demonstrating the various formatting options available.
+             */
+
+            {
+                slug: "_template",
+                title: "Template Markdown",
+                category: "_Template",
+                client: "Acme Comp",
+                img: { src: "/images/_template.png", alt: "_template" },
+                description: "Supported Markdown syntax showcase",
+            },
+
             {
                 slug: "finance",
                 title: "Finance",
