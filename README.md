@@ -1,5 +1,24 @@
 # Portfolio
 
+## Table of Contents
+
+- Prerequisites
+- Setup
+- Installation
+- Development
+- Type-checking and Linting
+- Building
+- Pushing Changes
+- Automation
+  - CI
+  - CD
+- Customization
+  - Colors
+  - Fonts
+  - Icons
+  - Database
+  - Projects (Markdown)
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -14,11 +33,11 @@ Before you begin, ensure you have met the following requirements:
   - SimonSiefke.svg-preview
   - svelte.svelte-vscode
 
-## Cloning
+## Setup
 
 Clone this repository.
 
-## Installing
+## Installation
 
 This project uses Node.js's built-in package manager [npm](https://www.npmjs.com/). There are other package managers, we will warn you when you may encounter one of them.
 
@@ -32,7 +51,7 @@ Upon executing this step, a `node_modules` folder is generated within your proje
 
 In case of installation issues or dependency reinstallation, simply delete the `node_modules` folder and install the dependencies again.
 
-## Developing
+## Development
 
 Once you've installed the dependencies, start a development server:
 
@@ -49,7 +68,7 @@ When you run `npm run dev` for the first time, it creates the `.svelte-kit` fold
 
 If unexpected issues arise during development, you can delete the `.svelte-kit` folder to remove the existing cache and build artifacts. Once deleted, restart the development server, which will generate a new `.svelte-kit` folder with a fresh cache, potentially resolving any problems you encountered.
 
-## Type-checking, linting
+## Type-checking and Linting
 
 Perform type checking to ensure that `src/custom/database.ts` aligns with `src/custom/database.d.ts`:
 
@@ -82,29 +101,25 @@ To preview the production build in the browser:
 npm run preview
 ```
 
-## Deploying
+## Pushing Changes
+
+You can now use Git commands to push your changes to GitHub.
 
 If you accidentally push a commit with an error, don't worry. As long as there is a previous successful:heavy_check_mark: deployment on Vercel, it will be retained, and your site will remain unchanged. You will have time to fix the issues.
 
-### Local Validation
+## Automation
 
-Validate your changes with these three scripts locally:
+Automation significantly improves software development by providing consistent validation through Continuous Integration (CI) and facilitating automated deployment via Continuous Delivery (CD).
 
-```bash
-npm run check
-npm run lint
-npm run build
-```
+### CI
 
-Only `build` may have one known warning; otherwise, strive for error-free outcomes.
+This repository contains a GitHub Workflow located at `.github/workflows/ci.yml`, which executes installation, validation, and build processes on GitHub. The workflow runs can be viewed under the `Actions` tab of the repository on GitHub.
 
-### Continuous Integration (CI)
+### CD
 
-This repository includes a GitHub Workflow in `.github/workflows/ci.yml`, which runs the same three validations on GitHub. You can view the results in the `Actions` tab of the repository.
+In this example, we utilize [Vercel](https://vercel.com/) as the hosting platform for our static website, enabling an automated and seamless delivery process into production. The deployments can be viewed under the `Deployments` tab of the project on Vercel.
 
-### Importing a Git repo from GitHub
-
-Complete this one-time task after a successful:heavy_check_mark: deployment:
+But first, we need to set up CD by importing our Git repo from GitHub to Vercel. Complete this one-time task once you have a successfully:heavy_check_mark: processed GitHub repository:
 
 1. Sign in to [vercel.com](https://vercel.com/)  with your GitHub account.
 2. Go to the [vercel.com/dashboard](https://vercel.com/dashboard)
@@ -123,6 +138,8 @@ Complete this one-time task after a successful:heavy_check_mark: deployment:
 
 The deployed site from this repository can be viewed at [dalum.vercel.app](https://dalum.vercel.app/).
 
+From this point forward, every time you create a pull request (PR) or push to the `main` branch, GitHub CI processes will automatically build, test, and validate your code changes to ensure seamless integration with the existing codebase. Subsequently, Vercel CD processes will deploy the updated code automatically from the `main` branch. If the checks pass :heavy_check_mark:, your live site will be updated smoothly. However, if the checks fail :x:, the deployment will not proceed, and your live site will remain unchanged, preserving the last successful deployment.
+
 ## Customization
 
 Three key areas for customization include:
@@ -133,7 +150,8 @@ Three key areas for customization include:
   - colors
   - fonts
   - icons
-  - database (well,... :smiley:)
+  - database
+  - projects
 
 ### Colors
 
@@ -181,7 +199,7 @@ Start the development server, and modify the colors in VSCode. You will see the 
 
 There are three files related to the well-structured content of your site:
 
-- `src/custom/template.database.ts`: This file is a guide for showing data on your website. Don't delete or change it. Keep it for future reference.
+- `src/custom/template.database.ts`: This file is a guide for the data of your website. Don't delete or change it. Keep it for future reference.
 - `src/custom/database.ts`: Initially, this file is a copy of the template. You can change this file with your own information, and it will show on your website.
 - `src/custom/database.d.ts`: This file explains the structure and types of data used in your `database.ts` ( and `template.database.ts`) file. It makes sure the data in `database.ts` is correct and adheres to the expected format, which helps prevent errors.
 
@@ -203,13 +221,13 @@ Example `<head>` for the Resume page:
 
 ##### For Projects
 
-Each project (`page.portfolio.projects[]`) has a dynamically generated piece of SEO related `<head>` based on the following rules
+Each project `page.portfolio.projects[]` has a dynamically generated piece of SEO related `<head>` based on the following rules
 
-| Meta              | Content                                                            |
-| ----------------- | ------------------------------------------------------------------ |
-| `seo.title`       | `sidebar.name · page.portfolio.projects[].title`                   |
-| `seo.description` | `page.portfolio.projects[].description`                            |
-| `seo.keywords`    | `page.portfolio.seo.keywords, page.portfolio.projects[].category}` |
+| Meta          | Content                                                            |
+| ------------- | ------------------------------------------------------------------ |
+| `title`       | `sidebar.name · page.portfolio.projects[].title`                   |
+| `description` | `page.portfolio.projects[].description`                            |
+| `keywords`    | `page.portfolio.seo.keywords, page.portfolio.projects[].category}` |
 
 Example `<head>` for a Project page:
 
@@ -220,3 +238,5 @@ Example `<head>` for a Project page:
   <meta name="keywords" content="freelancer, data science, analytics, Statistics">
 </head>
 ```
+
+### Projects
