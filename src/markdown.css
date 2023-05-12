@@ -160,37 +160,8 @@
   border: 1px solid var(--jet);
 }
 
-.project-markdown table th:empty {
-  border: 0;
-  padding: 0;
-}
-
-.project-markdown table tr img {
-  border: 0;
-}
-
 .project-markdown table tr td img {
   margin: 0;
-}
-
-.project-markdown table tr td:has(> img),
-.project-markdown table tr td:has(> img) + td {
-  border: 0;
-  padding: 0;
-  vertical-align: top;
-}
-
-.project-markdown table tr td:has(> img) {
-  padding-right: 10px;
-}
-
-.project-markdown table tr td:has(> img) + td {
-  padding-left: 10px;
-}
-
-.project-markdown table tr:nth-child(2n) td:has(> img),
-.project-markdown table tr:nth-child(2n) td:has(> img) + td {
-  background-color: transparent;
 }
 
 .project-markdown blockquote {

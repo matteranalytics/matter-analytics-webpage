@@ -179,21 +179,3 @@ This line is separated from the one above by two newlines, so it will be a *sepa
 
 This line is also a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*. ❗Again, not rendered properly.
-
-## Layout
-
-This is an experimental customization, where the rendering is based on the following markdown:
-
-```md
-      |
----   | ---
-image | text
-```
-
-    |
---- | ---
-![Different aspects](/images/orizon-illustration.webp) | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-
-    |
---- | ---
-![Different aspects](/images/orizon-illustration.webp) | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
