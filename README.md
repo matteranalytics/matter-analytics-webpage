@@ -4,7 +4,7 @@
 
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Workflow](#workflow)
+- [Local Workflow](#local-workflow)
   - [Installation](#installation)
   - [Development](#development)
   - [Type-checking and Linting](#type-checking-and-linting)
@@ -18,8 +18,6 @@
     - [Database](#database)
     - [Markdown](#markdown)
   - [Static Assets](#static-assets)
-    - [Favicon](#favicon)
-    - [Images](#images)
   - [Styling](#styling)
     - [Colors](#colors)
     - [Fonts](#fonts)
@@ -45,7 +43,7 @@ Before you begin, ensure you have met the following requirements:
 
 Clone this repository.
 
-## Workflow
+## Local Workflow
 
 Key steps of the profile creation which take place locally on your computer.
 
@@ -109,7 +107,7 @@ npm run build
 
 Fix any errors or warnings that arise.
 
-A known warning can be left unresolved before deployment. It is related to older SvelteKit versions and involves the [adapter-auto package](https://vercel.com/docs/beginner-sveltekit/adapters#adapter-types):
+A known warning can be left unresolved before deployment. It is related to older SvelteKit versions and involves the [adapter-auto package](https://vercel.com/docs/beginner-sveltekit/adapters#adapter-types). The warning reads:
 > Unable to detect a supported production environment. Visit <https://kit.svelte.dev/docs/adapters> to learn how to configure your app for your chosen platform.
 
 To preview the production build in the browser:
@@ -122,11 +120,11 @@ npm run preview
 
 You can now use Git commands to push your changes to GitHub.
 
-If you accidentally push a commit that fails :x:, don't worry. Simply start over the [Workflow](#workflow) and address the issues.
+If you accidentally push a commit that fails :x:, don't worry. Simply start over the [Local Workflow](#local-workflow) and address the issues.
 
 ## Automation
 
-After pushing your changes to GitHub, the automated processes take over.
+After successfully :heavy_check_mark: pushing your changes to GitHub, the automated processes take over.
 Automation significantly improves software development by providing consistent validation through Continuous Integration (CI) and facilitating automated deployment via Continuous Delivery (CD).
 
 ### Continuous Integration
@@ -135,17 +133,17 @@ This repository contains a GitHub Workflow located at `.github/workflows/ci.yml`
 
 ### Continuous Delivery
 
-In this example, we utilize [Vercel](https://vercel.com/) as the hosting platform for our static website, enabling an automated and seamless release process into production. The deployments can be viewed under the `Deployments` tab.
+In our case, we utilize [Vercel](https://vercel.com/) as the hosting platform for our static website, enabling an automated and seamless release process into production. The deployments can be viewed under the `Deployments` tab.
 
 But first, we need to set up CD by importing our Git repo from GitHub to Vercel. Complete this one-time task once you have a successfully :heavy_check_mark: processed repository on GitHub:
 
 1. Sign in to [vercel.com](https://vercel.com/) with your GitHub account.
-2. Go to the [vercel.com/dashboard](https://vercel.com/dashboard)
+2. Go to the [Dashboard](https://vercel.com/dashboard)
 3. Click `Add New` and choose `Project`
 4. In the `Import Git repository` section, you'll see your imported Git repositories. To import a new one, click `Adjust GitHub App Permissions →` next to `Missing Git repository?` question.
 5. In the popup, click `Configure` next to your GitHub username
 6. _Optional_ If you enabled 2FA on GitHub, you'll need to authorize yourself.
-7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select your profile source code repository, and click `Save`. This allows Vercel to access your repository and create a static site from it.
+7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select your profile's repository, and click `Save`. This authorizes Vercel to access your repository and create a static site from it.
 8. The popup will be closed automatically, and you'll see the authorized repository in the Vercel Dashboard. Click `Import` next to it.
 9. Leave the settings as they are and click the wide `Deploy` button.
 10. If you see "Congratulations", your site is live!
@@ -173,9 +171,9 @@ Three key areas for customization include:
 There are two files related to the well-structured content of your site:
 
 - `src/custom/template.database.ts`: This file serves as a reference for your website's data. Do not delete or modify it; keep it for future reference.
-- `src/custom/database.ts`: Initially a copy of the template, you can customize this file with your own information to display on your website.
+- `src/custom/database.ts`: Initially a copy of the template, this is the file you need to customize with your own information in order to display your personal content on the website.
 
-> The types utilized in the [Type-checking and Linting](#type-checking-and-linting) section can be found in `src/database.d.ts`. This file outlines the structure and data types for your `{template.}database.ts` files, ensuring they are accurate and conform to the expected format, thus preventing errors.
+> The types utilized in the [Type-checking and Linting](#type-checking-and-linting) section can be found in `src/database.d.ts`. This file outlines the structure and data types for the `{template.}database.ts` files, ensuring they are accurate and conform to the expected format, thus preventing errors.
 
 ##### Structure
 
@@ -232,29 +230,30 @@ The following trees provide an alternative representation of the type definition
   │   └── keywords
   │
   ├── title
+  │
   ├── paragraphs[] ❎
   │
   ├── services ❎
   │   ├── title
   │   └── items[]
-  │       ├── img
-  │       │   ├── src
-  │       │   └── alt
   │       ├── title
-  │       └── text
+  │       ├── text
+  │       └── img
+  │           ├── src
+  │           └── alt
   │
   ├── testimonials ❎
   │   ├── title
   │   └── items[]
+  │       ├── name
+  │       ├── date
+  │       ├── text
   │       ├── qoute
   │       │   ├── src
   │       │   └── alt
-  │       ├── img
-  │       │   ├── src
-  │       │   └── alt
-  │       ├── name
-  │       ├── date
-  │       └── text
+  │       └── img
+  │           ├── src
+  │           └── alt
   │
   └── clients ❎
       ├── title
@@ -311,6 +310,7 @@ The following trees provide an alternative representation of the type definition
   │   └── keywords
   │
   ├── title
+  │
   ├── select_category_option ❎
   ├── allCategory ❎
   │
@@ -319,10 +319,10 @@ The following trees provide an alternative representation of the type definition
       ├── title
       ├── category ❎
       ├── client ❎
-      ├── img
-      │   ├── src
-      │   └── alt
-      └── description
+      ├── description
+      └── img
+          ├── src
+          └── alt
 ```
 
 ##### Search Engine Optimization (SEO)
@@ -363,7 +363,7 @@ Example `<head>` for a Project page:
 
 #### Markdown
 
-In this setup, the content of the individual Project pages on your site comes from two sources:
+The content of the individual Project pages on your site comes from two sources:
 
 1. The `pages.portfolio.projects[]` array in the `src/custom/database.ts` file, and
 2. The Markdown files located in the `src/custom/projects` folder.
@@ -374,15 +374,18 @@ To establish a connection between the two, the `slug` field of each Project with
 
 You may notice that there are only two items in the `projects` folder, while there are more items in the `projects[]` array. When rendering a Project page, the site utilizes the data found in the `projects[]` array. If there is an associated Markdown file, the content from that file will also be rendered on the page.
 
-On the contrary, if a Markdown file exists in the `projects` folder but there is no item in the `projects[]` array with a `slug` field that matches the Markdown file's name, nothing will be rendered, and the Project will not be accessible to visitors.
+On the contrary, if a Markdown file exists in the `projects` folder but there is no item in the `projects[]` array with a `slug` that matches the Markdown file's name, nothing will be rendered, and the Project will not be accessible to visitors.
 
-A `_template.md` file is provided in the `projects` folder, containing the allowed syntax for Markdown files in this repository. Avoid deleting this file; instead, comment out the corresponding item in the `projects[]` array, so it will not appear on your site.
+A `_template.md` file is provided in the `projects` folder, containing the supported syntax for Markdown files in this repository. Avoid deleting this file; instead, comment out the corresponding item in the `projects[]` array, so it will not appear on your site.
 
 ### Static assets
 
-#### Favicon
+Place any static assets that should be served as-is, such as images, in the `static/` folder. You can organize this folder as you see fit, but make sure to:
 
-#### Images
+- Keep the `robots.txt` file in its current location, as it is related to SEO, and
+- Keep a `favicon.ico` in the same location as the current one.
+
+When referencing an image, for example in `database.ts` or within a Project Markdown file, omit the `static` prefix and use the next folder, starting with a `/`.
 
 ### Styling
 
@@ -468,4 +471,4 @@ Start the development server, and modify the colors in VSCode. You will see the 
   - Examine its ancestors; if one of them is optional, you might not need the entire subtree.
   - Try setting the field to an empty string `""`, empty array `[]`, or `null`, and then preview it in the browser if you see `undefined` or do not.
 - Broken images: Avoid using the `static` prefix in the `img.src` fields, but ensure the path starts with `/`.
-- Broken Markdown: Refer to the `_template.md` for the allowed syntax.
+- Broken Markdown: Refer to the `_template.md` for the supported syntax.
