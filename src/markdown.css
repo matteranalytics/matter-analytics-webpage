@@ -205,6 +205,7 @@ pre[class*="language-"] {
   padding: 1em;
   overflow: auto;
   max-width: 100%;
+  border-radius: 8px;
 }
 
 :not(pre) > code[class*="language-"],
