@@ -56,10 +56,10 @@ export const pages: Database.Pages = {
 
         seo: {
             // Keep it very short
-            title: "Richard Hanrick · Portfolio",
+            title: "Richard Hanrick · Profile",
             // Max. 155 characters
             description:
-                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
+                "Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
             // The more unique they are, the better.
             keywords: "freelancer, data science, analytics",
         },
@@ -168,7 +168,7 @@ export const pages: Database.Pages = {
         seo: {
             title: "Richard Hanrick · Resume",
             description:
-                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
+                "Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
             keywords: "freelancer, data science, analytics",
         },
 
@@ -233,7 +233,7 @@ export const pages: Database.Pages = {
         seo: {
             title: "Richard Hanrick · Portfolio",
             description:
-                "Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
+                "Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
             keywords: "freelancer, data science, analytics",
         },
 

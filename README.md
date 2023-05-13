@@ -1,4 +1,4 @@
-# Portfolio
+# Profile
 
 ## Table of Contents
 
@@ -47,7 +47,7 @@ Clone this repository.
 
 ## Workflow
 
-Key steps of the portfolio creation which take place locally on your computer.
+Key steps of the profile creation which take place locally on your computer.
 
 ### Installation
 
@@ -80,11 +80,11 @@ When you run `npm run dev` for the first time, it creates the `.svelte-kit` fold
 
 If unexpected issues arise during development, you can delete the `.svelte-kit` folder to remove the existing cache and build artifacts. Once deleted, restart the development server, which will generate a new `.svelte-kit` folder with a fresh cache, potentially resolving any problems you encountered.
 
-You might be wondering what we mean by _Development_ in the context of this repo. We'll cover the [Customization](#customization) options in more detail later in this document.
+You might be wondering what we mean by _Development_ in the context of this repo. We will cover the [Customization](#customization) options in more detail later in this document.
 
 ### Type-checking and Linting
 
-Perform type checking to ensure that `src/custom/database.ts` aligns with `src/custom/database.d.ts`, and fix any errors or warnings that arise:
+Perform type checking to ensure that `src/custom/database.ts` aligns with `src/database.d.ts`, and fix any errors or warnings that arise:
 
 ```bash
 npm run check
@@ -145,7 +145,7 @@ But first, we need to set up CD by importing our Git repo from GitHub to Vercel.
 4. In the `Import Git repository` section, you'll see your imported Git repositories. To import a new one, click `Adjust GitHub App Permissions →` next to `Missing Git repository?` question.
 5. In the popup, click `Configure` next to your GitHub username
 6. _Optional_ If you enabled 2FA on GitHub, you'll need to authorize yourself.
-7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select your portfolio source code repository, and click `Save`. This allows Vercel to access your repository and create a static site from it.
+7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select your profile source code repository, and click `Save`. This allows Vercel to access your repository and create a static site from it.
 8. The popup will be closed automatically, and you'll see the authorized repository in the Vercel Dashboard. Click `Import` next to it.
 9. Leave the settings as they are and click the wide `Deploy` button.
 10. If you see "Congratulations", your site is live!
@@ -179,16 +179,15 @@ There are two files related to the well-structured content of your site:
 
 ##### Structure
 
-The following trees provide an alternative representation of the `src/database.d.ts` file to help you better understand the structure and connections between different properties. In these trees, optional fields are marked with a ❎ symbol. You can remove these subtrees from your portfolio as needed.
+The following trees provide an alternative representation of the type definitions found in `src/database.d.ts` to help you better understand the structure and connections between different fields. In these trees, optional fields are marked with a `❎` symbol. You can remove or comment in these subtrees from the `src/custom/database.ts` as needed.
 
 ```
-- localeDateString
-  ├── locale
-  │
-  └── options
-      ├── day
-      ├── month
-      └── year
+- profile
+  ├── sidebar
+  └── pages
+      ├── about
+      ├── resume ❎
+      └── portfolio ❎
 ```
 
 ```
@@ -219,14 +218,6 @@ The following trees provide an alternative representation of the `src/database.d
   └── socials[] ❎
       ├── link
       └── icon
-```
-
-```
-- pages
-  ├── about
-  ├── resume ❎
-  └── portfolio ❎
-
 ```
 
 ```
@@ -345,7 +336,7 @@ Example `<head>` for the Resume page:
 ```html
 <head>
   <title>Richard Hanrick · Resume</title>
-  <meta name="description" content="Richard Hanrick's portfolio: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.">
+  <meta name="description" content="Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.">
   <meta name="keywords" content="freelancer, data science, analytics">
 </head>
 ```
