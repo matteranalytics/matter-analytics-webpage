@@ -16,7 +16,10 @@
     <Sidebar {sidebar} />
 
     <div class="main-content">
-        <Navbar {routes} />
+        {#if routes.length > 1}
+            <Navbar {routes} />
+        {/if}
+
         <slot />
     </div>
 </main>
