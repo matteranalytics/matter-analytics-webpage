@@ -37,8 +37,8 @@ declare global {
         type Sidebar = {
             name: string;
             profession: string;
-            info_more_btn: InfoMoreButton;
             img: Image;
+            info_more_btn: InfoMoreButton;
             contacts?: Contact[];
             socials?: Social[];
         };
@@ -56,9 +56,9 @@ declare global {
         type Paragraphs = string[];
 
         type Service = {
-            img: Image;
             title: string;
             text: string;
+            img: Image;
         };
 
         type Services = {
@@ -67,11 +67,11 @@ declare global {
         };
 
         type Testimonial = {
-            qoute: Image;
-            img: Image;
             name: string;
             date: string;
             text: string;
+            qoute: Image;
+            img: Image;
         };
 
         type Testimonials = {
@@ -132,8 +132,8 @@ declare global {
             title: string;
             category?: string;
             client?: string;
-            img: Image;
             description: string;
+            img: Image;
         };
 
         type Projects = Project[];
