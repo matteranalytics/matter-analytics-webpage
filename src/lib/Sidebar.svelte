@@ -2,8 +2,14 @@
     import Icon from "@iconify/svelte";
     import fsm from "svelte-fsm";
 
-    /** @type { import("../custom/database.d").Sidebar } */
+    /** @type { Database.Sidebar } */
     export let sidebar;
+
+    /** @type { Database.Contact[] } */
+    const contacts = sidebar.contacts ?? [];
+
+    /** @type { Database.Social[] } */
+    const socials = sidebar.socials ?? [];
 
     const accordionMachine = fsm("off", {
         off: { toggle: "on" },
@@ -29,36 +35,40 @@
     </div>
 
     <div class="sidebar-info_more">
-        <div class="separator" />
+        {#if contacts && contacts.length > 0}
+            <div class="separator" />
 
-        <ul class="contacts-list">
-            {#each sidebar.contacts as contact}
-                <li class="contact-item">
-                    <div class="icon-box">
-                        <Icon icon={contact.icon} />
-                    </div>
+            <ul class="contacts-list">
+                {#each contacts as contact}
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <Icon icon={contact.icon} />
+                        </div>
 
-                    <div class="contact-info">
-                        <p class="contact-title">{contact.title}</p>
+                        <div class="contact-info">
+                            <p class="contact-title">{contact.title}</p>
 
-                        {#if Object.prototype.hasOwnProperty.call(contact, "link") && contact.link}
-                            <a href={contact.link} class="contact-link">{contact.text}</a>
-                        {:else if Object.prototype.hasOwnProperty.call(contact, "address") && contact.address}
-                            <address>{contact.address}</address>
-                        {/if}
-                    </div>
-                </li>
-            {/each}
-        </ul>
+                            {#if Object.prototype.hasOwnProperty.call(contact, "link") && contact.link}
+                                <a href={contact.link} class="contact-link">{contact.text}</a>
+                            {:else if Object.prototype.hasOwnProperty.call(contact, "address") && contact.address}
+                                <address>{contact.address}</address>
+                            {/if}
+                        </div>
+                    </li>
+                {/each}
+            </ul>
+        {/if}
 
-        <div class="separator" />
+        {#if socials && socials.length > 0}
+            <div class="separator" />
 
-        <ul class="social-list">
-            {#each sidebar.socials as social}
-                <li class="social-item">
-                    <a href={social.link} class="social-link"><Icon icon={social.icon} /></a>
-                </li>
-            {/each}
-        </ul>
+            <ul class="social-list">
+                {#each socials as social}
+                    <li class="social-item">
+                        <a href={social.link} class="social-link"><Icon icon={social.icon} /></a>
+                    </li>
+                {/each}
+            </ul>
+        {/if}
     </div>
 </aside>

@@ -1,6 +1,11 @@
 <script>
+    /** @type { string } */
     export let title = "";
+
+    /** @type { string } */
     export let description = "";
+
+    /** @type { string } */
     export let keywords = "";
 </script>
 

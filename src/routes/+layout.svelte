@@ -8,8 +8,8 @@
     import Navbar from "$lib/Navbar.svelte";
 
     export let data;
-    const { pages, sidebar } = data;
-    const routes = Object.values(pages).map(({ route }) => route);
+    const { sidebar, pages } = data;
+    const routes = Object.values(pages).map(({ route }) => route) || [];
 </script>
 
 <main>

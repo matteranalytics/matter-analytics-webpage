@@ -1,9 +1,6 @@
 import Icons from "./icons";
 
-/**
- * @param { import("./database.d.ts").LocaleDateString } localeDateString
- */
-export const localeDateString = {
+export const localeDateString: Database.LocaleDateString = {
     locales: "en-US",
     options: {
         day: "numeric" as const,
@@ -12,10 +9,7 @@ export const localeDateString = {
     },
 };
 
-/**
- * @param { import("./database.d.ts").Sidebar } sidebar
- */
-export const sidebar = {
+export const sidebar: Database.Sidebar = {
     name: "Richard Hanrick",
     profession: "Data Scientist",
     info_more_btn: {
@@ -56,10 +50,7 @@ export const sidebar = {
     ],
 };
 
-/**
- * @param { import("./database.d.ts").Pages } pages
- */
-export const pages = {
+export const pages: Database.Pages = {
     about: {
         route: { id: "/", nav: "About" },
 
@@ -76,8 +67,8 @@ export const pages = {
         title: "About me",
 
         paragraphs: [
-            "I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.",
-            "My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.",
+            "I'm a Data Scientist and Machine Learning Engineer from Sacramento, California, working in the field of data analysis and predictive modeling. I am passionate about transforming complex data into valuable insights and actionable solutions.",
+            "My job is to analyze your data and create models that are both efficient and easy to understand, while ensuring they deliver accurate predictions. My aim is to help you make data-driven decisions and unlock the full potential of your data. I have developed data-driven solutions for numerous renowned companies across various industries.",
         ],
 
         services: {
@@ -255,7 +246,6 @@ export const pages = {
             /** The `_template` Project page serves as a showcase for the supported Markdown syntax,
              * demonstrating the various formatting options available.
              */
-
             {
                 slug: "_template",
                 title: "Template Markdown",

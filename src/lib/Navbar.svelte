@@ -1,8 +1,8 @@
 <script>
     import { page } from "$app/stores";
 
-    /** @type { import("../custom/database.d").Route[] } */
-    export let routes;
+    /** @type { Database.Route[] } */
+    export let routes = [];
 </script>
 
 <nav class="navbar">

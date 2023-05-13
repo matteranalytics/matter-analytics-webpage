@@ -35,9 +35,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 2. Another item
     - Unordered sub-list indented with 4 spaces
     - Unordered sub-list indented with 4 spaces
-3. Actual numbers don't matter, just that it's a number, but the Markdwon Linter will warn you
-    1. Ordered sub-list indented with 4 spaces
-    2. Ordered sub-list indented with 4 spaces
+1. Actual numbers don't matter, just that it's a number, but the Markdown Linter will warn you in this case. To avoid the warning be consistent:
+    1. Use either consecutive numbers, or
+    2. Use just 1. for every item at the same level
 4. And another item.
 
   You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use two here to also align the raw Markdown).
@@ -48,7 +48,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - Unordered list
   - Item
   - Item
-- And another one right after the previous one
+- And another one right after the previous one without a line break
   - Item
   - Item
 

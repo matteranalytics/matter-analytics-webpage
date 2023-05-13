@@ -1,12 +1,12 @@
 export const prerender = true;
 
-import { sidebar, pages, localeDateString } from "../custom/database";
+import { localeDateString, sidebar, pages } from "../custom/database";
 
 /** @type { import('./$types').LayoutServerLoad } */
 export function load() {
     return {
+        localeDateString,
         sidebar,
         pages,
-        localeDateString,
     };
 }

@@ -6,21 +6,37 @@
     import Filter from "$lib/Filter.svelte";
 
     export let data;
-    const { portfolio } = data.pages;
-    const { allCategory, projects, select_category_option, seo } = portfolio;
+
+    /** @type { Database.Portfolio | undefined } */
+    const portfolio = data.pages?.portfolio;
+
+    /** @type { Database.SEO | undefined } */
+    const seo = portfolio?.seo;
+
+    /** @type { Database.Project[] } */
+    const projects = portfolio?.projects ?? [];
+
+    /** @type { string } */
+    const allCategory = portfolio?.allCategory ?? "";
+
+    /** @type { string } */
+    const select_category_option = portfolio?.select_category_option ?? "";
 
     /**
-     * @param { import("../../custom/database.d").Project[] } projects
+     * @param { Database.Project[] } projects
      * @return { string[] }
      */
     const extractCategories = (projects) => {
         return projects.reduce(
             /**
              * @param { string[] } acc
-             * @param { import("../../custom/database.d").Project } project
+             * @param { Database.Project } project
              */
             (acc, project) => {
-                acc.includes(project.category) ? acc : acc.push(project.category);
+                const category = project?.category ?? "";
+                if (category.length > 0) {
+                    acc.includes(category) ? acc : acc.push(category);
+                }
                 return acc;
             },
             []
@@ -37,36 +53,42 @@
 
 <article class="portfolio active">
     <header>
-        <h2 class="h2 article-title">{portfolio.title}</h2>
+        <h2 class="h2 article-title">{portfolio?.title}</h2>
     </header>
 
     <section class="projects">
-        <Filter
-            instruction={select_category_option}
-            all={allCategory}
-            {categories}
-            {selectedCategory}
-            on:selectCategory={(event) => (selectedCategory = event.detail.category)}
-        />
+        {#if select_category_option && allCategory && categories && categories.length > 0}
+            <Filter
+                instruction={select_category_option}
+                all={allCategory}
+                {categories}
+                {selectedCategory}
+                on:selectCategory={(event) => (selectedCategory = event.detail.category)}
+            />
+        {/if}
 
-        <ul class="project-list">
-            {#each filteredProjects as project}
-                <li class="project-item active">
-                    <a href="{portfolio.route.id}/{project.slug}">
-                        <figure class="project-img">
-                            <div class="project-item-icon-box">
-                                <Icon icon={eyeIcon} />
-                            </div>
-                            <img src={project.img.src} alt={project.img.alt} loading="lazy" />
-                        </figure>
+        {#if filteredProjects.length > 0}
+            <ul class="project-list">
+                {#each filteredProjects as project}
+                    <li class="project-item active">
+                        <a href="{portfolio?.route.id}/{project.slug}">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <Icon icon={eyeIcon} />
+                                </div>
+                                <img src={project.img.src} alt={project.img.alt} loading="lazy" />
+                            </figure>
 
-                        <h3 class="project-title">{project.title}</h3>
-                        <div class="project-meta">
-                            <p class="project-category">{project.category}</p>
-                        </div>
-                    </a>
-                </li>
-            {/each}
-        </ul>
+                            <h3 class="project-title">{project.title}</h3>
+                            {#if (project?.category ?? "").length > 0}
+                                <div class="project-meta">
+                                    <p class="project-category">{project.category}</p>
+                                </div>
+                            {/if}
+                        </a>
+                    </li>
+                {/each}
+            </ul>
+        {/if}
     </section>
 </article>

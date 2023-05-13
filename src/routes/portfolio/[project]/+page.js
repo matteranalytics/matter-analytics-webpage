@@ -1,13 +1,22 @@
-export const prerender = true;
-
 import { redirect } from "@sveltejs/kit";
 
 import { pages } from "../../../custom/database";
 
-const { projects } = pages.portfolio;
+/** @type { Database.Portfolio | undefined } */
+const portfolio = pages?.portfolio;
+
+export const prerender = Object.prototype.hasOwnProperty.call(pages, "portfolio") ? true : false;
+
+/** @type { Database.Project[] } */
+const projects = portfolio?.projects ?? [];
 
 /** @type { import('./$types').PageLoad } */
 export async function load({ params }) {
+    if (!Object.prototype.hasOwnProperty.call(pages, "portfolio")) {
+        throw redirect(307, "/");
+    }
+
+    /** @type { Database.Project | undefined} */
     const project = projects.find((project) => project.slug === params.project);
 
     if (!project) {

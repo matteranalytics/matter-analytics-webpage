@@ -17,16 +17,16 @@
     }
 
     /** @type { string } */
-    export let instruction;
+    export let instruction = "";
 
     /** @type { string } */
-    export let all;
+    export let all = "";
 
     /** @type { string[] } */
     export let categories = [];
 
     /** @type { string } */
-    export let selectedCategory;
+    export let selectedCategory = "";
 
     const accordionMachine = fsm("off", {
         off: { toggle: "on" },
