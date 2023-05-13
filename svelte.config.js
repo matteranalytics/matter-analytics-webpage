@@ -6,9 +6,6 @@ import mdsvexConfig from "./mdsvex.config.js";
 const config = {
     kit: {
         adapter: adapter(),
-        alias: {
-            $custom: "src/custom",
-        },
     },
 
     extensions: [".svelte", ...mdsvexConfig.extensions],

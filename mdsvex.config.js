@@ -1,5 +1,5 @@
 const config = {
-    extensions: [".svelte.md", ".md", ".svx"],
+    extensions: [".md", ".svx"],
 
     smartypants: {
         quotes: true,
