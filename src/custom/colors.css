@@ -13,20 +13,25 @@
   --smoky-black: #121212;
 }
 
-/* Service Icon */
+/* My Image */
+/* .avatar-box img {
+  filter: grayscale(1);
+} */
+
+/* Service Images */
 /* .service-icon-box img {
   filter: grayscale(1);
 } */
 
-/* Testimonial Avatar */
-/* .testimonials-avatar-box {
+/* Testimonial Images */
+/* .testimonials-avatar-box img {
   filter: grayscale(1);
 }
-.modal-avatar-box {
+.modal-avatar-box img {
   filter: grayscale(1);
 } */
 
-/* Client Logo */
+/* Client Logos */
 .clients-item img {
   filter: grayscale(1);
 }
