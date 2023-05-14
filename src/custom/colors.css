@@ -11,3 +11,21 @@
   --eerie-black-1: #1e1e1f;
   --smoky-black: #121212;
 }
+
+/* Testimonial Avatar */
+.testimonials-avatar-box {
+  filter: grayscale(1);
+}
+
+.modal-avatar-box {
+  filter: grayscale(1);
+}
+
+/* Client Logo */
+.clients-item img {
+  filter: grayscale(1);
+}
+
+.clients-item img:hover {
+  filter: grayscale(0);
+}
