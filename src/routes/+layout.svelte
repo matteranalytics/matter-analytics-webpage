@@ -1,8 +1,8 @@
 <script>
     import "../custom/fonts.css";
-    import "../custom/colors.css";
     import "../app.css";
     import "../markdown.css";
+    import "../custom/colors.css";
 
     import Sidebar from "$lib/Sidebar.svelte";
     import Navbar from "$lib/Navbar.svelte";
