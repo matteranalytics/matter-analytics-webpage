@@ -1,5 +1,11 @@
-![Appealing Markdown logo |full](/images/_template.png)
-![Appealing Markdown logo](/images/_template.png)
+
+# Markdown Syntax
+
+**Markdown**
+**Acme Comp**
+
+![Appealing Markdown logo |full](/example_images/_markdown_syntax.png)
+![Appealing Markdown logo](/example_images/_markdown_syntax.png)
 
 The first image occupies the container's full width, responsively adjusting its size.
 
@@ -21,11 +27,11 @@ The second image retains its original size on larger screens and responsively sh
 
 ## Emphasis
 
-Emphasis, aka italics, with *one asterisk*.
+Emphasis, aka italics, with *one asterisk*, or one underscore.
 
-Strong emphasis, aka bold, with **two asterisks**.
+Strong emphasis, aka bold, with **two asterisks**, or two underscores.
 
-Combined emphasis with ***three asterisks***.
+Combined emphasis with ***three asterisks***, or three underscores.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
@@ -84,7 +90,7 @@ Reference-style:
 ![alt text][logo]
 
 Relative reference to the `static/` folder (without using the `static` prefix to safe space if you have a nested folder structure):
-![Template Project](/images/_template.png)
+![Markdown Syntax](/example_images/_markdown_syntax.png)
 
 [logo]: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/80px-Markdown-mark.svg.png "Logo Title Text 2"
 

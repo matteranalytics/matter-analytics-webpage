@@ -49,7 +49,7 @@ Key steps of the profile creation which take place locally on your computer.
 
 ### Installation
 
-This repo uses Node.js's built-in package manager command-line tool [npm](https://docs.npmjs.com/cli/v9). There are other package managers, we will warn you when you may encounter one of them.
+This repo uses Node.js's built-in package manager command-line tool [npm](https://docs.npmjs.com/cli/v9/commands). There are other package managers, we will warn you when you may encounter one of them.
 
 The `package.json` contains the required JavaScript packages which are hosted at [npm](https://www.npmjs.com/). To install these dependencies run the following script at the root of this repository:
 
@@ -78,7 +78,7 @@ When you run `npm run dev` for the first time, it creates the `.svelte-kit` fold
 
 If unexpected issues arise during development, you can delete the `.svelte-kit` folder to remove the existing cache and build artifacts. Once deleted, restart the development server, which will generate a new `.svelte-kit` folder with a fresh cache, potentially resolving any problems you encountered.
 
-You might be wondering what we mean by _Development_ in the context of this repo. We will cover the [Customization](#customization) options in more detail later in this document.
+You might be wondering what we mean by *Development* in the context of this repo. We will cover the [Customization](#customization) options in more detail later in this document.
 
 ### Type-checking and Linting
 
@@ -94,8 +94,7 @@ Check the code for syntax and style issues, and fix any errors or warnings that 
 npm run lint
 ```
 
-The original `src/custom/template.database.ts` file can be helpful for comparing it with the modified `src/custom/database.ts` file to troubleshoot and resolve any errors.
-However, the `src/custom/template.database.ts` might not render correctly anymore if you have removed the default images from the `static/images/` folder.
+The original `src/custom/example.database.ts` file can be helpful for comparing it with the modified `src/custom/database.ts` file to troubleshoot and resolve any errors.
 
 ### Building
 
@@ -124,7 +123,7 @@ If you accidentally push a commit that fails :x:, don't worry. Simply start over
 
 ## Automation
 
-After successfully :heavy_check_mark: pushing your changes to GitHub, the automated processes take over.
+After  pushing your changes to GitHub, the automated processes take over.
 Automation significantly improves software development by providing consistent validation through Continuous Integration (CI) and facilitating automated deployment via Continuous Delivery (CD).
 
 ### Continuous Integration
@@ -135,15 +134,15 @@ This repository contains a GitHub Workflow located at `.github/workflows/ci.yml`
 
 In our case, we utilize [Vercel](https://vercel.com/) as the hosting platform for our static website, enabling an automated and seamless release process into production. The deployments can be viewed under the `Deployments` tab.
 
-But first, we need to set up CD by importing our Git repo from GitHub to Vercel. Complete this one-time task once you have a successfully :heavy_check_mark: processed repository on GitHub:
+But first, we need to set up CD by importing our Git repo from GitHub to Vercel. Complete this one-time task once you have a successfully :heavy_check_mark: pushed commit on GitHub:
 
 1. Sign in to [vercel.com](https://vercel.com/) with your GitHub account.
 2. Go to the [Dashboard](https://vercel.com/dashboard)
 3. Click `Add New` and choose `Project`
 4. In the `Import Git repository` section, you'll see your imported Git repositories. To import a new one, click `Adjust GitHub App Permissions →` next to `Missing Git repository?` question.
 5. In the popup, click `Configure` next to your GitHub username
-6. _Optional_ If you enabled 2FA on GitHub, you'll need to authorize yourself.
-7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select your profile's repository, and click `Save`. This authorizes Vercel to access your repository and create a static site from it.
+6. *Optional* If you enabled 2FA on GitHub, you'll need to authorize yourself.
+7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select the repository, and click `Save`. This authorizes Vercel to access your repository and create a static site from it.
 8. The popup will be closed automatically, and you'll see the authorized repository in the Vercel Dashboard. Click `Import` next to it.
 9. Leave the settings as they are and click the wide `Deploy` button.
 10. If you see "Congratulations", your site is live!
@@ -170,14 +169,14 @@ Three key areas for customization include:
 
 There are two files related to the well-structured content of your site:
 
-- `src/custom/template.database.ts`: This file serves as a reference for your website's data. Do not delete or modify it; keep it for future reference.
-- `src/custom/database.ts`: Initially a copy of the template, this is the file you need to customize with your own information in order to display your personal content on the website.
+- `src/custom/example.database.ts`: This file serves as a reference for your website's data. Do not delete or modify it; keep it for future reference.
+- `src/custom/database.ts`: Initially a copy of the example, this is the file you need to customize with your own information in order to display your personal content on the website.
 
-> The types utilized in the [Type-checking and Linting](#type-checking-and-linting) section can be found in `src/database.d.ts`. This file outlines the structure and data types for the `{template.}database.ts` files, ensuring they are accurate and conform to the expected format, thus preventing errors.
+> The types utilized in the [Type-checking and Linting](#type-checking-and-linting) section can be found in `src/database.d.ts`. This file outlines the structure and data types for the `{example.}database.ts` files, ensuring they are accurate and conform to the expected format, thus preventing errors.
 
 ##### Structure
 
-The following trees provide an alternative representation of the type definitions found in `src/database.d.ts` to help you better understand the structure and connections between different fields. In these trees, optional fields are marked with a `❎` symbol. You can remove or comment in these subtrees from the `src/custom/database.ts` as needed.
+The following trees provide an alternative representation of the type definitions found in `src/database.d.ts` to help you better understand the structure and connections between different fields. In these trees, optional fields are marked with a `❎` symbol. You can remove or comment out these subtrees from the `src/custom/database.ts` as needed.
 
 ```
 - profile
@@ -193,13 +192,13 @@ The following trees provide an alternative representation of the type definition
   ├── name
   ├── profession
   │
-  ├── info_more_btn
-  │   ├── text
-  │   └── icon
-  │
   ├── img
   │   ├── src
   │   └── alt
+  │
+  ├── info_more_btn
+  │   ├── text
+  │   └── icon
   │
   ├── contacts[] ❎
   │   ├── title
@@ -370,15 +369,41 @@ The content of the individual Project pages on your site comes from two sources:
 
 For simplicity, we will refer to the array as the `projects[]` array and the folder as the `projects` folder.
 
+##### Connection
+
 To establish a connection between the two, the `slug` field of each Project within the `projects[]` array and the filename of each Markdown file are used. In this way, the value of `projects[].slug` corresponds to `projects/{slug}.md`, and the content will be rendered on the page at the URL <http://mysite.com/portfolio/{slug}>.
 
 You may notice that there are only two items in the `projects` folder, while there are more items in the `projects[]` array. When rendering a Project page, the site utilizes the data found in the `projects[]` array. If there is an associated Markdown file, the content from that file will also be rendered on the page.
 
 On the contrary, if a Markdown file exists in the `projects` folder but there is no item in the `projects[]` array with a `slug` that matches the Markdown file's name, nothing will be rendered, and the Project will not be accessible to visitors.
 
-A `_template.md` file is provided in the `projects` folder, containing the supported syntax for Markdown files in this repository. Avoid deleting this file; instead, comment out the corresponding item in the `projects[]` array, so it will not appear on your site.
+A `_markdown_syntax.md` file is provided in the `projects` folder, containing the supported syntax for Markdown files in this repository. Avoid deleting this file; instead, delete or comment out the corresponding item in the `projects[]` array, so it will not appear on your site.
 
-### Static assets
+##### Controlling the Markdown
+
+In the following, we will analyze the content of the `src/custom/projects/_markdown_syntax.md` file to demonstrate two special formatting options you can utilize in your Markdown files to achieve a visually more appealing outcome.
+
+- **Category and Client**
+
+  By placing the category and client information immediately after the Project `H1` heading within two **bold items**, they will be rendered distinctively from other bold texts:
+
+  ```markdown
+  # Markdown Syntax
+
+  **Markdown**
+  **Acme Comp**
+  ```
+
+- **Image width**
+
+   Image width can be adjusted by using the `|full` postfix in the image alt text. Including `|full` causes the image to expand to the full width of the container, while omitting it renders the image at its actual size:
+
+  ```markdown
+  ![Appealing Markdown logo |full](/example_images/_markdown_syntax.png)
+  ![Appealing Markdown logo](/example_images/_markdown_syntax.png)
+  ```
+
+### Static Assets
 
 Place any static assets that should be served as-is, such as images, in the `static/` folder. You can organize this folder as you see fit, but make sure to:
 
@@ -386,6 +411,8 @@ Place any static assets that should be served as-is, such as images, in the `sta
 - Keep a `favicon.ico` in the same location as the current one.
 
 When referencing an image, for example in `database.ts` or within a Project Markdown file, omit the `static` prefix and use the next folder, starting with a `/`.
+
+The `static/example_images` folder contains the images used in `src/custom/example.database.ts` (and initialy in `src/custom/database.ts`). You can keep this folder and create a new `static/images/` folder for your personal images, which can then be used in `src/custom/database.ts`.
 
 ### Styling
 
@@ -399,7 +426,7 @@ Start the development server, and modify the colors in VSCode. You will see the 
 
 1. Terminate the development server if it is running.
 
-2. Choose a font family from [fontsource](https://fontsource.org/), such as [Open Sans](https://fontsource.org/fonts/open-sans).
+2. Choose a font family from [Fontsource](https://fontsource.org/), such as [Open Sans](https://fontsource.org/fonts/open-sans).
 
 3. Execute the installation script at the root of the repository (note that the official instructions use the `yarn` package manager, which is not advised here):
 
@@ -407,7 +434,7 @@ Start the development server, and modify the colors in VSCode. You will see the 
     npm install @fontsource/open-sans
     ```
 
-    After running this script, you will see the changes in the `package.json` file.
+    After executing this script, the `dependencies` in the `package.json` file will be updated.
 
 4. Modify `src/custom/fonts.css` in two locations to resemble the following code:
 
@@ -425,7 +452,7 @@ Start the development server, and modify the colors in VSCode. You will see the 
     npm uninstall @fontsource/inter
     ```
 
-    Once again, you will see the changes reflected in the `package.json` file.
+    Once again, you will see the changes reflected in the `dependencies` of the `package.json` file.
 
 6. Finally restart the development server to view the updated font on your website.
 
@@ -433,35 +460,43 @@ Start the development server, and modify the colors in VSCode. You will see the 
 
 1. Terminate the development server if it is running.
 
-2. Choose an icon set from [fontsource](https://fontsource.org/), such as [Open Sans](https://fontsource.org/fonts/open-sans).
+2. Select an icon set from [Iconify Design](https://icon-sets.iconify.design/), such as [Material Symbols](https://icon-sets.iconify.design/material-symbols/).
 
-3. Execute the installation script at the root of the repository (note that the official instructions use the `yarn` package manager, which is not advised here):
-
-    ```bash
-    npm install @fontsource/open-sans
-    ```
-
-    After running this script, you will see the changes in the `package.json` file.
-
-4. Modify `src/custom/fonts.css` in two locations to resemble the following code:
-
-    ```css
-    import "@fontsource/open-sans";
-
-    :root {
-      --ff-custom: "Open Sans";
-    }
-    ```
-
-5. Uninstall the previous font family:
+3. The URL should resemble `icon-sets.iconify.design/material-symbols/`, with the last part, in this case `material-symbols`, identifying the icon set. Run the installation script at the root of the repository:
 
     ```bash
-    npm uninstall @fontsource/inter
+    npm install @iconify-icons/material-symbols --save-dev
     ```
 
-    Once again, you will see the changes reflected in the `package.json` file.
+    After executing this script, the `devDependencies` in the `package.json` file will be updated.
 
-6. Finally restart the development server to view the updated font on your website.
+4. Restart the development server to observe the replacement of the default IonIcon phone with a new Material Design phone in the Sidebar. Open the `src/custom/icons.js` file in VSCode.
+
+5. On the Iconify site, locate the desired icon, such as [phone-android-outline](https://icon-sets.iconify.design/material-symbols/phone-android-outline/). Near the icon, in the first input, there will be text like `material-symbols:phone-android-outline`. Copy this text.
+
+6. In the `src/custom/icons.js` file, edit the line and verify the changes in the browser:
+
+    ```javascript
+    ...
+    import phone from "@iconify-icons/ion/phone-portrait-outline.js";
+    ...
+    ```
+
+     The result should look like (replacing `:` with `/`):
+
+    ```javascript
+    ...
+    import phone from "@iconify-icons/material-symbols/phone-android-outline.js";
+    ...
+    ```
+
+7. If all icons in the `src/custom/icons.js` file have been replaced and you no longer use IonIcons, uninstall the icon set:
+
+    ```bash
+    npm uninstall @iconify-icons/ion
+    ```
+
+    Once again, you will see the changes reflected in the `devDependencies` of the `package.json` file.
 
 ## Troubleshooting
 
@@ -469,6 +504,6 @@ Start the development server, and modify the colors in VSCode. You will see the 
 - Required fields: If you see the word `undefined` somewhere on your site it indicates a missing required field in `database.ts`.
 - What can you do if a field is required but you do not need it:
   - Examine its ancestors; if one of them is optional, you might not need the entire subtree.
-  - Try setting the field to an empty string `""`, empty array `[]`, or `null`, and then preview it in the browser if you see `undefined` or do not.
+  - You can try setting the field to an empty string `""`, an empty array `[]`, or `null`, and then preview the changes in the browser to see if the value appears as `undefined` or not. However, this approach is considered a hack and may not always produce the desired results.
 - Broken images: Avoid using the `static` prefix in the `img.src` fields, but ensure the path starts with `/`.
-- Broken Markdown: Refer to the `_template.md` for the supported syntax.
+- Broken Markdown: Refer to the `_markdown_syntax.md` for the supported syntax.

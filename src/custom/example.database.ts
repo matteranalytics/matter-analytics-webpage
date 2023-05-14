@@ -13,9 +13,10 @@ export const sidebar: Database.Sidebar = {
     name: "Richard Hanrick",
     profession: "Data Scientist",
     img: {
-        src: "/images/my-avatar.png",
+        src: "/example_images/my-avatar.png",
         alt: "Richard Hanrick",
     },
+
     info_more_btn: {
         text: "Show Contacts",
         icon: Icons.chevronDown,
@@ -30,7 +31,7 @@ export const sidebar: Database.Sidebar = {
         },
         {
             title: "Phone",
-            icon: Icons.phonePortrait,
+            icon: Icons.phone,
             link: "tel:+12133522795",
             text: "+1 (213) 352-2795",
         },
@@ -77,22 +78,22 @@ export const pages: Database.Pages = {
                 {
                     title: "Machine Learning",
                     text: "I create top-notch ML models to tackle various challenges",
-                    img: { src: "/images/branding-design.svg", alt: "design icon" },
+                    img: { src: "/example_images/branding-design.svg", alt: "design icon" },
                 },
                 {
                     title: "Statistics",
                     text: "Analyzing and interpreting data using essential statistical concepts.",
-                    img: { src: "/images/branding-dev.svg", alt: "Web development icon" },
+                    img: { src: "/example_images/branding-dev.svg", alt: "Web development icon" },
                 },
                 {
                     title: "Prompt Engineering",
                     text: "Creating quality prompts for improved AI language model performance.",
-                    img: { src: "/images/branding-app.svg", alt: "mobile app icon" },
+                    img: { src: "/example_images/branding-app.svg", alt: "mobile app icon" },
                 },
                 {
                     title: "Photography",
                     text: "I make high-quality photos of any category at a professional level.",
-                    img: { src: "/images/branding-photo.svg", alt: "camera icon" },
+                    img: { src: "/example_images/branding-photo.svg", alt: "camera icon" },
                 },
             ],
         },
@@ -104,29 +105,29 @@ export const pages: Database.Pages = {
                     name: "Daniel lewis",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/images/branding-quote.svg", alt: "quote icon" },
-                    img: { src: "/images/avatar-1.png", alt: "Daniel lewis" },
+                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
+                    img: { src: "/example_images/avatar-1.png", alt: "Daniel lewis" },
                 },
                 {
                     name: "Jessica miller",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/images/branding-quote.svg", alt: "quote icon" },
-                    img: { src: "/images/avatar-2.png", alt: "Jessica miller" },
+                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
+                    img: { src: "/example_images/avatar-2.png", alt: "Jessica miller" },
                 },
                 {
                     name: "Emily evans",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/images/branding-quote.svg", alt: "quote icon" },
-                    img: { src: "/images/avatar-3.png", alt: "Emily evans" },
+                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
+                    img: { src: "/example_images/avatar-3.png", alt: "Emily evans" },
                 },
                 {
                     name: "Henry william",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/images/branding-quote.svg", alt: "quote icon" },
-                    img: { src: "/images/avatar-4.png", alt: "Henry william" },
+                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
+                    img: { src: "/example_images/avatar-4.png", alt: "Henry william" },
                 },
             ],
         },
@@ -136,27 +137,27 @@ export const pages: Database.Pages = {
             items: [
                 {
                     link: "https://svelte.dev/",
-                    img: { src: "/images/logo-1-color.png", alt: "client logo" },
+                    img: { src: "/example_images/logo-1-color.png", alt: "client logo" },
                 },
                 {
                     link: "https://kit.svelte.dev/",
-                    img: { src: "/images/logo-2-color.png", alt: "client logo" },
+                    img: { src: "/example_images/logo-2-color.png", alt: "client logo" },
                 },
                 {
                     link: "https://fonts.google.com/",
-                    img: { src: "/images/logo-3-color.png", alt: "client logo" },
+                    img: { src: "/example_images/logo-3-color.png", alt: "client logo" },
                 },
                 {
                     link: "https://icon-sets.iconify.design/",
-                    img: { src: "/images/logo-4-color.png", alt: "client logo" },
+                    img: { src: "/example_images/logo-4-color.png", alt: "client logo" },
                 },
                 {
                     link: "https://vercel.com/",
-                    img: { src: "/images/logo-5-color.png", alt: "client logo" },
+                    img: { src: "/example_images/logo-5-color.png", alt: "client logo" },
                 },
                 {
                     link: "https://github.com/",
-                    img: { src: "/images/logo-6-color.png", alt: "client logo" },
+                    img: { src: "/example_images/logo-6-color.png", alt: "client logo" },
                 },
             ],
         },
@@ -239,20 +240,21 @@ export const pages: Database.Pages = {
 
         title: "Portfolio",
 
-        select_category_option: "Select category",
+        select_category_option: "Select Category",
         allCategory: "All",
 
         projects: [
-            /** The `_template` Project page serves as a showcase for the supported Markdown syntax,
+            /** The `_markdown_syntax` Project page serves as a showcase for the supported Markdown syntax,
              * demonstrating the various formatting options available.
+             * Comment out this item, so it will not appear as your first Project on your site!
              */
             {
-                slug: "_template",
-                title: "Template Markdown",
-                category: "Template",
+                slug: "_markdown_syntax",
+                title: "Markdown Syntax",
+                category: "Markdown",
                 client: "Acme Comp",
                 description: "Supported Markdown syntax showcase",
-                img: { src: "/images/_template.png", alt: "template" },
+                img: { src: "/example_images/_markdown_syntax.png", alt: "markdown syntax" },
             },
 
             {
@@ -261,15 +263,15 @@ export const pages: Database.Pages = {
                 category: "Statistics",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description which can be nicely appear in SEO",
-                img: { src: "/images/project-1.jpg", alt: "finance" },
+                img: { src: "/example_images/project-1.jpg", alt: "finance" },
             },
             {
                 slug: "orizon",
-                title: "Orizon",
+                title: "Orizon with a longer title, maybe even a bit longer",
                 category: "Statistics",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-2.png", alt: "orizon" },
+                img: { src: "/example_images/project-2.png", alt: "orizon" },
             },
             {
                 slug: "fundo",
@@ -277,7 +279,7 @@ export const pages: Database.Pages = {
                 category: "Machine Learning",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-3.jpg", alt: "fundo" },
+                img: { src: "/example_images/project-3.jpg", alt: "fundo" },
             },
             {
                 slug: "brawlhalla",
@@ -285,7 +287,7 @@ export const pages: Database.Pages = {
                 category: "Big Data",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-4.png", alt: "brawlhalla" },
+                img: { src: "/example_images/project-4.png", alt: "brawlhalla" },
             },
             {
                 slug: "dsm",
@@ -293,7 +295,7 @@ export const pages: Database.Pages = {
                 category: "Machine Learning",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-5.png", alt: "dsm" },
+                img: { src: "/example_images/project-5.png", alt: "dsm" },
             },
             {
                 slug: "metaspark",
@@ -301,7 +303,7 @@ export const pages: Database.Pages = {
                 category: "Machine Learning",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-6.png", alt: "metaspark" },
+                img: { src: "/example_images/project-6.png", alt: "metaspark" },
             },
             {
                 slug: "summary",
@@ -309,7 +311,7 @@ export const pages: Database.Pages = {
                 category: "Statistics",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-7.png", alt: "summary" },
+                img: { src: "/example_images/project-7.png", alt: "summary" },
             },
             {
                 slug: "task-manager",
@@ -317,7 +319,7 @@ export const pages: Database.Pages = {
                 category: "Big Data",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-8.jpg", alt: "task manager" },
+                img: { src: "/example_images/project-8.jpg", alt: "task manager" },
             },
             {
                 slug: "arrival",
@@ -325,7 +327,7 @@ export const pages: Database.Pages = {
                 category: "Statistics",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/images/project-9.png", alt: "arrival" },
+                img: { src: "/example_images/project-9.png", alt: "arrival" },
             },
         ],
     },
