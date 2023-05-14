@@ -1,6 +1,7 @@
 :root {
   /* Article title, skill progress, timeline */
   --text-gradient-brand: linear-gradient(to right, #2e85f3, #2e65df);
+
   --text-solid-brand-1: #2e85f3;
   --text-solid-brand-2: #316dca;
 
@@ -13,24 +14,22 @@
 }
 
 /* Service Icon */
-.service-icon-box img {
-  /* filter: grayscale(1); */
-}
+/* .service-icon-box img {
+  filter: grayscale(1);
+} */
 
 /* Testimonial Avatar */
-.testimonials-avatar-box {
+/* .testimonials-avatar-box {
   filter: grayscale(1);
 }
-
 .modal-avatar-box {
   filter: grayscale(1);
-}
+} */
 
 /* Client Logo */
 .clients-item img {
   filter: grayscale(1);
 }
-
 .clients-item img:hover {
   filter: grayscale(0);
 }
