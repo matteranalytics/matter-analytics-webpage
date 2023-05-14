@@ -371,7 +371,7 @@ For simplicity, we will refer to the array as the `projects[]` array and the fol
 
 ##### Connection
 
-To establish a connection between the two, the `slug` field of each Project within the `projects[]` array and the filename of each Markdown file are used. In this way, the value of `projects[].slug` corresponds to `projects/{slug}.md`, and the content will be rendered on the page at the URL <http://mysite.com/portfolio/{slug}>.
+To establish a connection between the two, the `slug` field of each Project within the `projects[]` array and the filename of each Markdown file are used. In this way, the value of `projects[].slug` corresponds to `projects/{slug}.md`, and the content will be rendered on the page at the URL <https://example.com/portfolio/{slug}>.
 
 You may notice that there are only two items in the `projects` folder, while there are more items in the `projects[]` array. When rendering a Project page, the site utilizes the data found in the `projects[]` array. If there is an associated Markdown file, the content from that file will also be rendered on the page.
 
