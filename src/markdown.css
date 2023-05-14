@@ -4,7 +4,6 @@
 .project-markdown h4,
 .project-markdown h5 {
   color: var(--white-2);
-  text-transform: capitalize;
 }
 
 .project-markdown h2,
@@ -12,7 +11,6 @@
 .project-markdown h4,
 .project-markdown h5 {
   color: var(--white-2);
-  text-transform: capitalize;
   margin: 40px 0 20px 0;
 }
 
