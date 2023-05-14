@@ -12,6 +12,11 @@
   --smoky-black: #121212;
 }
 
+/* Service Icon */
+.service-icon-box img {
+  /* filter: grayscale(1); */
+}
+
 /* Testimonial Avatar */
 .testimonials-avatar-box {
   filter: grayscale(1);
