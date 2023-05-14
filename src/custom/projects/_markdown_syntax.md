@@ -27,11 +27,11 @@ The second image retains its original size on larger screens and responsively sh
 
 ## Emphasis
 
-Emphasis, aka italics, with *one asterisk*, or one underscore.
+Emphasis, aka italics, with *one asterisk*.
 
-Strong emphasis, aka bold, with **two asterisks**, or two underscores.
+Strong emphasis, aka bold, with **two asterisks**.
 
-Combined emphasis with ***three asterisks***, or three underscores.
+Combined emphasis with ***three asterisks***.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 
@@ -54,7 +54,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - Unordered list
   - Item
   - Item
-- And another one right after the previous one without a line break
+- And another one right after the previous one without an empty line
   - Item
   - Item
 
