@@ -5,7 +5,7 @@ import { pages } from "../../../custom/database";
 /** @type { Database.Portfolio | undefined } */
 const portfolio = pages?.portfolio;
 
-export const prerender = Object.prototype.hasOwnProperty.call(pages, "portfolio") ? true : false;
+export const prerender = Object.prototype.hasOwnProperty.call(pages, "portfolio");
 
 /** @type { Database.Project[] } */
 const projects = portfolio?.projects ?? [];
