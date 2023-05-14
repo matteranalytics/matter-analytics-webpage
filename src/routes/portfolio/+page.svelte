@@ -57,7 +57,7 @@
     </header>
 
     <section class="projects">
-        {#if select_category_option && allCategory && categories && categories.length > 0}
+        {#if select_category_option && allCategory && categories && categories.length > 1}
             <Filter
                 instruction={select_category_option}
                 all={allCategory}
