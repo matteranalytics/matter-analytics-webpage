@@ -12,8 +12,6 @@ import mastodon from "@iconify-icons/ion/logo-mastodon.js";
 import twitter from "@iconify-icons/ion/logo-twitter.js";
 import youtube from "@iconify-icons/ion/logo-youtube.js";
 
-import paperPlane from "@iconify-icons/ion/paper-plane-outline.js";
-
 export default {
     chevronDown,
     location,
@@ -26,5 +24,4 @@ export default {
     mastodon,
     twitter,
     youtube,
-    paperPlane,
 };
