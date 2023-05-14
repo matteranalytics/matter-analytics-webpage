@@ -94,7 +94,7 @@ Check the code for syntax and style issues, and fix any errors or warnings that 
 npm run lint
 ```
 
-The original `src/custom/example.database.ts` file can be helpful for comparing it with the modified `src/custom/database.ts` file to troubleshoot and resolve any errors.
+The original `src/custom/example.database.ts` can be helpful for comparing it with the modified `src/custom/database.ts` to troubleshoot and resolve any errors.
 
 ### Building
 
@@ -167,16 +167,15 @@ Three key areas for customization include:
 
 #### Database
 
-There are two files related to the well-structured content of your site:
+This repository does not have a backend or a persistent database, so all information must be stored in files located in the `src/custom/` folder. Customize the `database.ts` file with your own information to display your personal content on the website.
 
-- `src/custom/example.database.ts`: This file serves as a reference for your website's data. Do not delete or modify it; keep it for future reference.
-- `src/custom/database.ts`: Initially a copy of the example, this is the file you need to customize with your own information in order to display your personal content on the website.
+> `example.database.ts`: This file serves as a reference for the website's data. Do not delete or modify it; keep it for future reference. Initially the `database.ts` is a copy of this example.
 
-> The types utilized in the [Type-checking and Linting](#type-checking-and-linting) section can be found in `src/database.d.ts`. This file outlines the structure and data types for the `{example.}database.ts` files, ensuring they are accurate and conform to the expected format, thus preventing errors.
+> `src/database.d.ts`: This file outlines the structure and data types for the `{example.}database.ts` files, ensuring they are accurate and conform to the expected format, thus preventing errors. The types utilized in the [Type-checking and Linting](#type-checking-and-linting) section rely on this file.
 
 ##### Structure
 
-The following trees provide an alternative representation of the type definitions found in `src/database.d.ts` to help you better understand the structure and connections between different fields. In these trees, optional fields are marked with a `❎` symbol. You can remove or comment out these subtrees from the `src/custom/database.ts` as needed.
+The following trees provide an alternative representation of the type definitions found in `src/database.d.ts` to help you better understand the structure and connections between different fields. In these trees, optional fields are marked with a `❎` symbol. You can remove or comment out these subtrees from the `database.ts` as needed.
 
 ```
 - profile
@@ -326,9 +325,9 @@ The following trees provide an alternative representation of the type definition
 
 ##### Search Engine Optimization (SEO)
 
-###### For Pages
+###### For top-level Pages
 
-Each page (`page.about`, `page.resume`, `page.portfolio`) has an `seo` section that will be rendered as meta content in the `<head>` of your site.
+Each Page - `page.about`, `page.resume`, `page.portfolio` - has an `seo` section that will be rendered as meta content in the `<head>` of your site.
 
 Example `<head>` for the Resume page:
 
@@ -340,9 +339,9 @@ Example `<head>` for the Resume page:
 </head>
 ```
 
-###### For Projects
+###### For Project pages
 
-Each Project `page.portfolio.projects[]` has a dynamically generated SEO meta content based on the following rules:
+Each Project page - `portfolio.projects[]` - has a dynamically generated SEO meta content based on the following rules:
 
 | Meta          | Content                                                           |
 | ------------- | ----------------------------------------------------------------- |
@@ -362,30 +361,25 @@ Example `<head>` for a Project page:
 
 #### Markdown
 
-The content of the individual Project pages on your site comes from two sources:
-
-1. The `pages.portfolio.projects[]` array in the `src/custom/database.ts` file, and
-2. The Markdown files located in the `src/custom/projects` folder.
-
-For simplicity, we will refer to the array as the `projects[]` array and the folder as the `projects` folder.
+The content of the individual Project pages on your site comes from the Markdown files located in the `src/custom/projects/` folder.
 
 ##### Connection
 
-To establish a connection between the two, the `slug` field of each Project within the `projects[]` array and the filename of each Markdown file are used. In this way, the value of `projects[].slug` corresponds to `projects/{slug}.md`, and the content will be rendered on the page at the URL <https://example.com/portfolio/{slug}>.
+To establish a connection between the Markdown files and the `database.ts`, specifically the items in the `portfolio.projects[]` array, ensure that the filename of each Markdown file and the `slug` field of each item in the `portfolio.projects[]` array are identical. By doing this, the `projects/{slug}.md` Markdown file corresponds to a single item in the `portfolio.projects[]` array which has the same `slug` value, and the Markdown file will be rendered on the page at the URL <https://example.com/portfolio/{slug}>.
 
-You may notice that there are only two items in the `projects` folder, while there are more items in the `projects[]` array. When rendering a Project page, the site utilizes the data found in the `projects[]` array. If there is an associated Markdown file, the content from that file will also be rendered on the page.
+You may notice that there are only two items in the `projects/` folder, while there are more items in the `portfolio.projects[]` array. When rendering a Project page with a specific `slug`, the site first looks for a Markdown file to be rendered from `projects/{slug}.md`. If it is missing, the site will render the corresponding item from the `portfolio.projects[]` array.
 
-On the contrary, if a Markdown file exists in the `projects` folder but there is no item in the `projects[]` array with a `slug` that matches the Markdown file's name, nothing will be rendered, and the Project will not be accessible to visitors.
+On the contrary, if a Markdown file exists with some `slug` but there is no corresponding item in the `portfolio.projects[]` array, then nothing will be rendered, and the Markdown file will not be accessible to visitors.
 
-A `_markdown_syntax.md` file is provided in the `projects` folder, containing the supported syntax for Markdown files in this repository. Avoid deleting this file; instead, delete or comment out the corresponding item in the `projects[]` array, so it will not appear on your site.
+The `projects/_markdown_syntax.md` contains the supported syntax for Markdown files in this repository. Avoid deleting this file; instead, delete or comment out the corresponding item in the `portfolio.projects[]` array, so it will not appear on your site.
 
 ##### Controlling the Markdown
 
-In the following, we will analyze the content of the `src/custom/projects/_markdown_syntax.md` file to demonstrate two special formatting options you can utilize in your Markdown files to achieve a visually more appealing outcome.
+In the following, we will analyze the content of the `projects/_markdown_syntax.md` file to demonstrate two special formatting options you can utilize in your Markdown files to achieve a visually more appealing outcome.
 
 - **Category and Client**
 
-  By placing the category and client information immediately after the Project `H1` heading within two **bold items**, they will be rendered distinctively from other bold texts:
+  To render values from `portfolio.projects[].category` and `portfolio.projects[].client` distinctively from other bold texts, place them immediately after the `# Title` within two **bold items**, like this:
 
   ```markdown
   # Markdown Syntax
@@ -412,7 +406,7 @@ Place any static assets that should be served as-is, such as images, in the `sta
 
 When referencing an image, for example in `database.ts` or within a Project Markdown file, omit the `static` prefix and use the next folder, starting with a `/`.
 
-The `static/example_images` folder contains the images used in `src/custom/example.database.ts` (and initialy in `src/custom/database.ts`). You can keep this folder and create a new `static/images/` folder for your personal images, which can then be used in `src/custom/database.ts`.
+The `static/example_images/` folder contains the images used in `example.database.ts` (and initialy in `database.ts`). You can keep this folder and create a new `static/images/` folder for your personal images, which can then be used in `database.ts`.
 
 ### Styling
 
@@ -506,4 +500,4 @@ Start the development server, and modify the colors in VSCode. You will see the 
   - Examine its ancestors; if one of them is optional, you might not need the entire subtree.
   - You can try setting the field to an empty string `""`, an empty array `[]`, or `null`, and then preview the changes in the browser to see if the value appears as `undefined` or not. However, this approach is considered a hack and may not always produce the desired results.
 - Broken images: Avoid using the `static` prefix in the `img.src` fields, but ensure the path starts with `/`.
-- Broken Markdown: Refer to the `_markdown_syntax.md` for the supported syntax.
+- Broken Markdown: Refer to the `projects/_markdown_syntax.md` for the supported syntax.
