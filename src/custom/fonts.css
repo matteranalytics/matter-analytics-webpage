@@ -1,5 +1,9 @@
-@import "@fontsource/inter";
+/* Embed a font-family chosen from Google Fonts */
+
+/* Choose the @import option and copy the URL contained within the <style> tags: */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
+  /* Then find the font family name under the "CSS rules to specify families" section and copy it as shown below: */
   --ff-custom: "Inter";
 }

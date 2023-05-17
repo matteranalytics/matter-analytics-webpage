@@ -1,19 +1,36 @@
-import chevronDown from "@iconify-icons/ion/chevron-down.js";
+// Sidebar
+import location from "@iconify-icons/fa6-solid/location-dot.js";
+import mail from "@iconify-icons/fa6-solid/envelope.js";
+import phone from "@iconify-icons/fa6-solid/mobile-button.js";
 
-import location from "@iconify-icons/ion/location-outline.js";
-import mail from "@iconify-icons/ion/mail-outline.js";
-import phone from "@iconify-icons/ion/phone-portrait-outline.js";
+import facebook from "@iconify-icons/fa6-brands/facebook-square.js";
+import github from "@iconify-icons/fa6-brands/github.js";
+import instagram from "@iconify-icons/fa6-brands/instagram.js";
+import linkedin from "@iconify-icons/fa6-brands/linkedin.js";
+import mastodon from "@iconify-icons/fa6-brands/mastodon.js";
+import twitter from "@iconify-icons/fa6-brands/twitter.js";
+import youtube from "@iconify-icons/fa6-brands/youtube.js";
 
-import facebook from "@iconify-icons/ion/logo-facebook.js";
-import github from "@iconify-icons/ion/logo-github.js";
-import instagram from "@iconify-icons/ion/logo-instagram.js";
-import linkedin from "@iconify-icons/ion/logo-linkedin.js";
-import mastodon from "@iconify-icons/ion/logo-mastodon.js";
-import twitter from "@iconify-icons/ion/logo-twitter.js";
-import youtube from "@iconify-icons/ion/logo-youtube.js";
+// Sidebar & Portfolio
+import chevronDown from "@iconify-icons/fa6-solid/chevron-down.js";
+
+// About
+import close from "@iconify-icons/fa6-solid/xmark.js";
+
+// About - Services
+import brain from "@iconify-icons/fa6-solid/brain.js";
+import chartPie from "@iconify-icons/fa6-solid/chart-pie.js";
+import code from "@iconify-icons/fa6-solid/code.js";
+import camera from "@iconify-icons/fa6-solid/camera.js";
+
+// Portfolio
+import eye from "@iconify-icons/fa6-solid/eye.js";
+
+// Resume
+import book from "@iconify-icons/fa6-solid/book-open.js";
 
 export default {
-    chevronDown,
+    // Sidebar
     location,
     mail,
     phone,
@@ -24,4 +41,17 @@ export default {
     mastodon,
     twitter,
     youtube,
+    // Sidebar & Portfolio
+    chevronDown,
+    // About
+    close,
+    // About - Services
+    brain,
+    chartPie,
+    code,
+    camera,
+    // Portfolio
+    eye,
+    // Resume
+    book,
 };

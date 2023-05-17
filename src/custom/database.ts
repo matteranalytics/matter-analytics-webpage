@@ -17,7 +17,7 @@ export const sidebar: Database.Sidebar = {
         alt: "Richard Hanrick",
     },
 
-    info_more_btn: {
+    showContacts: {
         text: "Show Contacts",
         icon: Icons.chevronDown,
     },
@@ -73,33 +73,34 @@ export const pages: Database.Pages = {
         ],
 
         services: {
-            title: "What i'm doing",
+            title: "What I'm doing",
             items: [
                 {
                     title: "Machine Learning",
                     text: "I create top-notch ML models to tackle various challenges",
-                    img: { src: "/example_images/branding-design.svg", alt: "design icon" },
+                    icon: Icons.brain,
                 },
                 {
                     title: "Statistics",
                     text: "Analyzing and interpreting data using essential statistical concepts.",
-                    img: { src: "/example_images/branding-dev.svg", alt: "Web development icon" },
+                    icon: Icons.chartPie,
                 },
                 {
                     title: "Prompt Engineering",
                     text: "Creating quality prompts for improved AI language model performance.",
-                    img: { src: "/example_images/branding-app.svg", alt: "mobile app icon" },
+                    icon: Icons.code,
                 },
                 {
                     title: "Photography",
                     text: "I make high-quality photos of any category at a professional level.",
-                    img: { src: "/example_images/branding-photo.svg", alt: "camera icon" },
+                    icon: Icons.camera,
                 },
             ],
         },
 
         testimonials: {
             title: "Testimonials",
+            closeIcon: Icons.close,
             items: [
                 {
                     name: "Daniel lewis",
@@ -177,6 +178,7 @@ export const pages: Database.Pages = {
 
         education: {
             title: "Education",
+            icon: Icons.book,
             items: [
                 {
                     title: "Microsoft Certified Solutions Expert",
@@ -198,6 +200,7 @@ export const pages: Database.Pages = {
 
         experience: {
             title: "Experience",
+            icon: Icons.book,
             items: [
                 {
                     title: "Data Scientist",
@@ -239,9 +242,13 @@ export const pages: Database.Pages = {
         },
 
         title: "Portfolio",
+        imageIcon: Icons.eye,
 
-        select_category_option: "Select Category",
-        allCategory: "All",
+        categoryFilter: {
+            instruction: "Select Category",
+            icon: Icons.chevronDown,
+            allCategory: "All",
+        },
 
         projects: [
             /** The `_markdown_syntax` Project page serves as a showcase for the supported Markdown syntax,
@@ -279,7 +286,7 @@ export const pages: Database.Pages = {
                 category: "Machine Learning",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-3.jpg", alt: "fundo" },
+                img: { src: "/example_images/project-3.png", alt: "fundo" },
             },
             {
                 slug: "brawlhalla",
@@ -291,43 +298,11 @@ export const pages: Database.Pages = {
             },
             {
                 slug: "dsm",
-                title: "DSM.",
+                title: "DSM",
                 category: "Machine Learning",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
                 img: { src: "/example_images/project-5.png", alt: "dsm" },
-            },
-            {
-                slug: "metaspark",
-                title: "MetaSpark",
-                category: "Machine Learning",
-                client: "Acme Comp",
-                description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-6.png", alt: "metaspark" },
-            },
-            {
-                slug: "summary",
-                title: "Summary",
-                category: "Statistics",
-                client: "Acme Comp",
-                description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-7.png", alt: "summary" },
-            },
-            {
-                slug: "task-manager",
-                title: "Task Manager",
-                category: "Big Data",
-                client: "Acme Comp",
-                description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-8.jpg", alt: "task manager" },
-            },
-            {
-                slug: "arrival",
-                title: "Arrival",
-                category: "Statistics",
-                client: "Acme Comp",
-                description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-9.png", alt: "arrival" },
             },
         ],
     },

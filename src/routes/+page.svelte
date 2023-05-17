@@ -1,4 +1,6 @@
 <script>
+    import Icon from "@iconify/svelte";
+
     import Head from "$lib/Head.svelte";
     import Testimonial from "$lib/Testimonial.svelte";
 
@@ -45,7 +47,7 @@
                 {#each services.items as item}
                     <li class="service-item">
                         <div class="service-icon-box">
-                            <img src={item.img.src} alt={item.img.alt} width="40" />
+                            <Icon icon={item.icon} />
                         </div>
                         <div class="service-content-box">
                             <h4 class="h4 service-item-title">{item.title}</h4>
@@ -64,7 +66,7 @@
             <ul class="testimonials-list has-scrollbar">
                 {#each testimonials.items as item}
                     <li class="testimonials-item">
-                        <Testimonial {item} />
+                        <Testimonial {item} closeIcon={testimonials.closeIcon} />
                     </li>
                 {/each}
             </ul>

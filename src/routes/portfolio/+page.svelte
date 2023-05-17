@@ -1,6 +1,5 @@
 <script>
     import Icon from "@iconify/svelte";
-    import eyeIcon from "@iconify-icons/ion/eye-outline.js";
 
     import Head from "$lib/Head.svelte";
     import Filter from "$lib/Filter.svelte";
@@ -16,11 +15,8 @@
     /** @type { Database.Project[] } */
     const projects = portfolio?.projects ?? [];
 
-    /** @type { string } */
-    const allCategory = portfolio?.allCategory ?? "";
-
-    /** @type { string } */
-    const select_category_option = portfolio?.select_category_option ?? "";
+    /** @type { Database.CategoryFilter | undefined } */
+    const categoryFilter = portfolio?.categoryFilter;
 
     /**
      * @param { Database.Project[] } projects
@@ -45,8 +41,11 @@
 
     const categories = extractCategories(projects);
 
-    let selectedCategory = allCategory;
-    $: filteredProjects = selectedCategory === allCategory ? projects : projects.filter((project) => project.category === selectedCategory);
+    let selectedCategory = categoryFilter?.allCategory ?? "";
+    $: filteredProjects =
+        selectedCategory === (categoryFilter?.allCategory ?? "")
+            ? projects
+            : projects.filter((project) => project.category === selectedCategory);
 </script>
 
 <Head {...seo} />
@@ -57,10 +56,11 @@
     </header>
 
     <section class="projects">
-        {#if select_category_option && allCategory && categories && categories.length > 1}
+        {#if categoryFilter && categories && categories.length > 1}
             <Filter
-                instruction={select_category_option}
-                all={allCategory}
+                instruction={categoryFilter.instruction}
+                icon={categoryFilter.icon}
+                all={categoryFilter.allCategory}
                 {categories}
                 {selectedCategory}
                 on:selectCategory={(event) => (selectedCategory = event.detail.category)}
@@ -73,9 +73,11 @@
                     <li class="project-item active">
                         <a href="{portfolio?.route.id}/{project.slug}">
                             <figure class="project-img">
-                                <div class="project-item-icon-box">
-                                    <Icon icon={eyeIcon} />
-                                </div>
+                                {#if !!portfolio?.imageIcon}
+                                    <div class="project-item-icon-box">
+                                        <Icon icon={portfolio?.imageIcon} />
+                                    </div>
+                                {/if}
                                 <img src={project.img.src} alt={project.img.alt} loading="lazy" />
                             </figure>
 

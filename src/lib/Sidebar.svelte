@@ -28,9 +28,9 @@
             <p class="profession">{sidebar.profession}</p>
         </div>
 
-        <button class="info_more-btn" on:click={accordionMachine.toggle} aria-label={sidebar.info_more_btn.text}>
-            <span>{sidebar.info_more_btn.text}</span>
-            <Icon icon={sidebar.info_more_btn.icon} />
+        <button class="info_more-btn" on:click={accordionMachine.toggle} aria-label={sidebar.showContacts.text}>
+            <span>{sidebar.showContacts.text}</span>
+            <Icon icon={sidebar.showContacts.icon} />
         </button>
     </div>
 

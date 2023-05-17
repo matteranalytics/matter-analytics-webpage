@@ -1,6 +1,5 @@
 <script>
     import Icon from "@iconify/svelte";
-    import bookIcon from "@iconify-icons/ion/book-outline.js";
 
     import Head from "$lib/Head.svelte";
 
@@ -33,7 +32,7 @@
         <section class="timeline">
             <div class="title-wrapper">
                 <div class="icon-box">
-                    <Icon icon={bookIcon} />
+                    <Icon icon={education.icon} />
                 </div>
                 <h3 class="h3">{education.title}</h3>
             </div>
@@ -54,7 +53,7 @@
         <section class="timeline">
             <div class="title-wrapper">
                 <div class="icon-box">
-                    <Icon icon={bookIcon} />
+                    <Icon icon={experience.icon} />
                 </div>
                 <h3 class="h3">{experience.title}</h3>
             </div>

@@ -6,10 +6,12 @@
 
 <script>
     import Icon from "@iconify/svelte";
-    import closeIcon from "@iconify-icons/ion/close-outline.js";
 
     /** @type { Database.Testimonial } */
     export let item;
+
+    /** @type { import('@iconify/types').IconifyIcon } */
+    export let closeIcon;
 </script>
 
 <div class="content-card" on:click={() => activeTestimonial.set(item.name)} on:keydown={() => activeTestimonial.set(item.name)}>

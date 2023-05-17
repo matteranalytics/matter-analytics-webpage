@@ -1,6 +1,5 @@
 <script>
     import Icon from "@iconify/svelte";
-    import chevronDownIcon from "@iconify-icons/ion/chevron-down-outline.js";
 
     import { createEventDispatcher } from "svelte";
     import fsm from "svelte-fsm";
@@ -18,6 +17,9 @@
 
     /** @type { string } */
     export let instruction = "";
+
+    /** @type { import('@iconify/types').IconifyIcon } */
+    export let icon;
 
     /** @type { string } */
     export let all = "";
@@ -59,7 +61,7 @@
     >
         <div class="select-value">{categories.includes(selectedCategory) ? selectedCategory : instruction}</div>
         <div class="select-icon">
-            <Icon icon={chevronDownIcon} />
+            <Icon {icon} />
         </div>
     </button>
 

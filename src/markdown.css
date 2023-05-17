@@ -10,29 +10,7 @@
 .project-markdown h3,
 .project-markdown h4,
 .project-markdown h5 {
-  color: var(--white-2);
   margin: 40px 0 20px 0;
-}
-
-.project-markdown h1 {
-  font-size: var(--fs-1);
-}
-
-.project-markdown h2 {
-  font-size: var(--fs-2);
-}
-
-.project-markdown h3 {
-  font-size: var(--fs-3);
-}
-
-.project-markdown h4 {
-  font-size: var(--fs-4);
-}
-
-.project-markdown h5 {
-  font-size: var(--fs-7);
-  font-weight: var(--fw-500);
 }
 
 .project-markdown hr {
@@ -190,7 +168,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   background: none;
   font-family: Consolas, Monaco, monospace;
-  font-size: 95%;
+  font-size: 92%;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -355,8 +333,6 @@ pre[class*="language-"] {
   opacity: 0.8;
 }
 
-/* Custom H1, OL */
-
 .project-markdown h1 {
   position: relative;
   padding-bottom: 7px;
@@ -376,7 +352,6 @@ pre[class*="language-"] {
 
 @media (min-width: 580px) {
   .project-markdown h1 {
-    font-weight: var(--fw-600);
     padding-bottom: 15px;
     margin-bottom: 20px;
   }
@@ -393,24 +368,16 @@ pre[class*="language-"] {
   }
 }
 
-.project-markdown h1 + p {
-  margin: 0;
-  color: var(--light-gray-70);
-  font-size: var(--fs-6);
+@media (min-width: 1024px) {
+  .project-markdown h1 {
+    padding-bottom: 20px;
+    max-width: 550px;
+  }
 }
 
-.project-markdown h1 + p > strong {
-  font-weight: var(--fw-300);
-}
-
-.project-markdown h1 + p > *:nth-child(1) ~ *:nth-child(2)::before {
-  content: " ";
-  display: inline-block;
-  background: var(--light-gray-70);
-  width: 4px;
-  height: 4px;
-  border-radius: 4px;
-  margin-left: 5px;
-  margin-right: 10px;
-  margin-bottom: 3px;
+@media (min-width: 1350px) {
+  .project-markdown h1 {
+    padding-bottom: 20px;
+    max-width: 530px;
+  }
 }

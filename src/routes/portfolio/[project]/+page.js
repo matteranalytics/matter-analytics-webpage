@@ -16,7 +16,7 @@ export async function load({ params }) {
         throw redirect(307, "/");
     }
 
-    /** @type { Database.Project | undefined} */
+    /** @type { Database.Project | undefined } */
     const project = projects.find((project) => project.slug === params.project);
 
     if (!project) {

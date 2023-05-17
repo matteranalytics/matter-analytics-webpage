@@ -38,7 +38,7 @@ declare global {
             name: string;
             profession: string;
             img: Image;
-            info_more_btn: InfoMoreButton;
+            showContacts: InfoMoreButton;
             contacts?: Contact[];
             socials?: Social[];
         };
@@ -58,7 +58,7 @@ declare global {
         type Service = {
             title: string;
             text: string;
-            img: Image;
+            icon: IconifyIcon;
         };
 
         type Services = {
@@ -76,6 +76,7 @@ declare global {
 
         type Testimonials = {
             title: string;
+            closeIcon: IconifyIcon;
             items: Testimonial[];
         };
 
@@ -97,6 +98,7 @@ declare global {
 
         type Education = {
             title: string;
+            icon: IconifyIcon;
             items: EducationItem[];
         };
 
@@ -108,6 +110,7 @@ declare global {
 
         type Experience = {
             title: string;
+            icon: IconifyIcon;
             items: ExperienceItem[];
         };
 
@@ -125,6 +128,12 @@ declare global {
             title: string;
             description: string;
             keywords: string;
+        };
+
+        type CategoryFilter = {
+            instruction: string;
+            icon: IconifyIcon;
+            allCategory: string;
         };
 
         type Project = {
@@ -161,8 +170,8 @@ declare global {
             route: Route;
             seo: SEO;
             title: string;
-            select_category_option?: string;
-            allCategory?: string;
+            imageIcon: IconifyIcon;
+            categoryFilter?: CategoryFilter;
             projects: Projects;
         };
 

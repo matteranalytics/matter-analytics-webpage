@@ -195,7 +195,7 @@ The following trees provide an alternative representation of the type definition
   │   ├── src
   │   └── alt
   │
-  ├── info_more_btn
+  ├── showContacts
   │   ├── text
   │   └── icon
   │
@@ -236,9 +236,7 @@ The following trees provide an alternative representation of the type definition
   │   └── items[]
   │       ├── title
   │       ├── text
-  │       └── img
-  │           ├── src
-  │           └── alt
+  │       └── icon
   │
   ├── testimonials ❎
   │   ├── title
@@ -277,6 +275,7 @@ The following trees provide an alternative representation of the type definition
   │
   ├── education ❎
   │   ├── title
+  │   ├── icon
   │   └── items[]
   │       ├── title
   │       ├── year
@@ -284,6 +283,7 @@ The following trees provide an alternative representation of the type definition
   │
   ├── experience ❎
   │   ├── title
+  │   ├── icon
   │   └── items[]
   │       ├── title
   │       ├── year
@@ -308,9 +308,12 @@ The following trees provide an alternative representation of the type definition
   │   └── keywords
   │
   ├── title
+  ├── imageIcon
   │
-  ├── select_category_option ❎
-  ├── allCategory ❎
+  ├── categoryFilter ❎
+  │   ├── instruction
+  │   ├── icon
+  │   └── allCategory
   │
   └── projects[]
       ├── slug
@@ -373,29 +376,14 @@ On the contrary, if a Markdown file exists with some `slug` but there is no corr
 
 The `projects/_markdown_syntax.md` contains the supported syntax for Markdown files in this repository. Avoid deleting this file; instead, delete or comment out the corresponding item in the `portfolio.projects[]` array, so it will not appear on your site.
 
-##### Controlling the Markdown
+##### Image Width
 
-In the following, we will analyze the content of the `projects/_markdown_syntax.md` file to demonstrate two special formatting options you can utilize in your Markdown files to achieve a visually more appealing outcome.
+Adjust image width in Markdown using `|full` postfix in the image alt text. This stretches the image to the full width of the container. Without `|full`, the image retains its actual size. Below are two examples from `projects/_markdown_syntax.md` demonstrating both cases:
 
-- **Category and Client**
-
-  To render values from `portfolio.projects[].category` and `portfolio.projects[].client` distinctively from other bold texts, place them immediately after the `# Title` within two **bold items**, like this:
-
-  ```markdown
-  # Markdown Syntax
-
-  **Markdown**
-  **Acme Comp**
-  ```
-
-- **Image width**
-
-   Image width can be adjusted by using the `|full` postfix in the image alt text. Including `|full` causes the image to expand to the full width of the container, while omitting it renders the image at its actual size:
-
-  ```markdown
-  ![Appealing Markdown logo |full](/example_images/_markdown_syntax.png)
-  ![Appealing Markdown logo](/example_images/_markdown_syntax.png)
-  ```
+```markdown
+![Appealing Markdown logo |full](/example_images/_markdown_syntax.png)
+![Appealing Markdown logo](/example_images/_markdown_syntax.png)
+```
 
 ### Static Assets
 
@@ -418,37 +406,32 @@ Start the development server, and modify the colors in VSCode. You will see the 
 
 #### Fonts
 
-1. Terminate the development server if it is running.
+1. Choose a font family from [Google Fonts](https://fonts.google.com/), such as [Open Sans](https://fonts.google.com/?query=open+sans).
 
-2. Choose a font family from [Fontsource](https://fontsource.org/), such as [Open Sans](https://fontsource.org/fonts/open-sans).
+2. Select the following styles, these will then appear in the `Selected family` panel on the right:
 
-3. Execute the installation script at the root of the repository (note that the official instructions use the `yarn` package manager, which is not advised here):
+    - Light 300
+    - Regular 400
+    - Medium 500
+    - SemiBold 600
+    - Bold 700
+    - ExtraBold 800
 
-    ```bash
-    npm install @fontsource/open-sans
-    ```
+3. In the `Use on the web` section of the right panel, find and copy the following configuration into the `src/custom/fonts.css` file:
 
-    After executing this script, the `dependencies` in the `package.json` file will be updated.
+    - Choose the `@import` option and copy the URL contained within the `<style>` tags.
 
-4. Modify `src/custom/fonts.css` in two locations to resemble the following code:
+    - Under the `CSS rules to specify families` section copy the name of the font family:
 
     ```css
-    import "@fontsource/open-sans";
+    @import url('<https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap>');
 
     :root {
       --ff-custom: "Open Sans";
     }
     ```
 
-5. Uninstall the previous font family:
-
-    ```bash
-    npm uninstall @fontsource/inter
-    ```
-
-    Once again, you will see the changes reflected in the `dependencies` of the `package.json` file.
-
-6. Finally restart the development server to view the updated font on your website.
+4. Save the `src/custom/fonts.css`, start the development server if it is not running, and view the changes in the browser.
 
 #### Icons
 
@@ -484,10 +467,11 @@ Start the development server, and modify the colors in VSCode. You will see the 
     ...
     ```
 
-7. If all icons in the `src/custom/icons.js` file have been replaced and you no longer use IonIcons, uninstall the icon set:
+7. If all icons in the `src/custom/icons.js` file have been replaced and you no longer use Font Awesome icons, uninstall the icon set:
 
     ```bash
-    npm uninstall @iconify-icons/ion
+    npm uninstall @iconify-icons/fa6-solid
+    npm uninstall @iconify-icons/fa6-brands
     ```
 
     Once again, you will see the changes reflected in the `devDependencies` of the `package.json` file.
