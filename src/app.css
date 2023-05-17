@@ -220,15 +220,15 @@ h3 {
 }
 h4 {
   font-size: var(--fs-4);
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-700);
 }
 h5 {
   font-size: var(--fs-5);
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-700);
 }
 h6 {
   font-size: var(--fs-6);
-  font-weight: var(--fw-600);
+  font-weight: var(--fw-700);
 }
 
 .h2,
@@ -1469,7 +1469,7 @@ main {
 
     --fs-1: 34px;
     --fs-2: 34px;
-    --fs-3: 24px;
+    --fs-3: 26px;
     --fs-4: 20px;
     --fs-5: 17px;
     --fs-6: 16px;
