@@ -1,8 +1,8 @@
-# Finance
+# DSM
 
-Statistics • Acme Comp
+Machine Learning • Acme Comp
 
-![Main project dashboard |full](/example_images/project-1.jpg)
+![Main project dashboard |full](/example_images/project-5.png)
 
 ## Project Overview
 

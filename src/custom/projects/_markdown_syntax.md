@@ -1,8 +1,7 @@
 
 # Markdown Syntax
 
-**Markdown**
-**Acme Comp**
+Markdown • Acme Comp
 
 ![Appealing Markdown logo |full](/example_images/_markdown_syntax.png)
 ![Appealing Markdown logo](/example_images/_markdown_syntax.png)

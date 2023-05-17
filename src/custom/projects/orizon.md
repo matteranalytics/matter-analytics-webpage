@@ -1,8 +1,8 @@
-# Finance
+# Orizon with a longer title, maybe even a bit longer
 
 Statistics • Acme Comp
 
-![Main project dashboard |full](/example_images/project-1.jpg)
+![Main project dashboard |full](/example_images/project-2.png)
 
 ## Project Overview
 

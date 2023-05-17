@@ -1,8 +1,8 @@
-# Finance
+# Brawlhalla
 
-Statistics • Acme Comp
+Big Data • Acme Comp
 
-![Main project dashboard |full](/example_images/project-1.jpg)
+![Main project dashboard |full](/example_images/project-4.png)
 
 ## Project Overview
 

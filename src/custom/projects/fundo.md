@@ -1,8 +1,8 @@
-# Finance
+# Fundo
 
-Statistics • Acme Comp
+Machine Learning • Acme Comp
 
-![Main project dashboard |full](/example_images/project-1.jpg)
+![Main project dashboard |full](/example_images/project-3.png)
 
 ## Project Overview
 
