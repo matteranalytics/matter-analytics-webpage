@@ -1,29 +1,30 @@
 :root {
-  --brand: #2e85f3;
-  --brand-gradient: linear-gradient(to right, #2e85f3, #2e65df);
+  --c-brand: #2e85f3;
+  --c-brand-gradient: linear-gradient(to right, #2e85f3, #2e65df);
 
-  --text-bright: #ffffff;
-  --text-silver: #eeeeee;
-  --text-smoky: #acb0b7;
+  --c-text-bright: #ffffff;
+  --c-text-silver: #eeeeee;
+  --c-text-smoky: #acb0b7;
 
-  --box-icon: #ffffff;
-  --social-icon: #ffffff;
-  --service-icon: #ffffff;
+  --c-box-icon: #ffffff;
+  --c-social-icon: #ffffff;
+  --c-service-icon: #ffffff;
 
-  --about-scrollbar: #ffffff;
-  --testimonial-modal-quote: #ffffff;
+  --c-about-scrollbar: #ffffff;
+  --c-testimonial-modal-quote: #ffffff;
 
-  --navbar-bg: hsla(221, 24%, 15%, 0.75);
-  --navbar-link: #acb0b7;
-  --navbar-link-active: #ffffff;
-  --navbar-link-hover: #2e85f3;
+  --c-navbar-bg: hsla(221, 24%, 15%, 0.75);
+  --c-navbar-link: #acb0b7;
+  --c-navbar-link-active: #ffffff;
+  --c-navbar-link-hover: #2e85f3;
 
-  --body-bg: #0b101b;
-  --avatar-box-bg: #353d4a;
-  --area-bg-1: #181e29;
-  --area-bg-2: #1d232f;
+  --c-body-bg: #0b101b;
+  --c-avatar-box-bg: #353d4a;
+  --c-area-bg-1: #181e29;
+  --c-area-bg-2: #1d232f;
+  --c-light-bg-border: #353c4a;
 
-  --light-bg-border: #353c4a;
+  --c-markdown-link: #64a8fa;
 }
 
 /* My Image */
