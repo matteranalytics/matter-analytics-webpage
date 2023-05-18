@@ -13,6 +13,55 @@
   margin: 40px 0 20px 0;
 }
 
+.project-markdown h1 {
+  position: relative;
+  padding-bottom: 7px;
+  margin-bottom: 15px;
+}
+
+.project-markdown h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: var(--brand-gradient);
+  border-radius: 3px;
+}
+
+@media (min-width: 580px) {
+  .project-markdown h1 {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+
+  .project-markdown h1::after {
+    width: 40px;
+    height: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-markdown h1 {
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-markdown h1 {
+    padding-bottom: 20px;
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .project-markdown h1 {
+    padding-bottom: 20px;
+    max-width: 530px;
+  }
+}
+
 .project-markdown hr {
   height: 1px;
   background-color: var(--light-bg-border);
@@ -326,53 +375,4 @@ pre[class*="language-"] {
 
 .token.namespace {
   opacity: 0.8;
-}
-
-.project-markdown h1 {
-  position: relative;
-  padding-bottom: 7px;
-  margin-bottom: 15px;
-}
-
-.project-markdown h1::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: var(--brand-gradient);
-  border-radius: 3px;
-}
-
-@media (min-width: 580px) {
-  .project-markdown h1 {
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-  }
-
-  .project-markdown h1::after {
-    width: 40px;
-    height: 5px;
-  }
-}
-
-@media (min-width: 768px) {
-  .project-markdown h1 {
-    padding-bottom: 20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .project-markdown h1 {
-    padding-bottom: 20px;
-    max-width: 550px;
-  }
-}
-
-@media (min-width: 1350px) {
-  .project-markdown h1 {
-    padding-bottom: 20px;
-    max-width: 530px;
-  }
 }

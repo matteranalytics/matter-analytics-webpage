@@ -4,8 +4,8 @@
  * https://github.com/codewithsadee/vcard-personal-portfolio
  */
 
-/* ---------------------------------
-  #CUSTOM PROPERTY
+/* --------------------------------
+  CUSTOM PROPERTY
 ----------------------------------- */
 
 :root {
@@ -896,7 +896,7 @@ main {
 }
 
 .filter-select {
-  background: var(--area-bg-1);
+  background: var(--area-bg-2);
   color: var(--text-smoky);
   display: flex;
   justify-content: space-between;
@@ -911,10 +911,12 @@ main {
 
 .filter-select.active .select-icon {
   transform: rotate(0.5turn);
+  color: var(--text-smoky);
+  font-size: 13px;
 }
 
 .select-list {
-  background: var(--area-bg-1);
+  background: var(--area-bg-2);
   position: absolute;
   top: calc(100% + 6px);
   width: 100%;
@@ -935,7 +937,7 @@ main {
 }
 
 .select-item button {
-  background: var(--area-bg-1);
+  background: var(--area-bg-2);
   color: var(--text-smoky);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -945,7 +947,7 @@ main {
 }
 
 .select-item button:hover {
-  --area-bg-1: hsl(240, 2%, 20%);
+  background: var(--light-bg-border);
 }
 
 .project-list {
@@ -1006,7 +1008,7 @@ main {
   --scale: 0.8;
 
   background: var(--light-bg-border);
-  color: var(--text-bright);
+  color: var(--box-icon);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1624,7 +1626,7 @@ main {
 
 @media (min-width: 1350px) {
   /* --------------------------------
-    #RESET
+    RESET
   ----------------------------------- */
 
   body::-webkit-scrollbar {
