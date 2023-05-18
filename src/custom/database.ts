@@ -101,33 +101,30 @@ export const pages: Database.Pages = {
         testimonials: {
             title: "Testimonials",
             closeIcon: Icons.close,
+            quoteIcon: Icons.qoute,
             items: [
                 {
                     name: "Daniel lewis",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
                     img: { src: "/example_images/avatar-1.png", alt: "Daniel lewis" },
                 },
                 {
                     name: "Jessica miller",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
                     img: { src: "/example_images/avatar-2.png", alt: "Jessica miller" },
                 },
                 {
                     name: "Emily evans",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
                     img: { src: "/example_images/avatar-3.png", alt: "Emily evans" },
                 },
                 {
                     name: "Henry william",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    qoute: { src: "/example_images/branding-quote.svg", alt: "quote icon" },
                     img: { src: "/example_images/avatar-4.png", alt: "Henry william" },
                 },
             ],

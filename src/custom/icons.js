@@ -23,6 +23,9 @@ import chartPie from "@iconify-icons/fa6-solid/chart-pie.js";
 import code from "@iconify-icons/fa6-solid/code.js";
 import camera from "@iconify-icons/fa6-solid/camera.js";
 
+// About - Testimonial
+import qoute from "@iconify-icons/fa6-solid/quote-right.js";
+
 // Portfolio
 import eye from "@iconify-icons/fa6-solid/eye.js";
 
@@ -50,6 +53,8 @@ export default {
     chartPie,
     code,
     camera,
+    // About - Testimonial
+    qoute,
     // Portfolio
     eye,
     // Resume

@@ -153,7 +153,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--text-bright);
+  color: var(--box-icon);
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -243,7 +243,7 @@ h6 {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--text-bright);
+  background: var(--about-scrollbar);
   border-radius: 5px;
 }
 
@@ -419,7 +419,7 @@ main {
 }
 
 .social-item .social-link {
-  color: var(--text-silver);
+  color: var(--social-icon);
   font-size: 18px;
 }
 
@@ -522,7 +522,7 @@ main {
 
 .service-icon-box {
   margin-bottom: 10px;
-  color: var(--text-bright);
+  color: var(--service-icon);
 }
 
 .service-icon-box img {
@@ -704,8 +704,9 @@ main {
   box-shadow: var(--shadow-2);
 }
 
-.modal-img-wrapper > img {
+.modal-img-wrapper > svg {
   display: none;
+  color: var(--testimonial-modal-qoute);
 }
 
 .modal-title {
@@ -1353,11 +1354,11 @@ main {
     margin-bottom: 0;
   }
 
-  .modal-avatar-box img {
+  .modal-avatar-box svg {
     width: 65px;
   }
 
-  .modal-img-wrapper > img {
+  .modal-img-wrapper > svg {
     display: block;
     flex-grow: 1;
     width: 35px;
@@ -1479,7 +1480,7 @@ main {
     max-width: 680px;
   }
 
-  .modal-avatar-box img {
+  .modal-avatar-box svg {
     width: 80px;
   }
 

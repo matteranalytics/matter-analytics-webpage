@@ -12,6 +12,9 @@
 
     /** @type { import('@iconify/types').IconifyIcon } */
     export let closeIcon;
+
+    /** @type { import('@iconify/types').IconifyIcon } */
+    export let quoteIcon;
 </script>
 
 <div class="content-card" on:click={() => activeTestimonial.set(item.name)} on:keydown={() => activeTestimonial.set(item.name)}>
@@ -44,7 +47,7 @@
                 <img src={item.img.src} alt={item.img.alt} width="80" />
             </figure>
 
-            <img src={item.qoute.src} alt={item.qoute.alt} />
+            <Icon icon={quoteIcon} />
         </div>
 
         <div class="modal-content">

@@ -66,7 +66,7 @@
             <ul class="testimonials-list has-scrollbar">
                 {#each testimonials.items as item}
                     <li class="testimonials-item">
-                        <Testimonial {item} closeIcon={testimonials.closeIcon} />
+                        <Testimonial {item} closeIcon={testimonials.closeIcon} quoteIcon={testimonials.quoteIcon} />
                     </li>
                 {/each}
             </ul>

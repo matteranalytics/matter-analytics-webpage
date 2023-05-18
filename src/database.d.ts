@@ -1,3 +1,4 @@
+import type Icon from "@iconify/svelte";
 import { IconifyIcon } from "@iconify/types";
 
 declare global {
@@ -70,13 +71,13 @@ declare global {
             name: string;
             date: string;
             text: string;
-            qoute: Image;
             img: Image;
         };
 
         type Testimonials = {
             title: string;
             closeIcon: IconifyIcon;
+            quoteIcon: IconifyIcon;
             items: Testimonial[];
         };
 
