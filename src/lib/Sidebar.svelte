@@ -28,13 +28,13 @@
             <p class="profession">{sidebar.profession}</p>
         </div>
 
-        <button class="info_more-btn" on:click={accordionMachine.toggle} aria-label={sidebar.showContacts.text}>
+        <button class="show-contacts-btn" on:click={accordionMachine.toggle} aria-label={sidebar.showContacts.text}>
             <span>{sidebar.showContacts.text}</span>
             <Icon icon={sidebar.showContacts.icon} />
         </button>
     </div>
 
-    <div class="sidebar-info_more">
+    <div class="sidebar-show-contacts">
         {#if contacts && contacts.length > 0}
             <div class="separator" />
 

@@ -3,7 +3,7 @@
 .project-markdown h3,
 .project-markdown h4,
 .project-markdown h5 {
-  color: var(--white-2);
+  color: var(--text-bright);
 }
 
 .project-markdown h2,
@@ -15,16 +15,18 @@
 
 .project-markdown hr {
   height: 1px;
-  background-color: var(--jet);
+  background-color: var(--light-bg-border);
   border: none;
 }
 
 .project-markdown a {
-  color: var(--text-solid-brand-1);
+  color: var(--brand);
   display: inline-block;
+  text-decoration: underline;
 }
+
 .project-markdown a:hover {
-  color: var(--text-solid-brand-2);
+  text-decoration: none;
 }
 
 .project-markdown img {
@@ -36,6 +38,20 @@
 
 .project-markdown img:is([alt*="|full"]) {
   width: 100%;
+}
+
+.project-markdown p,
+.project-markdown li,
+.project-markdown td {
+  color: var(--text-silver);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+.project-markdown ol {
+  counter-reset: markdown-counter;
+  list-style-type: none;
 }
 
 .project-markdown ol,
@@ -70,35 +86,21 @@
   margin-top: 20px;
 }
 
-.project-markdown p,
-.project-markdown li,
-.project-markdown td {
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-  line-height: 1.6;
-}
-
 .project-markdown li {
   position: relative;
   margin-left: 30px;
 }
 
-.project-markdown ul > li:before {
+.project-markdown ul > li::before {
   content: "";
   position: absolute;
   top: 9px;
   left: -25px;
   height: 6px;
   width: 6px;
-  background: var(--text-solid-brand-1);
+  background: var(--text-silver);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--jet);
-}
-
-.project-markdown ol {
-  counter-reset: markdown-counter;
-  list-style-type: none;
+  box-shadow: 0 0 0 4px var(--light-bg-border);
 }
 
 .project-markdown ol > li {
@@ -113,7 +115,7 @@
   left: -25px;
   height: 6px;
   width: 6px;
-  color: var(--text-solid-brand-1);
+  color: var(--text-bright);
 }
 
 .project-markdown table {
@@ -127,31 +129,31 @@
 }
 
 .project-markdown table th {
-  border-top: 1px solid var(--jet);
+  border-top: 1px solid var(--light-bg-border);
+}
+
+.project-markdown table th,
+.project-markdown table td {
+  padding: 10px 15px;
+  border: 1px solid var(--light-bg-border);
 }
 
 .project-markdown table tr:nth-child(2n) td {
-  background-color: var(--onyx);
+  background-color: var(--area-bg-2);
 }
 
 .project-markdown table th {
   font-weight: var(--fw-600);
 }
 
-.project-markdown table th,
-.project-markdown table td {
-  padding: 10px 15px;
-  border: 1px solid var(--jet);
-}
-
-.project-markdown table tr td img {
+.project-markdown table tr td img:is:not([alt*="|full"]) {
   margin: 0;
 }
 
 .project-markdown blockquote {
   padding: 0 1em;
-  color: var(--eerie-black-2);
-  border-left: 0.25em solid var(--jet);
+  color: var(--light-bg-border);
+  border-left: 0.25em solid var(--light-bg-border);
 }
 
 .project-markdown :not(pre) code {
@@ -160,7 +162,7 @@
   font-family: Consolas, Monaco, monospace;
   font-size: 85%;
   white-space: break-spaces;
-  background-color: var(--onyx);
+  background-color: var(--light-bg-border);
   border-radius: 6px;
 }
 
@@ -174,14 +176,7 @@ pre[class*="language-"] {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
   tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none;
 }
 
@@ -346,7 +341,7 @@ pre[class*="language-"] {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-brand);
+  background: var(--brand-gradient);
   border-radius: 3px;
 }
 
