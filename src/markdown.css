@@ -98,7 +98,7 @@
   left: -25px;
   height: 6px;
   width: 6px;
-  background: var(--text-silver);
+  background: var(--box-icon);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--light-bg-border);
 }
