@@ -374,7 +374,7 @@ You may notice that there are only two items in the `projects/` folder, while th
 
 On the contrary, if a Markdown file exists with some `slug` but there is no corresponding item in the `portfolio.projects[]` array, then nothing will be rendered, and the Markdown file will not be accessible to visitors.
 
-The `projects/_markdown_syntax.md` contains the supported syntax for Markdown files in this repository. Avoid deleting this file; instead, delete or comment out the corresponding item in the `portfolio.projects[]` array, so it will not appear on your site.
+The `projects/_markdown_syntax.md` file outlines the supported syntax for Markdown files in this repository. This file is vital for future reference, so avoid to delete it. Instead, remove or comment out the corresponding item in the `portfolio.projects[]` array, so the `projects/_markdown_syntax.md` will not appear on your site.
 
 ##### Image Width
 
@@ -390,7 +390,7 @@ Adjust image width in Markdown using `|full` postfix in the image alt text. This
 Place any static assets that should be served as-is, such as images, in the `static/` folder. You can organize this folder as you see fit, but make sure to:
 
 - Keep the `robots.txt` file in its current location, as it is related to SEO, and
-- Keep a `favicon.ico` in the same location as the current one.
+- Keep a `favicon.ico` file in its current location, as it is related to `src/app.html`.
 
 When referencing an image, for example in `database.ts` or within a Project Markdown file, omit the `static` prefix and use the next folder, starting with a `/`.
 
@@ -424,7 +424,7 @@ Start the development server, and modify the colors in VSCode. You will see the 
     - Under the `CSS rules to specify families` section copy the name of the font family:
 
     ```css
-    @import url('<https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap>');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
     :root {
       --ff-custom: "Open Sans";
