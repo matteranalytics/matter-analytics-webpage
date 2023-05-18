@@ -77,7 +77,7 @@ export const pages: Database.Pages = {
             items: [
                 {
                     title: "Machine Learning",
-                    text: "I create top-notch ML models to tackle various challenges",
+                    text: "I create top-notch ML models to tackle various challenges.",
                     icon: Icons.brain,
                 },
                 {

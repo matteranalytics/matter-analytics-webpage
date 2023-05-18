@@ -706,7 +706,7 @@ main {
 
 .modal-img-wrapper > svg {
   display: none;
-  color: var(--testimonial-modal-qoute);
+  color: var(--testimonial-modal-quote);
 }
 
 .modal-title {
