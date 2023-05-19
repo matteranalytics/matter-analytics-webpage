@@ -1,10 +1,17 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": ["@alex-e-leon/stylelint-value-no-unknown-custom-properties"],
   "rules": {
     "alpha-value-notation": null,
     "color-function-notation": "legacy",
     "color-hex-length": null,
     "comment-empty-line-before": null,
+    "csstools/value-no-unknown-custom-properties": [
+      true,
+      {
+        "importFrom": ["./src/custom/fonts.css", "./src/custom/colors.css", "./src/app.css"]
+      }
+    ],
     "custom-property-empty-line-before": null,
     "hue-degree-notation": null,
     "media-feature-range-notation": "prefix",
