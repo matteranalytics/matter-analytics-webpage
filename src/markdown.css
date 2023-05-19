@@ -51,14 +51,19 @@
 @media (min-width: 1024px) {
   .project-markdown h1 {
     padding-bottom: 20px;
-    max-width: 550px;
+  }
+
+  .project-markdown h1::before {
+    content: " ";
+    width: 330px;
+    float: right;
+    height: 5px;
   }
 }
 
 @media (min-width: 1350px) {
   .project-markdown h1 {
     padding-bottom: 20px;
-    max-width: 530px;
   }
 }
 

@@ -271,7 +271,7 @@ export const pages: Database.Pages = {
             },
             {
                 slug: "orizon",
-                title: "Orizon with a longer title, maybe even a bit longer",
+                title: "Orizon",
                 category: "Statistics",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",

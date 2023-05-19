@@ -1,4 +1,4 @@
-# Orizon with a longer title, maybe even a bit longer
+# Orizon with a longer title, maybe even a bit longer, and - why not? - more stretches as before
 
 Statistics • Acme Comp
 

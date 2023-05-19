@@ -1554,6 +1554,13 @@ main {
     box-shadow: var(--shadow-5);
   }
 
+  .article-title::before {
+    content: " ";
+    width: 330px;
+    float: right;
+    height: 5px;
+  }
+
   /* --------------------------------
     MAIN
   ----------------------------------- */
