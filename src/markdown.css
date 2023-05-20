@@ -1,3 +1,19 @@
+.project-markdown {
+  --fs-2: 22px;
+}
+
+@media (min-width: 580px) {
+  .project-markdown {
+    --fs-2: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-markdown {
+    --fs-2: 28px;
+  }
+}
+
 .project-markdown h1,
 .project-markdown h2,
 .project-markdown h3,
