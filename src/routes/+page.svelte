@@ -33,11 +33,11 @@
     </header>
 
     {#if paragraphs && paragraphs?.length > 0}
-        <section class="about-text">
+        <div class="about-text">
             {#each paragraphs as paragraph}
                 <p>{paragraph}</p>
             {/each}
-        </section>
+        </div>
     {/if}
 
     {#if services && services?.items.length > 0}

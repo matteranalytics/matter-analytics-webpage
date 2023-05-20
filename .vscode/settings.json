@@ -3,6 +3,9 @@
   "editor.formatOnSave": true,
   "editor.rulers": [140],
   "editor.wordWrapColumn": 140,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

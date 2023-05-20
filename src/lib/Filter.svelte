@@ -59,10 +59,10 @@
         on:click={accordionMachine.toggle}
         aria-label={categories.includes(selectedCategory) ? selectedCategory : instruction}
     >
-        <div class="select-value">{categories.includes(selectedCategory) ? selectedCategory : instruction}</div>
-        <div class="select-icon">
+        <span class="select-value">{categories.includes(selectedCategory) ? selectedCategory : instruction}</span>
+        <span class="select-icon">
             <Icon {icon} />
-        </div>
+        </span>
     </button>
 
     <ul class="select-list">
