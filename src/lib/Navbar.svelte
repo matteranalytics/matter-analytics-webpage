@@ -1,7 +1,7 @@
 <script>
     import { page } from "$app/stores";
 
-    /** @type { Database.Route[] } */
+    /** @type { {id: string, nav: string}[] } */
     export let routes = [];
 </script>
 

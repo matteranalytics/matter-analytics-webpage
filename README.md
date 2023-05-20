@@ -218,16 +218,13 @@ The following trees provide an alternative representation of the type definition
 
 ```
 - about
-  ├── route
-  │   ├── id
-  │   └── nav
+  ├── nav
+  ├── title
   │
   ├── seo
   │   ├── title
   │   ├── description
   │   └── keywords
-  │
-  ├── title
   │
   ├── paragraphs[] ❎
   │
@@ -262,16 +259,13 @@ The following trees provide an alternative representation of the type definition
 
 ```
 - resume ❎
-  ├── route
-  │   ├── id
-  │   └── nav
+  ├── nav
+  ├── title
   │
   ├── seo
   │   ├── title
   │   ├── description
   │   └── keywords
-  │
-  ├── title
   │
   ├── education ❎
   │   ├── title
@@ -298,16 +292,14 @@ The following trees provide an alternative representation of the type definition
 
 ```
 - portfolio ❎
-  ├── route
-  │   ├── id
-  │   └── nav
+  ├── nav
+  ├── title
   │
   ├── seo
   │   ├── title
   │   ├── description
   │   └── keywords
   │
-  ├── title
   ├── imageIcon
   │
   ├── categoryFilter ❎

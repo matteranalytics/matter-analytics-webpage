@@ -44,11 +44,6 @@ declare global {
             socials?: Social[];
         };
 
-        type Route = {
-            id: string;
-            nav: string;
-        };
-
         type Image = {
             src: string;
             alt: string;
@@ -149,9 +144,9 @@ declare global {
         type Projects = Project[];
 
         type About = {
-            route: Route;
-            seo: SEO;
+            nav: string;
             title: string;
+            seo: SEO;
             paragraphs?: Paragraphs;
             services?: Services;
             testimonials?: Testimonials;
@@ -159,18 +154,18 @@ declare global {
         };
 
         type Resume = {
-            route: Route;
-            seo: SEO;
+            nav: string;
             title: string;
+            seo: SEO;
             education?: Education;
             experience?: Experience;
             skills?: Skills;
         };
 
         type Portfolio = {
-            route: Route;
-            seo: SEO;
+            nav: string;
             title: string;
+            seo: SEO;
             imageIcon: IconifyIcon;
             categoryFilter?: CategoryFilter;
             projects: Projects;

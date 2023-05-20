@@ -4,8 +4,11 @@ export const prerender = true;
 
 /** @type { import('./$types').LayoutServerLoad } */
 export function load() {
-    /** @type { Database.Route[] } */
-    const routes = Object.values(pages).map(({ route }) => route) || [];
+    /** @type { {id: string, nav: string}[] } */
+    const routes =
+        Object.entries(pages).map(([route, page]) =>
+            route === "about" ? { id: "/", nav: page.nav } : { id: `/${route}`, nav: page.nav }
+        ) || [];
 
     return {
         localeDateString,

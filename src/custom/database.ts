@@ -53,7 +53,8 @@ export const sidebar: Database.Sidebar = {
 
 export const pages: Database.Pages = {
     about: {
-        route: { id: "/", nav: "About" },
+        nav: "About",
+        title: "About me",
 
         seo: {
             // Keep it very short
@@ -64,8 +65,6 @@ export const pages: Database.Pages = {
             // The more unique they are, the better.
             keywords: "freelancer, data science, analytics",
         },
-
-        title: "About me",
 
         paragraphs: [
             "I'm a Data Scientist and Machine Learning Engineer from Sacramento, California, working in the field of data analysis and predictive modeling. I am passionate about transforming complex data into valuable insights and actionable solutions.",
@@ -162,7 +161,8 @@ export const pages: Database.Pages = {
     },
 
     resume: {
-        route: { id: "/resume", nav: "Resume" },
+        nav: "Resume",
+        title: "Resume",
 
         seo: {
             title: "Richard Hanrick · Resume",
@@ -170,8 +170,6 @@ export const pages: Database.Pages = {
                 "Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
             keywords: "freelancer, data science, analytics",
         },
-
-        title: "Resume",
 
         education: {
             title: "Education",
@@ -229,7 +227,8 @@ export const pages: Database.Pages = {
     },
 
     portfolio: {
-        route: { id: "/portfolio", nav: "Portfolio" },
+        nav: "Portfolio",
+        title: "Portfolio",
 
         seo: {
             title: "Richard Hanrick · Portfolio",
@@ -238,7 +237,6 @@ export const pages: Database.Pages = {
             keywords: "freelancer, data science, analytics",
         },
 
-        title: "Portfolio",
         imageIcon: Icons.eye,
 
         categoryFilter: {

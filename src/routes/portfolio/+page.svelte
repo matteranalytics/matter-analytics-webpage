@@ -71,7 +71,7 @@
             <ul class="project-list">
                 {#each filteredProjects as project}
                     <li class="project-item active">
-                        <a href="{portfolio?.route.id}/{project.slug}">
+                        <a href="/portfolio/{project.slug}">
                             <figure class="project-img">
                                 {#if !!portfolio?.imageIcon}
                                     <div class="project-item-icon-box">
