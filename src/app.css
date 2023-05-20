@@ -128,7 +128,7 @@ body {
 ----------------------------------- */
 
 .sidebar,
-article {
+.article {
   background: var(--c-area-bg-1);
   border: 1px solid var(--c-light-bg-border);
   border-radius: 20px;
@@ -854,7 +854,7 @@ main {
   margin-bottom: 8px;
 }
 
-.skill .title-wrapper h5 {
+.skill .title-wrapper h4 {
   font-size: var(--fs-7);
   font-weight: var(--fw-500);
 }
@@ -1153,7 +1153,7 @@ main {
   ----------------------------------- */
 
   .sidebar,
-  article {
+  .article {
     width: 520px;
     margin-inline: auto;
     padding: 30px;
@@ -1442,7 +1442,7 @@ main {
   ----------------------------------- */
 
   .sidebar,
-  article {
+  .article {
     width: 700px;
   }
 
@@ -1549,7 +1549,7 @@ main {
   ----------------------------------- */
 
   .sidebar,
-  article {
+  .article {
     width: 950px;
     box-shadow: var(--shadow-5);
   }
@@ -1664,11 +1664,11 @@ main {
   ----------------------------------- */
 
   .sidebar,
-  article {
+  .article {
     width: auto;
   }
 
-  article {
+  .article {
     min-height: 100%;
   }
 

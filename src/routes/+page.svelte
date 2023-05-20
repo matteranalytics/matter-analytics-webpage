@@ -27,7 +27,7 @@
 
 <Head {...seo} />
 
-<article class="about">
+<article class="article about">
     <header>
         <h2 class="h2 article-title">{about.title}</h2>
     </header>

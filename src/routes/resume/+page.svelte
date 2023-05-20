@@ -23,7 +23,7 @@
 
 <Head {...seo} />
 
-<article class="resume">
+<article class="article resume">
     <header>
         <h2 class="h2 article-title">{resume?.title}</h2>
     </header>
@@ -78,7 +78,7 @@
                 {#each skills.items as item}
                     <li class="skills-item">
                         <div class="title-wrapper">
-                            <h5 class="h5">{item.name}</h5>
+                            <h4 class="h4">{item.name}</h4>
                             <data value={item.percentage}>{item.percentage}%</data>
                         </div>
 

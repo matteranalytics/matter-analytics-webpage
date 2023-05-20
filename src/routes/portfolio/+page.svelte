@@ -50,7 +50,7 @@
 
 <Head {...seo} />
 
-<article class="portfolio active">
+<article class="article portfolio active">
     <header>
         <h2 class="h2 article-title">{portfolio?.title}</h2>
     </header>

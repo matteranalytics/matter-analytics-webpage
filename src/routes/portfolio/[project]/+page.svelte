@@ -10,8 +10,8 @@
 
 <Head title="{sidebar.name} · {project.title}" description={project.description} keywords="{portfolio?.seo.keywords}, {project.category}" />
 
-<article class="project">
-    {#if !ProjectMarkdown}
+{#if !ProjectMarkdown}
+    <article class="article project">
         <header>
             <h2 class="h2 article-title">{project.title}</h2>
         </header>
@@ -35,9 +35,9 @@
         <figure class="project-img">
             <img src={project.img.src} alt={project.img.alt} loading="lazy" />
         </figure>
-    {:else}
-        <section class="project-markdown">
-            <svelte:component this={ProjectMarkdown} />
-        </section>
-    {/if}
-</article>
+    </article>
+{:else}
+    <section class="article project project-markdown">
+        <svelte:component this={ProjectMarkdown} />
+    </section>
+{/if}
