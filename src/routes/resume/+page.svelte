@@ -41,7 +41,7 @@
                 {#each education.items as item}
                     <li class="timeline-item">
                         <h4 class="h4 timeline-item-title">{item.title}</h4>
-                        <span>{item.year}</span>
+                        <span class="timeline-date">{item.year}</span>
                         <p class="timeline-text">{item.text}</p>
                     </li>
                 {/each}
@@ -62,7 +62,7 @@
                 {#each experience.items as item}
                     <li class="timeline-item">
                         <h4 class="h4 timeline-item-title">{item.title}</h4>
-                        <span>{item.year}</span>
+                        <span class="timeline-date">{item.year}</span>
                         <p class="timeline-text">{item.text}</p>
                     </li>
                 {/each}

@@ -10,11 +10,11 @@ export const localeDateString: Database.LocaleDateString = {
 };
 
 export const sidebar: Database.Sidebar = {
-    name: "Richard Hanrick",
+    name: "Richard Hendricks",
     profession: "Data Scientist",
     img: {
-        src: "/example_images/my-avatar.png",
-        alt: "Richard Hanrick",
+        src: "/example_images/richard-hendricks.jpg",
+        alt: "Richard Hendricks",
     },
 
     showContacts: {
@@ -58,10 +58,10 @@ export const pages: Database.Pages = {
 
         seo: {
             // Keep it very short
-            title: "Richard Hanrick · Profile",
+            title: "Richard Hendricks · Profile",
             // Max. 155 characters
             description:
-                "Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
+                "Richard Hendricks' profile: Explore services, view client work, and read testimonials to see how Richard Hendricks can elevate your project.",
             // The more unique they are, the better.
             keywords: "freelancer, data science, analytics",
         },
@@ -103,16 +103,16 @@ export const pages: Database.Pages = {
             quoteIcon: Icons.qoute,
             items: [
                 {
-                    name: "Daniel lewis",
+                    name: "Jared Dunn",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    img: { src: "/example_images/avatar-1.png", alt: "Daniel lewis" },
+                    img: { src: "/example_images/jared-dunn.jpg", alt: "Daniel lewis" },
                 },
                 {
-                    name: "Jessica miller",
+                    name: "Bertram Gilfoyle",
                     date: "2021-06-14",
                     text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    img: { src: "/example_images/avatar-2.png", alt: "Jessica miller" },
+                    img: { src: "/example_images/bertram-gilfoyle.jpg", alt: "Jessica miller" },
                 },
                 {
                     name: "Emily evans",
@@ -133,20 +133,20 @@ export const pages: Database.Pages = {
             title: "Clients",
             items: [
                 {
-                    link: "https://svelte.dev/",
-                    img: { src: "/example_images/logo-1-color.png", alt: "client logo" },
+                    link: "https://google.com/",
+                    img: { src: "/example_images/google-logo.png", alt: "client logo" },
                 },
                 {
-                    link: "https://kit.svelte.dev/",
-                    img: { src: "/example_images/logo-2-color.png", alt: "client logo" },
+                    link: "https://microsoft.com/",
+                    img: { src: "/example_images/microsoft-logo.png", alt: "client logo" },
                 },
                 {
-                    link: "https://fonts.google.com/",
-                    img: { src: "/example_images/logo-3-color.png", alt: "client logo" },
+                    link: "https://meta.com/",
+                    img: { src: "/example_images/meta-logo.png", alt: "client logo" },
                 },
                 {
-                    link: "https://icon-sets.iconify.design/",
-                    img: { src: "/example_images/logo-4-color.png", alt: "client logo" },
+                    link: "https://amazon.com/",
+                    img: { src: "/example_images/amazon-logo.png", alt: "client logo" },
                 },
                 {
                     link: "https://vercel.com/",
@@ -165,9 +165,9 @@ export const pages: Database.Pages = {
         title: "Resume",
 
         seo: {
-            title: "Richard Hanrick · Resume",
+            title: "Richard Hendricks · Resume",
             description:
-                "Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
+                "Richard Hendricks' profile: Explore services, view client work, and read testimonials to see how Richard Hendricks can elevate your project.",
             keywords: "freelancer, data science, analytics",
         },
 
@@ -231,9 +231,9 @@ export const pages: Database.Pages = {
         title: "Portfolio",
 
         seo: {
-            title: "Richard Hanrick · Portfolio",
+            title: "Richard Hendricks · Portfolio",
             description:
-                "Richard Hanrick's profile: Explore services, view client work, and read testimonials to see how Richard Hanrick can elevate your project.",
+                "Richard Hendricks' profile: Explore services, view client work, and read testimonials to see how Richard Hendricks can elevate your project.",
             keywords: "freelancer, data science, analytics",
         },
 
