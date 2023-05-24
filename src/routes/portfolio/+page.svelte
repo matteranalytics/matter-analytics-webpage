@@ -52,7 +52,7 @@
 
 <article class="article portfolio active">
     <header>
-        <h2 class="h2 article-title">{portfolio?.title}</h2>
+        <h2 class="article-title">{portfolio?.title}</h2>
     </header>
 
     <section class="projects">

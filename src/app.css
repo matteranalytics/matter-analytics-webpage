@@ -209,10 +209,11 @@ h6 {
   font-weight: var(--fw-700);
 }
 
-.h2,
-.h3,
-.h4,
-.h5 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--c-text-bright);
 }
 
@@ -723,6 +724,9 @@ main {
 
 .modal-title {
   margin-bottom: 4px;
+  color: var(--c-text-bright);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-700);
 }
 
 .modal-content time {

@@ -25,7 +25,7 @@
 
 <article class="article resume">
     <header>
-        <h2 class="h2 article-title">{resume?.title}</h2>
+        <h2 class="article-title">{resume?.title}</h2>
     </header>
 
     {#if education && education?.items.length > 0}
@@ -34,13 +34,13 @@
                 <div class="icon-box">
                     <Icon icon={education.icon} />
                 </div>
-                <h3 class="h3">{education.title}</h3>
+                <h3>{education.title}</h3>
             </div>
 
             <ol class="timeline-list">
                 {#each education.items as item}
                     <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">{item.title}</h4>
+                        <h4 class="timeline-item-title">{item.title}</h4>
                         <span class="timeline-date">{item.year}</span>
                         <p class="timeline-text">{item.text}</p>
                     </li>
@@ -55,13 +55,13 @@
                 <div class="icon-box">
                     <Icon icon={experience.icon} />
                 </div>
-                <h3 class="h3">{experience.title}</h3>
+                <h3>{experience.title}</h3>
             </div>
 
             <ol class="timeline-list">
                 {#each experience.items as item}
                     <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">{item.title}</h4>
+                        <h4 class="timeline-item-title">{item.title}</h4>
                         <span class="timeline-date">{item.year}</span>
                         <p class="timeline-text">{item.text}</p>
                     </li>
@@ -72,13 +72,13 @@
 
     {#if skills && skills?.items.length > 0}
         <section class="skill">
-            <h3 class="h3 skills-title">{skills.title}</h3>
+            <h3 class="skills-title">{skills.title}</h3>
 
             <ul class="skills-list content-card">
                 {#each skills.items as item}
                     <li class="skills-item">
                         <div class="title-wrapper">
-                            <h4 class="h4">{item.name}</h4>
+                            <h4>{item.name}</h4>
                             <data value={item.percentage}>{item.percentage}%</data>
                         </div>
 

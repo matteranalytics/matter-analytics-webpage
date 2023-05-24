@@ -22,7 +22,7 @@
         <img src={item.img.src} alt={item.img.alt} width="60" />
     </figure>
 
-    <h4 class="h4 testimonials-item-title">{item.name}</h4>
+    <h4 class="testimonials-item-title">{item.name}</h4>
 
     <div class="testimonials-text">
         <p>{item.text}</p>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="modal-content">
-            <h4 class="h3 modal-title">{item.name}</h4>
+            <div class="modal-title">{item.name}</div>
 
             <time datetime={item.date}>
                 {new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" })}

@@ -29,7 +29,7 @@
 
 <article class="article about">
     <header>
-        <h2 class="h2 article-title">{about.title}</h2>
+        <h2 class="article-title">{about.title}</h2>
     </header>
 
     {#if paragraphs && paragraphs?.length > 0}
@@ -42,7 +42,7 @@
 
     {#if services && services?.items.length > 0}
         <section class="service">
-            <h3 class="h3 service-title">{services.title}</h3>
+            <h3 class="service-title">{services.title}</h3>
             <ul class="service-list">
                 {#each services.items as item}
                     <li class="service-item">
@@ -50,7 +50,7 @@
                             <Icon icon={item.icon} />
                         </div>
                         <div class="service-content-box">
-                            <h4 class="h4 service-item-title">{item.title}</h4>
+                            <h4 class="service-item-title">{item.title}</h4>
                             <p class="service-item-text">{item.text}</p>
                         </div>
                     </li>
@@ -61,7 +61,7 @@
 
     {#if testimonials && testimonials?.items.length > 0}
         <section class="testimonials">
-            <h3 class="h3 testimonials-title">{testimonials.title}</h3>
+            <h3 class="testimonials-title">{testimonials.title}</h3>
 
             <ul class="testimonials-list has-scrollbar">
                 {#each testimonials.items as item}
@@ -75,7 +75,7 @@
 
     {#if clients && clients?.items.length > 0}
         <section class="clients">
-            <h3 class="h3 clients-title">{clients.title}</h3>
+            <h3 class="clients-title">{clients.title}</h3>
 
             <ul class="clients-list has-scrollbar">
                 {#each clients.items as item}

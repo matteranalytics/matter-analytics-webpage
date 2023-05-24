@@ -13,7 +13,7 @@
 {#if !ProjectMarkdown}
     <article class="article project">
         <header>
-            <h2 class="h2 article-title">{project.title}</h2>
+            <h2 class="article-title">{project.title}</h2>
         </header>
 
         {#if (project?.category ?? "").length > 0 && (project?.client ?? "").length > 0}
