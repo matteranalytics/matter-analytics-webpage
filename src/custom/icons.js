@@ -18,10 +18,10 @@ import chevronDown from "@iconify-icons/fa6-solid/chevron-down.js";
 import close from "@iconify-icons/fa6-solid/xmark.js";
 
 // About - Services
-import brain from "@iconify-icons/fa6-solid/brain.js";
-import chartPie from "@iconify-icons/fa6-solid/chart-pie.js";
+import compass from "@iconify-icons/fa6-solid/compass.js";
 import code from "@iconify-icons/fa6-solid/code.js";
-import camera from "@iconify-icons/fa6-solid/camera.js";
+import pawn from "@iconify-icons/fa6-solid/chess-pawn.js";
+import group from "@iconify-icons/fa6-solid/people-group.js";
 
 // About - Testimonial
 import qoute from "@iconify-icons/fa6-solid/quote-right.js";
@@ -31,6 +31,7 @@ import eye from "@iconify-icons/fa6-solid/eye.js";
 
 // Resume
 import book from "@iconify-icons/fa6-solid/book-open.js";
+import suitcase from "@iconify-icons/fa6-solid/suitcase.js";
 
 export default {
     // Sidebar
@@ -49,14 +50,15 @@ export default {
     // About
     close,
     // About - Services
-    brain,
-    chartPie,
+    compass,
     code,
-    camera,
+    pawn,
+    group,
     // About - Testimonial
     qoute,
     // Portfolio
     eye,
     // Resume
     book,
+    suitcase,
 };

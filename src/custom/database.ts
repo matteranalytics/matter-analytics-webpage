@@ -11,7 +11,7 @@ export const localeDateString: Database.LocaleDateString = {
 
 export const sidebar: Database.Sidebar = {
     name: "Richard Hendricks",
-    profession: "Data Scientist",
+    profession: "Software Engineer",
     img: {
         src: "/example_images/richard-hendricks.jpg",
         alt: "Richard Hendricks",
@@ -58,41 +58,41 @@ export const pages: Database.Pages = {
 
         seo: {
             // Keep it very short
-            title: "Richard Hendricks · Profile",
+            title: "Richard Hendricks · CEO Pied Piper",
             // Max. 155 characters
             description:
                 "Richard Hendricks' profile: Explore services, view client work, and read testimonials to see how Richard Hendricks can elevate your project.",
             // The more unique they are, the better.
-            keywords: "freelancer, data science, analytics",
+            keywords: "tech entrepreneur, Pied Piper, compression technology, Silicon Valley, CEO",
         },
 
         paragraphs: [
-            "I'm a Data Scientist and Machine Learning Engineer from Sacramento, California, working in the field of data analysis and predictive modeling. I am passionate about transforming complex data into valuable insights and actionable solutions.",
-            "My job is to analyze your data and create models that are both efficient and easy to understand, while ensuring they deliver accurate predictions. My aim is to help you make data-driven decisions and unlock the full potential of your data. I have developed data-driven solutions for numerous renowned companies across various industries.",
+            "I'm Richard Hendricks, the CEO and founder of Pied Piper. Originally from Tulsa, Oklahoma, I moved to Silicon Valley to pursue my dream of making a significant impact on the tech industry. My passion lies in creating and developing revolutionary technologies.",
+            "My life's work is dedicated to revolutionizing the world of data compression with Pied Piper's Middle-Out technology. Our aim is to make data storage and transfer more efficient than ever before, thereby improving the technology landscape as a whole. I have had the privilege to lead a team of brilliant minds and together, we've brought Pied Piper to the forefront of innovation.",
         ],
 
         services: {
             title: "What I'm doing",
             items: [
                 {
-                    title: "Machine Learning",
-                    text: "I create top-notch ML models to tackle various challenges.",
-                    icon: Icons.brain,
+                    title: "Leading Pied Piper",
+                    text: "I steer the ship of Pied Piper towards creating and implementing game-changing technology.",
+                    icon: Icons.compass,
                 },
                 {
-                    title: "Statistics",
-                    text: "Analyzing and interpreting data using essential statistical concepts.",
-                    icon: Icons.chartPie,
-                },
-                {
-                    title: "Prompt Engineering",
-                    text: "Creating quality prompts for improved AI language model performance.",
+                    title: "Innovative Tech Development",
+                    text: "Leading the creation of disruptive technology, including the Middle-Out compression algorithm.",
                     icon: Icons.code,
                 },
                 {
-                    title: "Photography",
-                    text: "I make high-quality photos of any category at a professional level.",
-                    icon: Icons.camera,
+                    title: "Strategic Planning",
+                    text: "Planning and executing strategies to bring Pied Piper's technology to the market.",
+                    icon: Icons.pawn,
+                },
+                {
+                    title: "Team Building",
+                    text: "Cultivating a creative and productive work environment to foster innovation and drive growth.",
+                    icon: Icons.group,
                 },
             ],
         },
@@ -104,27 +104,27 @@ export const pages: Database.Pages = {
             items: [
                 {
                     name: "Jared Dunn",
-                    date: "2021-06-14",
-                    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    img: { src: "/example_images/jared-dunn.jpg", alt: "Daniel lewis" },
+                    date: "2023-05-26",
+                    text: "Richard's vision for Pied Piper was simply astounding. His meticulous attention to detail and unwavering commitment to creating a new, disruptive technology was truly inspiring. His ability to navigate through the complexities of the tech industry and keep his team focused is nothing short of amazing.",
+                    img: { src: "/example_images/testimonial-jared-dunn.jpg", alt: "Jared Dunn" },
                 },
                 {
                     name: "Bertram Gilfoyle",
-                    date: "2021-06-14",
-                    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    img: { src: "/example_images/bertram-gilfoyle.jpg", alt: "Jessica miller" },
+                    date: "2023-05-26",
+                    text: "Despite our disagreements, I have to admit, Richard knew how to build something out of nothing. His Middle-Out compression algorithm was a game-changer. It's rare to find someone so dedicated to pushing boundaries and refusing to settle for mediocrity.",
+                    img: { src: "/example_images/testimonial-bertram-gilfoyle.jpg", alt: "Bertram Gilfoyle" },
                 },
                 {
-                    name: "Emily evans",
-                    date: "2021-06-14",
-                    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    img: { src: "/example_images/avatar-3.png", alt: "Emily evans" },
+                    name: "Dinesh Chugtai",
+                    date: "2023-05-26",
+                    text: "Working with Richard has been an interesting experience, to say the least. His relentless drive to turn Pied Piper into a market-leading company was infectious. His knack for problem-solving and thinking outside of the box has often been the key to our success.",
+                    img: { src: "/example_images/testimonial-dinesh-chugtai.jpg", alt: "Dinesh Chugtai" },
                 },
                 {
-                    name: "Henry william",
-                    date: "2021-06-14",
-                    text: "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.",
-                    img: { src: "/example_images/avatar-4.png", alt: "Henry william" },
+                    name: "Erlich Bachman",
+                    date: "2023-05-26",
+                    text: "Richard may not have been the easiest person to work with, but his sheer genius cannot be denied. His drive to revolutionize the tech industry with Pied Piper was a force to be reckoned with. As much as it pains me to admit it, Richard's leadership was instrumental in our achievements.",
+                    img: { src: "/example_images/testimonial-erlich-bachman.jpg", alt: "Erlich Bachman" },
                 },
             ],
         },
@@ -133,28 +133,28 @@ export const pages: Database.Pages = {
             title: "Clients",
             items: [
                 {
-                    link: "https://google.com/",
-                    img: { src: "/example_images/google-logo.png", alt: "client logo" },
+                    link: "https://silicon-valley.fandom.com/wiki/Pied_Piper_(company)",
+                    img: { src: "/example_images/client-piedpiper-logo.png", alt: "client logo" },
                 },
                 {
-                    link: "https://microsoft.com/",
-                    img: { src: "/example_images/microsoft-logo.png", alt: "client logo" },
+                    link: "https://google.com/",
+                    img: { src: "/example_images/client-google-logo.png", alt: "client logo" },
                 },
                 {
                     link: "https://meta.com/",
-                    img: { src: "/example_images/meta-logo.png", alt: "client logo" },
+                    img: { src: "/example_images/client-meta-logo.png", alt: "client logo" },
+                },
+                {
+                    link: "https://datalumina.io/",
+                    img: { src: "/example_images/client-datalumina-logo.png", alt: "client logo" },
+                },
+                {
+                    link: "https://microsoft.com/",
+                    img: { src: "/example_images/client-microsoft-logo.png", alt: "client logo" },
                 },
                 {
                     link: "https://amazon.com/",
-                    img: { src: "/example_images/amazon-logo.png", alt: "client logo" },
-                },
-                {
-                    link: "https://vercel.com/",
-                    img: { src: "/example_images/logo-5-color.png", alt: "client logo" },
-                },
-                {
-                    link: "https://github.com/",
-                    img: { src: "/example_images/logo-6-color.png", alt: "client logo" },
+                    img: { src: "/example_images/client-amazon-logo.png", alt: "client logo" },
                 },
             ],
         },
@@ -176,41 +176,31 @@ export const pages: Database.Pages = {
             icon: Icons.book,
             items: [
                 {
-                    title: "Microsoft Certified Solutions Expert",
-                    year: "2021",
-                    text: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
+                    title: "Self-taught Programmer and Engineer",
+                    year: "2000 - Present",
+                    text: "Began coding from a young age, leveraging open-source resources and community forums to learn various programming languages and algorithms.",
                 },
                 {
-                    title: "MSc in Data Science, UCLA",
-                    year: "2015 — 2018",
-                    text: "Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis.",
-                },
-                {
-                    title: "BSc in Statistics, UCLA",
-                    year: "2012 — 2015",
-                    text: "Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.",
+                    title: "BSc in Computer Science, University of Oklahoma",
+                    year: "2005 — 2009",
+                    text: "Studied Computer Science where I cultivated my passion for algorithmic problem-solving and began developing the foundation for Pied Piper's compression technology.",
                 },
             ],
         },
 
         experience: {
             title: "Experience",
-            icon: Icons.book,
+            icon: Icons.suitcase,
             items: [
                 {
-                    title: "Data Scientist",
-                    year: "2020 — Present",
-                    text: "Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur.",
+                    title: "CEO, Pied Piper",
+                    year: "2014 — Present",
+                    text: "Founded and led a tech startup, developed the revolutionary Middle-Out compression algorithm, and navigated through various business and technical challenges to make Pied Piper a prominent name in the tech industry.",
                 },
                 {
-                    title: "Machine Learning Specialist",
-                    year: "2018 — 2020",
-                    text: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
-                },
-                {
-                    title: "Statistical Programmer",
-                    year: "2016 — 2018",
-                    text: "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
+                    title: "Software Engineer, Hooli",
+                    year: "2009 — 2013",
+                    text: "Worked on various projects as a part of the core development team, honed my programming skills, and gained experience that led to the conception of Pied Piper.",
                 },
             ],
         },
@@ -218,10 +208,10 @@ export const pages: Database.Pages = {
         skills: {
             title: "My skills",
             items: [
-                { name: "Machine Learning", percentage: 80 },
-                { name: "Statistical analysis", percentage: 70 },
-                { name: "Data Wrangling", percentage: 90 },
-                { name: "Cloud Computing", percentage: 50 },
+                { name: "Algorithm Design", percentage: 90 },
+                { name: "Software Engineering", percentage: 85 },
+                { name: "Leadership & Team Management", percentage: 70 },
+                { name: "Product Development", percentage: 80 },
             ],
         },
     },
@@ -246,58 +236,58 @@ export const pages: Database.Pages = {
         },
 
         projects: [
-            /** The `_markdown_syntax` Project page serves as a showcase for the supported Markdown syntax,
-             * demonstrating the various formatting options available.
-             * Comment out this item, so it will not appear as your first Project on your site!
-             */
             {
-                slug: "_markdown_syntax",
-                title: "Markdown Syntax",
-                category: "Markdown",
-                client: "Acme Comp",
-                description: "Supported Markdown syntax showcase",
-                img: { src: "/example_images/_markdown_syntax.png", alt: "markdown syntax" },
+                slug: "pied-piper",
+                title: "Pied Piper",
+                category: "Algorithms",
+                client: "In-House Project",
+                description: "A short (max. 155 charaters) description for SEO",
+                img: { src: "/example_images/project-pied-piper.jpg", alt: "pied-piper" },
             },
-
             {
                 slug: "finance",
                 title: "Finance",
-                category: "Statistics",
+                category: "Data Visualization",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description which can be nicely appear in SEO",
-                img: { src: "/example_images/project-1.jpg", alt: "finance" },
+                img: { src: "/example_images/project-finance.jpg", alt: "finance" },
             },
             {
                 slug: "orizon",
                 title: "Orizon",
-                category: "Statistics",
+                category: "Data Visualization",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-2.png", alt: "orizon" },
+                img: { src: "/example_images/project-orizon.png", alt: "orizon" },
             },
             {
                 slug: "fundo",
                 title: "Fundo",
-                category: "Machine Learning",
+                category: "Algorithms",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-3.png", alt: "fundo" },
-            },
-            {
-                slug: "brawlhalla",
-                title: "Brawlhalla",
-                category: "Big Data",
-                client: "Acme Comp",
-                description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-4.png", alt: "brawlhalla" },
+                img: { src: "/example_images/project-fundo.png", alt: "fundo" },
             },
             {
                 slug: "dsm",
                 title: "DSM",
-                category: "Machine Learning",
+                category: "Algorithms",
                 client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
-                img: { src: "/example_images/project-5.png", alt: "dsm" },
+                img: { src: "/example_images/project-dsm.png", alt: "dsm" },
+            },
+
+            /** The `_markdown-syntax` Project page serves as a showcase for the supported Markdown syntax,
+             * demonstrating the various formatting options available.
+             * Comment out this item, so it will not appear as your first Project on your site!
+             */
+            {
+                slug: "_markdown-syntax",
+                title: "Markdown Syntax",
+                category: "Markdown",
+                client: "Acme Comp",
+                description: "Supported Markdown syntax showcase",
+                img: { src: "/example_images/_project-markdown-syntax.png", alt: "markdown syntax" },
             },
         ],
     },

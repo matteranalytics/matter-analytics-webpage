@@ -3,8 +3,8 @@
 
 Markdown • Acme Comp
 
-![Appealing Markdown logo |full](/example_images/_markdown_syntax.png)
-![Appealing Markdown logo](/example_images/_markdown_syntax.png)
+![Appealing Markdown logo |full](/example_images/_project-markdown-syntax.png)
+![Appealing Markdown logo](/example_images/_project-markdown-syntax.png)
 
 The first image occupies the container's full width, responsively adjusting its size.
 
@@ -89,7 +89,7 @@ Reference-style:
 ![alt text][logo]
 
 Relative reference to the `static/` folder (without using the `static` prefix to safe space if you have a nested folder structure):
-![Markdown Syntax](/example_images/_markdown_syntax.png)
+![Markdown Syntax](/example_images/_project-markdown-syntax.png)
 
 [logo]: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/80px-Markdown-mark.svg.png "Logo Title Text 2"
 
