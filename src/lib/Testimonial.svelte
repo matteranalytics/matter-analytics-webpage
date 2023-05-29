@@ -17,7 +17,7 @@
     export let quoteIcon;
 </script>
 
-<div class="content-card" on:click={() => activeTestimonial.set(item.name)} on:keydown={() => activeTestimonial.set(item.name)}>
+<section class="content-card" on:click={() => activeTestimonial.set(item.name)} on:keydown={() => activeTestimonial.set(item.name)}>
     <figure class="testimonials-avatar-box">
         <img src={item.img.src} alt={item.img.alt} width="60" />
     </figure>
@@ -27,7 +27,7 @@
     <div class="testimonials-text">
         <p>{item.text}</p>
     </div>
-</div>
+</section>
 
 <div class="modal-container" class:active={$activeTestimonial === item.name}>
     <div
@@ -37,7 +37,7 @@
         on:keydown={() => activeTestimonial.set("")}
     />
 
-    <section class="testimonials-modal">
+    <div class="testimonials-modal">
         <button class="modal-close-btn" on:click={() => activeTestimonial.set("")} aria-label="Close">
             <Icon icon={closeIcon} />
         </button>
@@ -59,5 +59,5 @@
 
             <p>{item.text}</p>
         </div>
-    </section>
+    </div>
 </div>
