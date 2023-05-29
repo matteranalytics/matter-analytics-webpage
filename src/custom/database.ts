@@ -10,7 +10,7 @@ export const localeDateString: Database.LocaleDateString = {
 };
 
 export const sidebar: Database.Sidebar = {
-    name: "Richard Hendricks",
+    name: "Dave Ebbelaar",
     profession: "Software Engineer",
     img: {
         src: "/example_images/richard-hendricks.jpg",
