@@ -10,11 +10,14 @@
     /** @type { Database.Testimonial } */
     export let item;
 
-    /** @type { import('@iconify/types').IconifyIcon } */
-    export let closeIcon;
+    /** @type { Database.LocaleDateString } */
+    export let localeDateString;
 
     /** @type { import('@iconify/types').IconifyIcon } */
     export let quoteIcon;
+
+    /** @type { import('@iconify/types').IconifyIcon } */
+    export let closeIcon;
 </script>
 
 <section class="content-card" on:click={() => activeTestimonial.set(item.name)} on:keydown={() => activeTestimonial.set(item.name)}>
@@ -54,7 +57,7 @@
             <div class="modal-title">{item.name}</div>
 
             <time datetime={item.date}>
-                {new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" })}
+                {new Date(item.date).toLocaleDateString(localeDateString.locales, localeDateString.options)}
             </time>
 
             <p>{item.text}</p>
