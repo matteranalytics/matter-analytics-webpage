@@ -4,37 +4,22 @@ Statistics • Acme Comp
 
 ![Main project dashboard |full](/example_images/project-finance.jpg)
 
-## Project Overview
+## Challenge
 
-Sets the context for the project, what it's about, its purpose, and the problem it solves.
+Describe the problem or challenge that the project aims to solve.
 
-- A brief introduction to the project
-- Objective(s) and the problem(s) addressed
-- Client's requirements and goals (if applicable)
+## Our Approach
 
-## Objectives and Challenges
+Explain the methodology or approach used to tackle the challenge.
 
-Outlines the goals set at the start of the project and the difficulties that were overcome.
+## Results
 
-## Tools and Technologies Used
+Present the outcomes, findings, or achievements of the project.
 
-Highlights your technical skillset and gives a sense of the project's complexity.
+## Future Plans
 
-- List software, programming languages, and tools used in the project
+Outline any future plans or next steps for the project.
 
-## Project Process and Methodology
+## Team Expertise
 
-Describes the steps taken to execute the project, showing your strategic and procedural thinking.
-
-- A step-by-step breakdown of the project workflow.
-- Use bullet points or numbered lists for easy readability
-- Optional: Include visual aids such as flowcharts, diagrams, or process maps to illustrate the workflow
-
-## Results and Impact
-
-Demonstrates the value of your work by detailing the project's outcomes and the benefits they provided.
-
-- Quantitative and qualitative outcomes of the project
-- Key insights and findings
-- Client testimonials or feedback (if applicable)
-- Optional: Use visualizations, charts, or graphs to support the results
+Highlight the skills and expertise of the team members involved in the project.
