@@ -41,7 +41,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Setup
 
-Clone this repository.
+Clone or fork this repository.
 
 ## Local Workflow
 
@@ -144,7 +144,7 @@ But first, we need to set up CD by importing our Git repo from GitHub to Vercel.
 6. *Optional* If you enabled 2FA on GitHub, you'll need to authorize yourself.
 7. Enlarge the window, and you'll see it landed on GitHub. Scroll down to `Repository access`, select the repository, and click `Save`. This authorizes Vercel to access your repository and create a static site from it.
 8. The popup will be closed automatically, and you'll see the authorized repository in the Vercel Dashboard. Click `Import` next to it.
-9. Leave the settings as they are and click the wide `Deploy` button.
+9. Look for `Node.js Version` and select `18.x`, the rest of the settings can remain as they are, then click the wide `Deploy` button.
 10. If you see "Congratulations", your site is live!
 11. Click `Continue to Dashboard` to set the domain for the site.
 12. Click `Settings` at the top, then `Domains` on the left panel.
