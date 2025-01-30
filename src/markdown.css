@@ -1,41 +1,41 @@
-.project-markdown {
+.entry-markdown {
   --fs-2: 22px;
 }
 
 @media (min-width: 580px) {
-  .project-markdown {
+  .entry-markdown {
     --fs-2: 24px;
   }
 }
 
 @media (min-width: 768px) {
-  .project-markdown {
+  .entry-markdown {
     --fs-2: 28px;
   }
 }
 
-.project-markdown h1,
-.project-markdown h2,
-.project-markdown h3,
-.project-markdown h4,
-.project-markdown h5 {
+.entry-markdown h1,
+.entry-markdown h2,
+.entry-markdown h3,
+.entry-markdown h4,
+.entry-markdown h5 {
   color: var(--c-text-bright);
 }
 
-.project-markdown h2,
-.project-markdown h3,
-.project-markdown h4,
-.project-markdown h5 {
+.entry-markdown h2,
+.entry-markdown h3,
+.entry-markdown h4,
+.entry-markdown h5 {
   margin: 40px 0 20px 0;
 }
 
-.project-markdown h1 {
+.entry-markdown h1 {
   position: relative;
   padding-bottom: 7px;
   margin-bottom: 15px;
 }
 
-.project-markdown h1::after {
+.entry-markdown h1::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -47,29 +47,29 @@
 }
 
 @media (min-width: 580px) {
-  .project-markdown h1 {
+  .entry-markdown h1 {
     padding-bottom: 15px;
     margin-bottom: 20px;
   }
 
-  .project-markdown h1::after {
+  .entry-markdown h1::after {
     width: 40px;
     height: 5px;
   }
 }
 
 @media (min-width: 768px) {
-  .project-markdown h1 {
+  .entry-markdown h1 {
     padding-bottom: 20px;
   }
 }
 
 @media (min-width: 1024px) {
-  .project-markdown h1 {
+  .entry-markdown h1 {
     padding-bottom: 20px;
   }
 
-  .project-markdown h1::before {
+  .entry-markdown h1::before {
     content: " ";
     width: 330px;
     float: right;
@@ -78,90 +78,90 @@
 }
 
 @media (min-width: 1350px) {
-  .project-markdown h1 {
+  .entry-markdown h1 {
     padding-bottom: 20px;
   }
 }
 
-.project-markdown hr {
+.entry-markdown hr {
   height: 1px;
   background-color: var(--c-light-bg-border);
   border: none;
 }
 
-.project-markdown a {
+.entry-markdown a {
   color: var(--c-markdown-link);
   display: inline-block;
   text-decoration: underline;
 }
 
-.project-markdown a:hover {
+.entry-markdown a:hover {
   text-decoration: none;
 }
 
-.project-markdown img {
+.entry-markdown img {
   max-width: 100%;
   height: auto;
   border-radius: 16px;
   margin: 30px 0;
 }
 
-.project-markdown img:is([alt*="|full"]) {
+.entry-markdown img:is([alt*="|full"]) {
   width: 100%;
 }
 
-.project-markdown p,
-.project-markdown li,
-.project-markdown td {
+.entry-markdown p,
+.entry-markdown li,
+.entry-markdown td {
   color: var(--c-text-silver);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-.project-markdown ol {
+.entry-markdown ol {
   counter-reset: markdown-counter;
   list-style-type: none;
 }
 
-.project-markdown ol,
-.project-markdown ul,
-.project-markdown pre,
-.project-markdown table {
+.entry-markdown ol,
+.entry-markdown ul,
+.entry-markdown pre,
+.entry-markdown table {
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.project-markdown p {
+.entry-markdown p {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-.project-markdown li {
+.entry-markdown li {
   margin-bottom: 10px;
 }
 
-.project-markdown li ul,
-.project-markdown li ol,
-.project-markdown li p:last-child {
+.entry-markdown li ul,
+.entry-markdown li ol,
+.entry-markdown li p:last-child {
   margin-bottom: 0;
 }
 
-.project-markdown li ul,
-.project-markdown li ol {
+.entry-markdown li ul,
+.entry-markdown li ol {
   margin-top: 10px;
 }
 
-.project-markdown table {
+.entry-markdown table {
   margin-top: 20px;
 }
 
-.project-markdown li {
+.entry-markdown li {
   position: relative;
   margin-left: 30px;
 }
 
-.project-markdown ul > li::before {
+.entry-markdown ul > li::before {
   content: "";
   position: absolute;
   top: 9px;
@@ -173,12 +173,12 @@
   box-shadow: 0 0 0 4px var(--c-light-bg-border);
 }
 
-.project-markdown ol > li {
+.entry-markdown ol > li {
   counter-increment: markdown-counter;
   position: relative;
 }
 
-.project-markdown ol > li::before {
+.entry-markdown ol > li::before {
   content: counter(markdown-counter);
   position: absolute;
   top: 0;
@@ -188,7 +188,7 @@
   color: var(--c-text-bright);
 }
 
-.project-markdown table {
+.entry-markdown table {
   display: block;
   width: 100%;
   width: max-content;
@@ -198,35 +198,35 @@
   border-collapse: collapse;
 }
 
-.project-markdown table th {
+.entry-markdown table th {
   border-top: 1px solid var(--c-light-bg-border);
 }
 
-.project-markdown table th,
-.project-markdown table td {
+.entry-markdown table th,
+.entry-markdown table td {
   padding: 10px 15px;
   border: 1px solid var(--c-light-bg-border);
 }
 
-.project-markdown table tr:nth-child(2n) td {
+.entry-markdown table tr:nth-child(2n) td {
   background-color: var(--c-area-bg-2);
 }
 
-.project-markdown table th {
+.entry-markdown table th {
   font-weight: var(--fw-600);
 }
 
-.project-markdown table tr td img:is:not([alt*="|full"]) {
+.entry-markdown table tr td img:is:not([alt*="|full"]) {
   margin: 0;
 }
 
-.project-markdown blockquote {
+.entry-markdown blockquote {
   padding: 0 1em;
   color: var(--c-light-bg-border);
   border-left: 0.25em solid var(--c-light-bg-border);
 }
 
-.project-markdown :not(pre) code {
+.entry-markdown :not(pre) code {
   padding: 0.2em 0.4em;
   margin: 0;
   font-family: Consolas, Monaco, monospace;

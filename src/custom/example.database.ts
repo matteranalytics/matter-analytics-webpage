@@ -1,14 +1,5 @@
 import Icons from "./icons";
 
-export const localeDateString: Database.LocaleDateString = {
-    locales: "en-US",
-    options: {
-        day: "numeric" as const,
-        month: "long" as const,
-        year: "numeric" as const,
-    },
-};
-
 export const sidebar: Database.Sidebar = {
     name: "Richard Hendricks",
     profession: "Software Engineer",
@@ -288,6 +279,67 @@ export const pages: Database.Pages = {
                 client: "Acme Comp",
                 description: "Supported Markdown syntax showcase",
                 img: { src: "/example_images/_project-markdown-syntax.png", alt: "markdown syntax" },
+            },
+        ],
+    },
+
+    blog: {
+        nav: "Blog",
+        title: "Blog",
+
+        seo: {
+            title: "Richard Hendricks · Blog",
+            description:
+                "Richard Hendricks' profile: Explore services, view client work, and read testimonials to see how Richard Hendricks can elevate your post.",
+            keywords: "freelancer, data science, analytics",
+        },
+
+        categoryFilter: {
+            instruction: "Select Category",
+            icon: Icons.chevronDown,
+            allCategory: "All",
+        },
+
+        posts: [
+            {
+                slug: "pied-piper",
+                title: "Pied Piper",
+                category: "Algorithms",
+                date: "2023-05-26",
+                description: "A short (max. 155 charaters) description for SEO",
+                img: { src: "/example_images/post-pied-piper.jpg", alt: "pied-piper" },
+            },
+            {
+                slug: "finance",
+                title: "Finance",
+                category: "Data Visualization",
+                date: "2023-04-26",
+                description: "A short (max. 155 charaters) description which can be nicely appear in SEO",
+                img: { src: "/example_images/post-finance.jpg", alt: "finance" },
+            },
+            {
+                slug: "orizon",
+                title: "Orizon",
+                category: "Data Visualization",
+                date: "2023-03-26",
+                description: "A short (max. 155 charaters) description for SEO",
+                img: { src: "/example_images/post-orizon.png", alt: "orizon" },
+            },
+            {
+                slug: "fundo",
+                title: "Fundo",
+                category: "Algorithms",
+                date: "2023-02-26",
+                description: "A short (max. 155 charaters) description for SEO",
+                img: { src: "/example_images/post-fundo.png", alt: "fundo" },
+            },
+            {
+                slug: "dsm",
+                title: "DSM",
+                category: "Algorithms",
+                date: "2023-01-26",
+                description: "A short (max. 155 charaters) description for SEO",
+                img: { src: "/example_images/post-dsm.png", alt: "dsm" },
             },
         ],
     },

@@ -1,4 +1,4 @@
-import { localeDateString, sidebar, pages } from "../custom/database";
+import { sidebar, pages } from "../custom/database";
 
 export const prerender = true;
 
@@ -11,7 +11,6 @@ export function load() {
         ) || [];
 
     return {
-        localeDateString,
         sidebar,
         pages,
         routes,

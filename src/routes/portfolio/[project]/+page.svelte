@@ -16,9 +16,9 @@
             <h2 class="article-title">{project.title}</h2>
         </header>
 
-        {#if (project?.category ?? "").length > 0 && (project?.client ?? "").length > 0}
+        {#if (project?.category && project.category.length > 0) || (project?.client && project.client.length > 0)}
             <div class="project-meta">
-                {#if (project?.category ?? "").length > 0}
+                {#if project?.category && project.category.length > 0}
                     <p class="project-category">{project.category}</p>
                 {/if}
 
@@ -26,7 +26,7 @@
                     <span class="dot" />
                 {/if}
 
-                {#if (project?.client ?? "").length > 0}
+                {#if project?.client && project.client.length > 0}
                     <p class="project-client">{project.client}</p>
                 {/if}
             </div>
@@ -37,7 +37,7 @@
         </figure>
     </article>
 {:else}
-    <section class="article project project-markdown">
+    <section class="article project entry-markdown">
         <svelte:component this={ProjectMarkdown} />
     </section>
 {/if}

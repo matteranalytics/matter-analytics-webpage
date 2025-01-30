@@ -183,7 +183,8 @@ The following trees provide an alternative representation of the type definition
   └── pages
       ├── about
       ├── resume ❎
-      └── portfolio ❎
+      ├── portfolio ❎
+      └── blog ❎
 ```
 
 ```
@@ -312,6 +313,32 @@ The following trees provide an alternative representation of the type definition
       ├── title
       ├── category ❎
       ├── client ❎
+      ├── description
+      └── img
+          ├── src
+          └── alt
+```
+
+```
+- blog ❎
+  ├── nav
+  ├── title
+  │
+  ├── seo
+  │   ├── title
+  │   ├── description
+  │   └── keywords
+  │
+  ├── categoryFilter ❎
+  │   ├── instruction
+  │   ├── icon
+  │   └── allCategory
+  │
+  └── posts[]
+      ├── slug
+      ├── title
+      ├── category ❎
+      ├── date ❎
       ├── description
       └── img
           ├── src

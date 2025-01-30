@@ -143,6 +143,17 @@ declare global {
 
         type Projects = Project[];
 
+        type Post = {
+            slug: string;
+            title: string;
+            category?: string;
+            date?: string;
+            description: string;
+            img: Image;
+        };
+
+        type Posts = Post[];
+
         type About = {
             nav: string;
             title: string;
@@ -171,10 +182,19 @@ declare global {
             projects: Projects;
         };
 
+        type Blog = {
+            nav: string;
+            title: string;
+            seo: SEO;
+            categoryFilter?: CategoryFilter;
+            posts: Posts;
+        };
+
         type Pages = {
             about: About;
             resume?: Resume;
             portfolio?: Portfolio;
+            blog?: Blog;
         };
     }
 }
