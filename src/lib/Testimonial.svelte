@@ -5,13 +5,11 @@
 </script>
 
 <script>
+    import { formatDate } from "../utils.js";
     import Icon from "@iconify/svelte";
 
     /** @type { Database.Testimonial } */
     export let item;
-
-    /** @type { Database.LocaleDateString } */
-    export let localeDateString;
 
     /** @type { import('@iconify/types').IconifyIcon } */
     export let quoteIcon;
@@ -57,7 +55,7 @@
             <div class="modal-title">{item.name}</div>
 
             <time datetime={item.date}>
-                {new Date(item.date).toLocaleDateString(localeDateString.locales, localeDateString.options)}
+                {formatDate(item.date)}
             </time>
 
             <p>{item.text}</p>

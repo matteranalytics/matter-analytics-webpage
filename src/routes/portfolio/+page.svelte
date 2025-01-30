@@ -35,7 +35,7 @@
                 }
                 return acc;
             },
-            []
+            [],
         );
     };
 
@@ -82,7 +82,7 @@
                             </figure>
 
                             <h3 class="project-title">{project.title}</h3>
-                            {#if (project?.category ?? "").length > 0}
+                            {#if project?.category && project.category.length > 0}
                                 <div class="project-meta">
                                     <p class="project-category">{project.category}</p>
                                 </div>

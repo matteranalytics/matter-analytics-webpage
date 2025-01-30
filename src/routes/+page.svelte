@@ -23,9 +23,6 @@
 
     /** @type { Database.Testimonials | undefined } */
     const testimonials = about?.testimonials;
-
-    /** @type { Database.LocaleDateString } */
-    const localeDateString = data.localeDateString;
 </script>
 
 <Head {...seo} />
@@ -69,7 +66,7 @@
             <ul class="testimonials-list has-scrollbar">
                 {#each testimonials.items as item}
                     <li class="testimonials-item">
-                        <Testimonial {item} {localeDateString} quoteIcon={testimonials.quoteIcon} closeIcon={testimonials.closeIcon} />
+                        <Testimonial {item} quoteIcon={testimonials.quoteIcon} closeIcon={testimonials.closeIcon} />
                     </li>
                 {/each}
             </ul>
