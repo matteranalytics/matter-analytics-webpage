@@ -46,6 +46,8 @@
   border-radius: 3px;
 }
 
+
+
 @media (min-width: 580px) {
   .entry-markdown h1 {
     padding-bottom: 15px;
@@ -70,8 +72,8 @@
   }
 
   .entry-markdown h1::before {
-    content: " ";
-    width: 330px;
+    content: "";
+    width: 370px;
     float: right;
     height: 5px;
   }

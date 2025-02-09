@@ -3,6 +3,19 @@ import location from "@iconify-icons/fa6-solid/location-dot.js";
 import mail from "@iconify-icons/fa6-solid/envelope.js";
 import phone from "@iconify-icons/fa6-solid/mobile-button.js";
 
+// AI/ML/Data Icons
+import robot from "@iconify-icons/fa6-solid/robot.js";       // AI or robotics
+import brain from "@iconify-icons/fa6-solid/brain.js";       // Machine Learning, cognitive processes
+import chartLine from "@iconify-icons/fa6-solid/chart-line.js";  
+import chartBar from "@iconify-icons/fa6-solid/chart-bar.js";
+import database from "@iconify-icons/fa6-solid/database.js"; 
+import arrowsRotate from "@iconify-icons/fa6-solid/arrows-rotate.js"; // Represents a cycle/loop
+import gears from "@iconify-icons/fa6-solid/gears.js"; // automation
+import flask from "@iconify-icons/fa6-solid/flask.js";
+import rocket from "@iconify-icons/fa6-solid/rocket.js";
+
+
+// Social Icons
 import facebook from "@iconify-icons/fa6-brands/facebook-square.js";
 import github from "@iconify-icons/fa6-brands/github.js";
 import instagram from "@iconify-icons/fa6-brands/instagram.js";
@@ -23,6 +36,7 @@ import code from "@iconify-icons/fa6-solid/code.js";
 import pawn from "@iconify-icons/fa6-solid/chess-pawn.js";
 import group from "@iconify-icons/fa6-solid/people-group.js";
 
+
 // About - Testimonial
 import qoute from "@iconify-icons/fa6-solid/quote-right.js";
 
@@ -38,6 +52,17 @@ export default {
     location,
     mail,
     phone,
+    
+    // AI/ML/Data Icons
+    robot,
+    brain,
+    chartLine,
+    chartBar,
+    database,
+    flask,
+    rocket,
+    
+    // Social Icons
     facebook,
     github,
     instagram,
@@ -45,20 +70,30 @@ export default {
     mastodon,
     twitter,
     youtube,
+    
     // Sidebar & Portfolio
     chevronDown,
+    
     // About
     close,
+    
     // About - Services
     compass,
     code,
     pawn,
     group,
+    
     // About - Testimonial
     qoute,
+    
     // Portfolio
     eye,
+    
     // Resume
     book,
     suitcase,
+
+    // Misc
+    arrowsRotate,
+    gears
 };

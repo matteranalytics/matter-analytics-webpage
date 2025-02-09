@@ -98,6 +98,18 @@ declare global {
             items: EducationItem[];
         };
 
+        type ProdItem = {
+            title: string;
+            year: string;
+            text: string;
+        };
+
+        type Prod = {
+            title: string;
+            icon: IconifyIcon;
+            items: ProdItem[];
+        };
+
         type ExperienceItem = {
             title: string;
             year: string;
@@ -170,6 +182,7 @@ declare global {
             seo: SEO;
             education?: Education;
             experience?: Experience;
+            prod?: Prod;
             skills?: Skills;
         };
 
