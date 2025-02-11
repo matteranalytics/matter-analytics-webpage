@@ -166,7 +166,7 @@ declare global {
 
         type Posts = Post[];
 
-        type About = {
+        type Home = {
             nav: string;
             title: string;
             seo: SEO;
@@ -180,6 +180,7 @@ declare global {
             nav: string;
             title: string;
             seo: SEO;
+            paragraphs?: Paragraphs;
             education?: Education;
             experience?: Experience;
             prod?: Prod;
@@ -203,11 +204,20 @@ declare global {
             posts: Posts;
         };
 
+        type About = {
+            nav: string;
+            title: string;
+            seo: SEO;
+            paragraphs?: Paragraphs;
+            img: Image;
+        };
+
         type Pages = {
-            about: About;
+            home: Home;
             resume?: Resume;
             portfolio?: Portfolio;
             blog?: Blog;
+            about?: About;
         };
     }
 }

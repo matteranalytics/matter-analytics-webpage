@@ -31,6 +31,12 @@ export const sidebar: Database.Sidebar = {
             icon: Icons.location,
             address: "Chicago, Illinois, USA",
         },
+        {
+            icon: Icons.calendar, // New calendar icon
+            title: "Scheduling",
+            text: "Schedule a Call Today",
+            link: "https://cal.com/matter-analytics/inital-call" // Change to your scheduling link
+          }
     ],
 
     socials: [
@@ -43,7 +49,7 @@ export const sidebar: Database.Sidebar = {
 };
 
 export const pages: Database.Pages = {
-    about: {
+    home: {
         nav: "Home",
         title: "Let’s figure out what matters",
 
@@ -147,6 +153,8 @@ export const pages: Database.Pages = {
         nav: "Approach",
         title: "Our Approach",
 
+        paragraphs: ["Below is detailed overview of the standard approach Matter Analytics takes for a majority of its projects, broken out in the three unique phases."],
+
         seo: {
             title: "Matter Analytics - Our Approach",
             description:
@@ -195,7 +203,7 @@ export const pages: Database.Pages = {
                     year: "Phase 2.3 | Timeline Estimate: 1 Week",
                     text: "Define a robust plan to transition the PoC into a production environment, including data governance, security protocols, and infrastructure considerations. Evaluate best-fit architectures to ensure scalability and long-term maintainability for your AI/ML solution.",
                 },
-                
+
             ],
         },
 
@@ -307,6 +315,30 @@ export const pages: Database.Pages = {
             // },
         ],
     },
+
+    about: {
+        nav: "About",
+        title: "About",
+
+        seo: {
+            title: "Matter Analytics - About",
+            description:
+                "Matter Analytics Founder - Yianni Mercer's Bio",
+            keywords: "freelancer, data science, analytics, chicago, data analytics, machine learning",
+        },
+
+        paragraphs: [
+            "I'm Yianni, a Data Scientist and AI Consultant specializing in machine learning, predictive modeling, and AI-driven solutions. Through my freelance consulting entity, Matter Analytics, I help businesses harness the power of AI and data science to optimize decision-making, automate processes, and extract meaningful insights.",
+
+            "With a Master's of Science in Applied Statistics (focusing on Data Science and Machine Learning) and a Bachelor's degree in Mathematical Sciences (concentrating in Statistics), I bring an advanced analytical foundation to solving complex problems. I have been programming for six years and have successfully built and launched AI-driven applications and machine learning models that power real-world decision-making and automation.",
+
+            "I believe that mathematics and statistics are the backbone of AI and machine learning, providing the structure and rigor necessary to build intelligent, data-driven systems. My approach is driven by curiosity, continuous learning, and a commitment to technical excellence, ensuring that the solutions I develop are both scientifically sound and impactful.",
+
+            "Through Matter Analytics, I work with businesses to develop custom AI models, machine learning algorithms, and data-driven strategies that drive efficiency and innovation. I thrive at the intersection of theory, application, and real-world impact, always striving to deliver solutions that are both innovative and strategically valuable."
+        ],
+
+        img: { src: "/example_images/yjwm_headshot.png", alt: "fundo" }
+    }
 
     // blog: {
     //     nav: "Projects",

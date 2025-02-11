@@ -6,34 +6,34 @@
 
     export let data;
 
-    /** @type { Database.About } */
-    const about = data.pages.about;
+    /** @type { Database.Home } */
+    const home = data.pages.home;
 
     /** @type { Database.SEO } */
-    const seo = about.seo;
+    const seo = home.seo;
 
     /** @type { Database.Paragraphs | undefined } */
-    const paragraphs = about?.paragraphs;
+    const paragraphs = home?.paragraphs;
 
     /** @type { Database.Services | undefined } */
-    const services = about?.services;
+    const services = home?.services;
 
     /** @type { Database.Clients | undefined } */
-    const clients = about?.clients;
+    const clients = home?.clients;
 
     /** @type { Database.Testimonials | undefined } */
-    const testimonials = about?.testimonials;
+    const testimonials = home?.testimonials;
 </script>
 
 <Head {...seo} />
 
-<article class="article about">
+<article class="article home">
     <header>
-        <h2 class="article-title">{about.title}</h2>
+        <h2 class="article-title">{home.title}</h2>
     </header>
 
     {#if paragraphs && paragraphs?.length > 0}
-        <div class="about-text">
+        <div class="home-text">
             {#each paragraphs as paragraph}
                 <p>{paragraph}</p>
             {/each}

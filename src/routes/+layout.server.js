@@ -7,7 +7,7 @@ export function load() {
     /** @type { {id: string, nav: string}[] } */
     const routes =
         Object.entries(pages).map(([route, page]) =>
-            route === "about" ? { id: "/", nav: page.nav } : { id: `/${route}`, nav: page.nav }
+            route === "home" ? { id: "/", nav: page.nav } : { id: `/${route}`, nav: page.nav }
         ) || [];
 
     return {

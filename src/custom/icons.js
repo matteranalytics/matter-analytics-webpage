@@ -2,13 +2,14 @@
 import location from "@iconify-icons/fa6-solid/location-dot.js";
 import mail from "@iconify-icons/fa6-solid/envelope.js";
 import phone from "@iconify-icons/fa6-solid/mobile-button.js";
+import calendar from "@iconify-icons/fa6-solid/calendar-days.js";
 
 // AI/ML/Data Icons
 import robot from "@iconify-icons/fa6-solid/robot.js";       // AI or robotics
 import brain from "@iconify-icons/fa6-solid/brain.js";       // Machine Learning, cognitive processes
-import chartLine from "@iconify-icons/fa6-solid/chart-line.js";  
+import chartLine from "@iconify-icons/fa6-solid/chart-line.js";
 import chartBar from "@iconify-icons/fa6-solid/chart-bar.js";
-import database from "@iconify-icons/fa6-solid/database.js"; 
+import database from "@iconify-icons/fa6-solid/database.js";
 import arrowsRotate from "@iconify-icons/fa6-solid/arrows-rotate.js"; // Represents a cycle/loop
 import gears from "@iconify-icons/fa6-solid/gears.js"; // automation
 import flask from "@iconify-icons/fa6-solid/flask.js";
@@ -27,17 +28,17 @@ import youtube from "@iconify-icons/fa6-brands/youtube.js";
 // Sidebar & Portfolio
 import chevronDown from "@iconify-icons/fa6-solid/chevron-down.js";
 
-// About
+// Home
 import close from "@iconify-icons/fa6-solid/xmark.js";
 
-// About - Services
+// Home - Services
 import compass from "@iconify-icons/fa6-solid/compass.js";
 import code from "@iconify-icons/fa6-solid/code.js";
 import pawn from "@iconify-icons/fa6-solid/chess-pawn.js";
 import group from "@iconify-icons/fa6-solid/people-group.js";
 
 
-// About - Testimonial
+// Home - Testimonial
 import qoute from "@iconify-icons/fa6-solid/quote-right.js";
 
 // Portfolio
@@ -52,7 +53,8 @@ export default {
     location,
     mail,
     phone,
-    
+    calendar,
+
     // AI/ML/Data Icons
     robot,
     brain,
@@ -61,7 +63,7 @@ export default {
     database,
     flask,
     rocket,
-    
+
     // Social Icons
     facebook,
     github,
@@ -70,25 +72,25 @@ export default {
     mastodon,
     twitter,
     youtube,
-    
+
     // Sidebar & Portfolio
     chevronDown,
-    
-    // About
+
+    // Home
     close,
-    
-    // About - Services
+
+    // Home - Services
     compass,
     code,
     pawn,
     group,
-    
-    // About - Testimonial
+
+    // Home - Testimonial
     qoute,
-    
+
     // Portfolio
     eye,
-    
+
     // Resume
     book,
     suitcase,

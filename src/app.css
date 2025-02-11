@@ -239,7 +239,7 @@ h6 {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--c-about-scrollbar);
+  background: var(--c-home-scrollbar);
   border-radius: 5px;
 }
 
@@ -383,11 +383,11 @@ main {
 .info-content .profession {
   color: var(--c-text-bright);
   background: var(--c-light-bg-border);
-  font-size: var(--fs-4);
-  font-weight: var(--fw-300);
-  width: 100%;
+  font-size: var(--fs-5);
+  font-weight: var(--fw-100);
+  width: 90%;
   align-items: center;
-  padding: 3px 12px;
+  padding: 1px 12px;
   border-radius: 8px;
 }
 
@@ -520,7 +520,7 @@ main {
 .navbar-link {
   color: var(--c-navbar-link);
   font-size: var(--fs-8);
-  padding: 20px 7px;
+  padding: 20px 5px;
   transition: color var(--transition-1);
 }
 
@@ -534,21 +534,21 @@ main {
 }
 
 /* ---------------------------------
-  ABOUT
+  HOME
 ----------------------------------- */
 
-.about .article-title {
+.home .article-title {
   margin-bottom: 15px;
 }
 
-.about-text {
+.home-text {
   color: var(--c-text-silver);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
-.about-text p {
+.home-text p {
   margin-bottom: 15px;
 }
 
@@ -1320,7 +1320,7 @@ main {
   }
 
   .avatar-box img {
-    width: 120px;
+    width: 140px;
     border-radius: 20px;
   }
 
@@ -1373,19 +1373,19 @@ main {
   }
 
   .navbar-link {
-    --fs-8: 14px;
+    --fs-8: 20px;
   }
 
   /* --------------------------------
-    ABOUT
+    HOME
   ----------------------------------- */
 
-  .about .article-title {
+  .home .article-title {
     font-size: clamp(1.5rem, 4vw, 1.75rem);
     margin-bottom: 20px;
   }
 
-  .about-text {
+  .home-text {
     margin-bottom: 40px;
   }
 
@@ -1602,7 +1602,7 @@ main {
   ----------------------------------- */
 
   .info-content .name {
-    font-size: var(--fs-4);
+    font-size: var(--fs-6);
   }
 
   .contacts-list {
@@ -1615,11 +1615,11 @@ main {
   ----------------------------------- */
 
   .navbar-link {
-    --fs-8: 15px;
+    --fs-8: 17px;
   }
 
   /* --------------------------------
-    ABOUT
+    HOME
   ----------------------------------- */
 
   /* testimonials modal */
@@ -1709,13 +1709,13 @@ main {
     position: absolute;
     inset: 0 0 auto auto;
     width: max-content;
-    border-radius: 0 40px;
+    border-radius: 0 20px;
     padding: 0 10px;
     box-shadow: none;
   }
 
   .navbar-list {
-    gap: 30px;
+    gap: 20px;
     padding: 0 20px;
   }
 
@@ -1724,7 +1724,7 @@ main {
   }
 
   /* --------------------------------
-    ABOUT
+    HOME
   ----------------------------------- */
 
   /* service */
@@ -1831,7 +1831,7 @@ main {
 
   .sidebar {
     position: sticky;
-    top: 60px;
+    top: 20px;
     max-height: max-content;
     height: 100%;
     margin-bottom: 0;
@@ -1899,3 +1899,51 @@ main {
     max-width: 700px;
   }
 }
+
+  /* --------------------------------
+    MEETING SCHEDULING
+  ----------------------------------- */
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .contact-item .icon-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: var(--c-box-icon);
+    background: var(--c-light-bg-border);
+    box-shadow: var(--shadow-1);
+  }
+
+  .contact-item .icon-box ion-icon {
+    font-size: 20px; /* Adjust the size of the icons */
+  }
+
+  .contact-info {
+    flex-grow: 1;
+  }
+
+  .contact-title {
+    font-size: var(--fs-8);
+    color: var(--c-text-smoky);
+    text-transform: uppercase;
+  }
+
+  .contact-link {
+    font-size: var(--fs-7);
+    color: var(--c-text-bright);
+    text-decoration: none;
+  }
+
+  .contact-link:hover {
+    color: var(--c-brand);
+  }

@@ -43,7 +43,7 @@ export const sidebar: Database.Sidebar = {
 };
 
 export const pages: Database.Pages = {
-    about: {
+    home: {
         nav: "About",
         title: "About me",
 
