@@ -6,7 +6,8 @@ export default defineConfig({
   server: {
     allowedHosts: [
       "matter-analytics.replit.app",
-      "matteranalytics.io"
+      "matteranalytics.io",
+      "matter-analytics-webpage-yjmercer.replit.app"
     ],
   },
 });
