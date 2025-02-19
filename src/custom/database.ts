@@ -35,8 +35,8 @@ export const sidebar: Database.Sidebar = {
             icon: Icons.calendar, // New calendar icon
             title: "Scheduling",
             text: "Schedule a Call Today",
-            link: "https://cal.com/matter-analytics/inital-call" // Change to your scheduling link
-          }
+            link: "https://cal.com/matter-analytics/inital-call", // Change to your scheduling link
+        },
     ],
 
     socials: [
@@ -57,8 +57,7 @@ export const pages: Database.Pages = {
             // Keep it very short
             title: "Matter Analytics",
             // Max. 155 characters
-            description:
-                "Matter Analytics Mission.",
+            description: "Matter Analytics Mission.",
             // The more unique they are, the better.
             keywords: "ML, AI, Data Science",
         },
@@ -81,7 +80,7 @@ export const pages: Database.Pages = {
                     icon: Icons.robot,
                 },
                 {
-                    title: "ML Developement & Intelligent Insights",
+                    title: "ML Development & Intelligent Insights",
                     text: "Advanced analytics and machine learning solutions aimed at extracting actionable insights, forecasting trends, and driving data-backed decisions.",
                     icon: Icons.gears,
                 },
@@ -153,12 +152,13 @@ export const pages: Database.Pages = {
         nav: "Approach",
         title: "Our Approach",
 
-        paragraphs: ["Below is detailed overview of the standard approach Matter Analytics takes for a majority of its projects, broken out in the three unique phases."],
+        paragraphs: [
+            "Below is detailed overview of the standard approach Matter Analytics takes for a majority of its projects, broken out in the three unique phases.",
+        ],
 
         seo: {
             title: "Matter Analytics - Our Approach",
-            description:
-                "Matter Analytics approach to AI & ML Projects",
+            description: "Matter Analytics approach to AI & ML Projects",
             keywords: "freelancer, data science, analytics",
         },
 
@@ -203,7 +203,6 @@ export const pages: Database.Pages = {
                     year: "Phase 2.3 | Timeline Estimate: 1 Week",
                     text: "Define a robust plan to transition the PoC into a production environment, including data governance, security protocols, and infrastructure considerations. Evaluate best-fit architectures to ensure scalability and long-term maintainability for your AI/ML solution.",
                 },
-
             ],
         },
 
@@ -246,8 +245,7 @@ export const pages: Database.Pages = {
 
         seo: {
             title: "Matter Analytics · Services",
-            description:
-                "Matter Analytics' services",
+            description: "Matter Analytics' services",
             keywords: "freelancer, data science, analytics",
         },
 
@@ -278,7 +276,7 @@ export const pages: Database.Pages = {
             },
             {
                 slug: "ml-dev-and-intelligent-insights",
-                title: "ML Developement & Intelligent Insights",
+                title: "ML Development & Intelligent Insights",
                 category: "Machine Leaning",
                 // client: "Acme Comp",
                 description: "A short (max. 155 charaters) description for SEO",
@@ -322,8 +320,7 @@ export const pages: Database.Pages = {
 
         seo: {
             title: "Matter Analytics - About",
-            description:
-                "Matter Analytics Founder - Yianni Mercer's Bio",
+            description: "Matter Analytics Founder - Yianni Mercer's Bio",
             keywords: "freelancer, data science, analytics, chicago, data analytics, machine learning",
         },
 
@@ -334,11 +331,11 @@ export const pages: Database.Pages = {
 
             "I believe that mathematics and statistics are the backbone of AI and machine learning, providing the structure and rigor necessary to build intelligent, data-driven systems. My approach is driven by curiosity, continuous learning, and a commitment to technical excellence, ensuring that the solutions I develop are both scientifically sound and impactful.",
 
-            "Through Matter Analytics, I work with businesses to develop custom AI models, machine learning algorithms, and data-driven strategies that drive efficiency and innovation. I thrive at the intersection of theory, application, and real-world impact, always striving to deliver solutions that are both innovative and strategically valuable."
+            "Through Matter Analytics, I work with businesses to develop custom AI models, machine learning algorithms, and data-driven strategies that drive efficiency and innovation. I thrive at the intersection of theory, application, and real-world impact, always striving to deliver solutions that are both innovative and strategically valuable.",
         ],
 
-        img: { src: "/example_images/yjwm_headshot.png", alt: "fundo" }
-    }
+        img: { src: "/example_images/yjwm_headshot.png", alt: "fundo" },
+    },
 
     // blog: {
     //     nav: "Projects",
